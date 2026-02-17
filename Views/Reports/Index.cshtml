@@ -1,0 +1,17 @@
+@{
+    ViewData["Title"] = "Reports";
+}
+
+<div class="container mt-4">
+    <h2>Reports</h2>
+    <p class="text-muted">View system reports and analytics</p>
+
+    <div class="card mt-4">
+        <div class="card-body">
+            <h5 class="card-title">Reports Dashboard</h5>
+            <p>This page is accessible to users with "ViewReports" permission.</p>
+            <p>Available for: Admin, Normal User, and Data Entry Operator</p>
+            <a asp-controller="Dashboard" asp-action="Index" class="btn btn-secondary">Back to Dashboard</a>
+        </div>
+    </div>
+</div>

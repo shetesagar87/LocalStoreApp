@@ -1,0 +1,111 @@
+@using System.Security.Claims
+@{
+    ViewData["Title"] = "Dashboard";
+    var username = User.Identity?.Name;
+    var role = User.FindFirst(ClaimTypes.Role)?.Value;
+    var permissions = User.FindAll("Permission").Select(c => c.Value).ToList();
+}
+
+<div class="container mt-4">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="d-flex justify-content-between align-items-center mb-4">
+                <h2>Dashboard</h2>
+                <form asp-controller="Account" asp-action="Logout" method="post">
+                    <button type="submit" class="btn btn-outline-danger">Logout</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="row mb-4">
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Welcome, @username!</h5>
+                    <p class="card-text">
+                        <strong>Role:</strong> @role
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-header">
+                    <h5>Your Permissions</h5>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        @foreach (var permission in permissions)
+                        {
+                            <div class="col-md-4 mb-2">
+                                <span class="badge bg-success">@permission</span>
+                            </div>
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row mt-4">
+        <div class="col-md-12">
+            <h4>Available Pages</h4>
+        </div>
+
+        @if (permissions.Contains("ManageUsers"))
+        {
+            <div class="col-md-4 mb-3">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">User Management</h5>
+                        <p class="card-text">Manage system users and roles</p>
+                        <a asp-controller="Admin" asp-action="ManageUsers" class="btn btn-primary">Go to Users</a>
+                    </div>
+                </div>
+            </div>
+        }
+
+        @if (permissions.Contains("ViewReports"))
+        {
+            <div class="col-md-4 mb-3">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Reports</h5>
+                        <p class="card-text">View system reports and analytics</p>
+                        <a asp-controller="Reports" asp-action="Index" class="btn btn-primary">View Reports</a>
+                    </div>
+                </div>
+            </div>
+        }
+
+        @if (permissions.Contains("EditData"))
+        {
+            <div class="col-md-4 mb-3">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Data Entry</h5>
+                        <p class="card-text">Add and edit data records</p>
+                        <a asp-controller="DataEntry" asp-action="Index" class="btn btn-primary">Enter Data</a>
+                    </div>
+                </div>
+            </div>
+        }
+
+        @if (permissions.Contains("ViewSettings"))
+        {
+            <div class="col-md-4 mb-3">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Settings</h5>
+                        <p class="card-text">Configure system settings</p>
+                        <a asp-controller="Admin" asp-action="Settings" class="btn btn-primary">Settings</a>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>

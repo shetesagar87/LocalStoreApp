@@ -1,0 +1,22 @@
+{
+  "users": [
+    {
+      "username": "admin",
+      "password": "Admin@123",
+      "role": "Admin",
+      "permissions": ["ViewDashboard", "ManageUsers", "ViewReports", "EditData", "DeleteData", "ViewSettings"]
+    },
+    {
+      "username": "user",
+      "password": "User@123",
+      "role": "NormalUser",
+      "permissions": ["ViewDashboard", "ViewReports"]
+    },
+    {
+      "username": "dataentry",
+      "password": "Data@123",
+      "role": "DataEntryOperator",
+      "permissions": ["ViewDashboard", "EditData", "ViewReports"]
+    }
+  ]
+}

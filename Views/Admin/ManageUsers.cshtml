@@ -1,0 +1,16 @@
+@{
+    ViewData["Title"] = "Manage Users";
+}
+
+<div class="container mt-4">
+    <h2>User Management</h2>
+    <p class="text-muted">Manage system users and their roles</p>
+
+    <div class="card mt-4">
+        <div class="card-body">
+            <h5 class="card-title">This page is only accessible to Admins</h5>
+            <p>You have the "ManageUsers" permission.</p>
+            <a asp-controller="Dashboard" asp-action="Index" class="btn btn-secondary">Back to Dashboard</a>
+        </div>
+    </div>
+</div>
