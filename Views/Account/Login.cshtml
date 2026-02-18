@@ -1,4 +1,4 @@
-@model CleanMvcApp.Models.LoginViewModel
+@model CleanMvcApp.Models.ViewModels.LoginViewModel
 @{
     ViewData["Title"] = "Login";
     Layout = null;
@@ -9,7 +9,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - CleanMvcApp</title>
+    <title>@ViewData["Title"] - Local Store Platform</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <style>
@@ -52,16 +52,12 @@
         .btn-login:hover {
             background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
         }
-        .user-info {
-            background: #f8f9fa;
-            border-radius: 5px;
-            padding: 15px;
+        .register-link {
+            text-align: center;
             margin-top: 20px;
-            font-size: 12px;
         }
-        .user-info h6 {
-            font-weight: 600;
-            margin-bottom: 10px;
+        .alert {
+            margin-bottom: 20px;
         }
     </style>
 </head>
@@ -73,13 +69,29 @@
                 <p>Please login to your account</p>
             </div>
 
+            @if (TempData["SuccessMessage"] != null)
+            {
+                <div class="alert alert-success alert-dismissible fade show" role="alert">
+                    @TempData["SuccessMessage"]
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+            }
+
+            @if (TempData["ErrorMessage"] != null)
+            {
+                <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                    @TempData["ErrorMessage"]
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+            }
+
             <form asp-action="Login" method="post">
                 <div asp-validation-summary="ModelOnly" class="text-danger mb-3"></div>
                 
                 <div class="mb-3">
-                    <label asp-for="Username" class="form-label">Username</label>
-                    <input asp-for="Username" class="form-control" placeholder="Enter username" />
-                    <span asp-validation-for="Username" class="text-danger"></span>
+                    <label asp-for="Email" class="form-label">Email</label>
+                    <input asp-for="Email" class="form-control" placeholder="Enter email" />
+                    <span asp-validation-for="Email" class="text-danger"></span>
                 </div>
 
                 <div class="mb-3">
@@ -96,11 +108,8 @@
                 <button type="submit" class="btn btn-primary btn-login">Login</button>
             </form>
 
-            <div class="user-info">
-                <h6>Demo Credentials:</h6>
-                <strong>Admin:</strong> admin / Admin@123<br/>
-                <strong>Normal User:</strong> user / User@123<br/>
-                <strong>Data Entry:</strong> dataentry / Data@123
+            <div class="register-link">
+                <p>Don't have an account? <a asp-action="Register">Register here</a></p>
             </div>
         </div>
     </div>

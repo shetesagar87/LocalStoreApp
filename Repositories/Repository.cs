@@ -49,9 +49,17 @@ public class Repository<T> : IRepository<T> where T : class
         await _context.SaveChangesAsync();
     }
 
-    public virtual async Task<bool> ExistsAsync(int id)
+    public virtual async Task<bool> ExistsAsync(Expression<Func<T, bool>> predicate)
     {
-        var entity = await GetByIdAsync(id);
-        return entity != null;
+        return await _dbSet.AnyAsync(predicate);
+    }
+
+    public virtual async Task<int> CountAsync(Expression<Func<T, bool>>? predicate = null)
+    {
+        if (predicate == null)
+        {
+            return await _dbSet.CountAsync();
+        }
+        return await _dbSet.CountAsync(predicate);
     }
 }
