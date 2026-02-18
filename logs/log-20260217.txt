@@ -304,3 +304,435 @@ WHERE [a].[RoleId] = @__role_Id_0
 2026-02-17 21:22:16.499 -08:00 [INF] Executed action CleanMvcApp.Controllers.AccountController.Login (CleanMvcApp) in 139.9548ms
 2026-02-17 21:22:16.516 -08:00 [INF] Executed endpoint 'CleanMvcApp.Controllers.AccountController.Login (CleanMvcApp)'
 2026-02-17 21:22:16.517 -08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5264/Account/ - 200 null text/html; charset=utf-8 249.1979ms
+2026-02-17 21:34:28.906 -08:00 [INF] Application is shutting down...
+2026-02-17 21:35:25.490 -08:00 [INF] Starting Local Store Delivery Platform
+2026-02-17 21:35:26.431 -08:00 [INF] User profile is available. Using 'C:\Users\SShete\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-02-17 21:35:28.591 -08:00 [INF] Executed DbCommand (64ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2026-02-17 21:35:29.034 -08:00 [INF] Executed DbCommand (3ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2026-02-17 21:35:29.042 -08:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2026-02-17 21:35:29.124 -08:00 [INF] Executed DbCommand (57ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[Address], [a].[ConcurrencyStamp], [a].[CreatedAt], [a].[Email], [a].[EmailConfirmed], [a].[FullName], [a].[IsActive], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2026-02-17 21:35:29.328 -08:00 [INF] Database seeded successfully
+2026-02-17 21:35:29.619 -08:00 [INF] Now listening on: http://localhost:5264
+2026-02-17 21:35:29.641 -08:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-02-17 21:35:29.645 -08:00 [INF] Hosting environment: Development
+2026-02-17 21:35:29.647 -08:00 [INF] Content root path: C:\LearningProjects\LearningProjects\LocalStoreWebsite
+2026-02-17 21:38:03.016 -08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5264/Home/Index - null null
+2026-02-17 21:38:03.031 -08:00 [WRN] Failed to determine the https port for redirect.
+2026-02-17 21:38:03.275 -08:00 [INF] Executing endpoint 'CleanMvcApp.Controllers.HomeController.Index (CleanMvcApp)'
+2026-02-17 21:38:03.302 -08:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller CleanMvcApp.Controllers.HomeController (CleanMvcApp).
+2026-02-17 21:38:03.385 -08:00 [INF] Executing ViewResult, running view Index.
+2026-02-17 21:38:03.668 -08:00 [INF] Executed ViewResult - view Index executed in 284.0508ms.
+2026-02-17 21:38:03.685 -08:00 [INF] Executed action CleanMvcApp.Controllers.HomeController.Index (CleanMvcApp) in 372.986ms
+2026-02-17 21:38:03.689 -08:00 [INF] Executed endpoint 'CleanMvcApp.Controllers.HomeController.Index (CleanMvcApp)'
+2026-02-17 21:38:03.866 -08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5264/Home/Index - 200 null text/html; charset=utf-8 798.2466ms
+2026-02-17 21:38:13.930 -08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5264/Home/Privacy - null null
+2026-02-17 21:38:13.953 -08:00 [INF] Executing endpoint 'CleanMvcApp.Controllers.HomeController.Privacy (CleanMvcApp)'
+2026-02-17 21:38:14.099 -08:00 [INF] Route matched with {action = "Privacy", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Privacy() on controller CleanMvcApp.Controllers.HomeController (CleanMvcApp).
+2026-02-17 21:38:14.230 -08:00 [INF] Executing ViewResult, running view Privacy.
+2026-02-17 21:38:14.474 -08:00 [INF] Executed ViewResult - view Privacy executed in 249.4038ms.
+2026-02-17 21:38:14.537 -08:00 [INF] Executed action CleanMvcApp.Controllers.HomeController.Privacy (CleanMvcApp) in 314.0684ms
+2026-02-17 21:38:14.540 -08:00 [INF] Executed endpoint 'CleanMvcApp.Controllers.HomeController.Privacy (CleanMvcApp)'
+2026-02-17 21:38:14.547 -08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5264/Home/Privacy - 200 null text/html; charset=utf-8 612.5749ms
+2026-02-17 21:38:19.901 -08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5264/ - null null
+2026-02-17 21:38:19.932 -08:00 [INF] Executing endpoint 'CleanMvcApp.Controllers.AccountController.Login (CleanMvcApp)'
+2026-02-17 21:38:20.071 -08:00 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(System.String) on controller CleanMvcApp.Controllers.AccountController (CleanMvcApp).
+2026-02-17 21:38:20.155 -08:00 [INF] Executing ViewResult, running view Login.
+2026-02-17 21:38:20.270 -08:00 [INF] Executed ViewResult - view Login executed in 116.419ms.
+2026-02-17 21:38:20.272 -08:00 [INF] Executed action CleanMvcApp.Controllers.AccountController.Login (CleanMvcApp) in 192.0078ms
+2026-02-17 21:38:20.275 -08:00 [INF] Executed endpoint 'CleanMvcApp.Controllers.AccountController.Login (CleanMvcApp)'
+2026-02-17 21:38:20.387 -08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5264/ - 200 null text/html; charset=utf-8 486.063ms
+2026-02-17 21:38:43.174 -08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5264/DataEntry - null null
+2026-02-17 21:38:43.182 -08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5264/DataEntry - 404 0 null 8.1904ms
+2026-02-17 21:38:43.194 -08:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5264/DataEntry, Response status code: 404
+2026-02-17 21:38:52.967 -08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5264/Account/Register - null null
+2026-02-17 21:38:52.971 -08:00 [INF] Executing endpoint 'CleanMvcApp.Controllers.AccountController.Register (CleanMvcApp)'
+2026-02-17 21:38:52.977 -08:00 [INF] Route matched with {action = "Register", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Register() on controller CleanMvcApp.Controllers.AccountController (CleanMvcApp).
+2026-02-17 21:38:53.090 -08:00 [INF] Executing ViewResult, running view Register.
+2026-02-17 21:38:53.264 -08:00 [INF] Executed ViewResult - view Register executed in 174.8835ms.
+2026-02-17 21:38:53.267 -08:00 [INF] Executed action CleanMvcApp.Controllers.AccountController.Register (CleanMvcApp) in 279.9331ms
+2026-02-17 21:38:53.270 -08:00 [INF] Executed endpoint 'CleanMvcApp.Controllers.AccountController.Register (CleanMvcApp)'
+2026-02-17 21:38:53.296 -08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5264/Account/Register - 200 null text/html; charset=utf-8 329.0943ms
+2026-02-17 21:39:04.665 -08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5264/Home/Privacy - null null
+2026-02-17 21:39:04.673 -08:00 [INF] Executing endpoint 'CleanMvcApp.Controllers.HomeController.Privacy (CleanMvcApp)'
+2026-02-17 21:39:04.677 -08:00 [INF] Route matched with {action = "Privacy", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Privacy() on controller CleanMvcApp.Controllers.HomeController (CleanMvcApp).
+2026-02-17 21:39:04.685 -08:00 [INF] Executing ViewResult, running view Privacy.
+2026-02-17 21:39:04.688 -08:00 [INF] Executed ViewResult - view Privacy executed in 4.2948ms.
+2026-02-17 21:39:04.851 -08:00 [INF] Executed action CleanMvcApp.Controllers.HomeController.Privacy (CleanMvcApp) in 167.6957ms
+2026-02-17 21:39:04.948 -08:00 [INF] Executed endpoint 'CleanMvcApp.Controllers.HomeController.Privacy (CleanMvcApp)'
+2026-02-17 21:39:04.950 -08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5264/Home/Privacy - 200 null text/html; charset=utf-8 284.9137ms
+2026-02-17 21:39:14.861 -08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5264/Account/Register - null null
+2026-02-17 21:39:14.874 -08:00 [INF] Executing endpoint 'CleanMvcApp.Controllers.AccountController.Register (CleanMvcApp)'
+2026-02-17 21:39:14.880 -08:00 [INF] Route matched with {action = "Register", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Register() on controller CleanMvcApp.Controllers.AccountController (CleanMvcApp).
+2026-02-17 21:39:14.990 -08:00 [INF] Executing ViewResult, running view Register.
+2026-02-17 21:39:15.114 -08:00 [INF] Executed ViewResult - view Register executed in 124.2329ms.
+2026-02-17 21:39:15.117 -08:00 [INF] Executed action CleanMvcApp.Controllers.AccountController.Register (CleanMvcApp) in 230.6471ms
+2026-02-17 21:39:15.250 -08:00 [INF] Executed endpoint 'CleanMvcApp.Controllers.AccountController.Register (CleanMvcApp)'
+2026-02-17 21:39:15.254 -08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5264/Account/Register - 200 null text/html; charset=utf-8 393.1852ms
+2026-02-17 21:43:49.984 -08:00 [INF] Application is shutting down...
+2026-02-17 21:46:24.427 -08:00 [INF] Starting Local Store Delivery Platform
+2026-02-17 21:46:25.428 -08:00 [INF] User profile is available. Using 'C:\Users\SShete\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-02-17 21:46:27.229 -08:00 [INF] Executed DbCommand (48ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2026-02-17 21:46:27.440 -08:00 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2026-02-17 21:46:27.446 -08:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2026-02-17 21:46:27.514 -08:00 [INF] Executed DbCommand (4ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[Address], [a].[ConcurrencyStamp], [a].[CreatedAt], [a].[Email], [a].[EmailConfirmed], [a].[FullName], [a].[IsActive], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2026-02-17 21:46:27.711 -08:00 [INF] Database seeded successfully
+2026-02-17 21:46:27.962 -08:00 [INF] Now listening on: http://localhost:5264
+2026-02-17 21:46:27.981 -08:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-02-17 21:46:28.036 -08:00 [INF] Hosting environment: Development
+2026-02-17 21:46:28.038 -08:00 [INF] Content root path: C:\LearningProjects\LearningProjects\LocalStoreWebsite
+2026-02-17 21:47:35.303 -08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5264/ - null null
+2026-02-17 21:47:35.326 -08:00 [WRN] Failed to determine the https port for redirect.
+2026-02-17 21:47:35.551 -08:00 [INF] Executing endpoint 'CleanMvcApp.Controllers.AccountController.Login (CleanMvcApp)'
+2026-02-17 21:47:35.666 -08:00 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(System.String) on controller CleanMvcApp.Controllers.AccountController (CleanMvcApp).
+2026-02-17 21:47:35.775 -08:00 [INF] Executing ViewResult, running view Login.
+2026-02-17 21:47:36.195 -08:00 [INF] Executed ViewResult - view Login executed in 420.6665ms.
+2026-02-17 21:47:36.378 -08:00 [INF] Executed action CleanMvcApp.Controllers.AccountController.Login (CleanMvcApp) in 704.0492ms
+2026-02-17 21:47:36.474 -08:00 [INF] Executed endpoint 'CleanMvcApp.Controllers.AccountController.Login (CleanMvcApp)'
+2026-02-17 21:47:36.586 -08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5264/ - 200 null text/html; charset=utf-8 1285.1815ms
+2026-02-17 21:47:48.263 -08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5264/Home/Privacy - null null
+2026-02-17 21:47:48.289 -08:00 [INF] Executing endpoint 'CleanMvcApp.Controllers.HomeController.Privacy (CleanMvcApp)'
+2026-02-17 21:47:48.458 -08:00 [INF] Route matched with {action = "Privacy", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Privacy() on controller CleanMvcApp.Controllers.HomeController (CleanMvcApp).
+2026-02-17 21:47:48.539 -08:00 [INF] Executing ViewResult, running view Privacy.
+2026-02-17 21:47:48.633 -08:00 [INF] Executed ViewResult - view Privacy executed in 96.0991ms.
+2026-02-17 21:47:48.636 -08:00 [INF] Executed action CleanMvcApp.Controllers.HomeController.Privacy (CleanMvcApp) in 101.3442ms
+2026-02-17 21:47:48.745 -08:00 [INF] Executed endpoint 'CleanMvcApp.Controllers.HomeController.Privacy (CleanMvcApp)'
+2026-02-17 21:47:48.761 -08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5264/Home/Privacy - 200 null text/html; charset=utf-8 484.7285ms
+2026-02-17 21:47:59.563 -08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5264/ - null null
+2026-02-17 21:47:59.710 -08:00 [INF] Executing endpoint 'CleanMvcApp.Controllers.AccountController.Login (CleanMvcApp)'
+2026-02-17 21:47:59.713 -08:00 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(System.String) on controller CleanMvcApp.Controllers.AccountController (CleanMvcApp).
+2026-02-17 21:47:59.802 -08:00 [INF] Executing ViewResult, running view Login.
+2026-02-17 21:47:59.813 -08:00 [INF] Executed ViewResult - view Login executed in 11.5944ms.
+2026-02-17 21:47:59.817 -08:00 [INF] Executed action CleanMvcApp.Controllers.AccountController.Login (CleanMvcApp) in 23.0631ms
+2026-02-17 21:47:59.959 -08:00 [INF] Executed endpoint 'CleanMvcApp.Controllers.AccountController.Login (CleanMvcApp)'
+2026-02-17 21:47:59.963 -08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5264/ - 200 null text/html; charset=utf-8 400.4582ms
+2026-02-17 21:48:16.724 -08:00 [INF] Request starting HTTP/1.1 POST http://localhost:5264/ - application/x-www-form-urlencoded 294
+2026-02-17 21:48:16.731 -08:00 [INF] Executing endpoint 'CleanMvcApp.Controllers.AccountController.Login (CleanMvcApp)'
+2026-02-17 21:48:16.834 -08:00 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(CleanMvcApp.Models.ViewModels.LoginViewModel, System.String) on controller CleanMvcApp.Controllers.AccountController (CleanMvcApp).
+2026-02-17 21:48:17.086 -08:00 [INF] Executed DbCommand (3ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[Address], [a].[ConcurrencyStamp], [a].[CreatedAt], [a].[Email], [a].[EmailConfirmed], [a].[FullName], [a].[IsActive], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2026-02-17 21:48:17.419 -08:00 [INF] Executed DbCommand (3ms) [Parameters=[@__user_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[ClaimType], [a].[ClaimValue], [a].[UserId]
+FROM [AspNetUserClaims] AS [a]
+WHERE [a].[UserId] = @__user_Id_0
+2026-02-17 21:48:17.521 -08:00 [INF] Executed DbCommand (4ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2026-02-17 21:48:17.598 -08:00 [INF] Executed DbCommand (23ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2026-02-17 21:48:17.614 -08:00 [INF] Executed DbCommand (3ms) [Parameters=[@__role_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[ClaimType], [a].[ClaimValue]
+FROM [AspNetRoleClaims] AS [a]
+WHERE [a].[RoleId] = @__role_Id_0
+2026-02-17 21:48:17.681 -08:00 [INF] AuthenticationScheme: Identity.Application signed in.
+2026-02-17 21:48:17.686 -08:00 [INF] User shetesagar88@gmail.com logged in successfully
+2026-02-17 21:48:17.692 -08:00 [INF] User shetesagar88@gmail.com logged in successfully
+2026-02-17 21:48:17.697 -08:00 [INF] Executing RedirectResult, redirecting to /Home/Index.
+2026-02-17 21:48:17.700 -08:00 [INF] Executed action CleanMvcApp.Controllers.AccountController.Login (CleanMvcApp) in 862.5764ms
+2026-02-17 21:48:17.703 -08:00 [INF] Executed endpoint 'CleanMvcApp.Controllers.AccountController.Login (CleanMvcApp)'
+2026-02-17 21:48:17.710 -08:00 [INF] Request finished HTTP/1.1 POST http://localhost:5264/ - 302 0 null 985.597ms
+2026-02-17 21:48:17.718 -08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5264/Home/Index - null null
+2026-02-17 21:48:17.775 -08:00 [INF] Executing endpoint 'CleanMvcApp.Controllers.HomeController.Index (CleanMvcApp)'
+2026-02-17 21:48:17.779 -08:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller CleanMvcApp.Controllers.HomeController (CleanMvcApp).
+2026-02-17 21:48:17.829 -08:00 [INF] Executing ViewResult, running view Index.
+2026-02-17 21:48:17.839 -08:00 [INF] Executed ViewResult - view Index executed in 12.4335ms.
+2026-02-17 21:48:18.065 -08:00 [INF] Executed action CleanMvcApp.Controllers.HomeController.Index (CleanMvcApp) in 250.1393ms
+2026-02-17 21:48:18.074 -08:00 [INF] Executed endpoint 'CleanMvcApp.Controllers.HomeController.Index (CleanMvcApp)'
+2026-02-17 21:48:18.077 -08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5264/Home/Index - 200 null text/html; charset=utf-8 358.9672ms
+2026-02-17 21:49:15.491 -08:00 [INF] Application is shutting down...
+2026-02-17 21:54:45.108 -08:00 [INF] Starting Local Store Delivery Platform
+2026-02-17 21:54:46.461 -08:00 [INF] User profile is available. Using 'C:\Users\SShete\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-02-17 21:54:48.274 -08:00 [INF] Executed DbCommand (47ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2026-02-17 21:54:48.489 -08:00 [INF] Executed DbCommand (11ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2026-02-17 21:54:48.495 -08:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2026-02-17 21:54:48.524 -08:00 [INF] Executed DbCommand (4ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[Address], [a].[ConcurrencyStamp], [a].[CreatedAt], [a].[Email], [a].[EmailConfirmed], [a].[FullName], [a].[IsActive], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2026-02-17 21:54:48.725 -08:00 [INF] Database seeded successfully
+2026-02-17 21:54:48.973 -08:00 [INF] Now listening on: http://localhost:5264
+2026-02-17 21:54:48.979 -08:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-02-17 21:54:48.981 -08:00 [INF] Hosting environment: Development
+2026-02-17 21:54:48.983 -08:00 [INF] Content root path: C:\LearningProjects\LearningProjects\LocalStoreWebsite
+2026-02-17 21:54:53.184 -08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5264/ - null null
+2026-02-17 21:54:53.198 -08:00 [WRN] Failed to determine the https port for redirect.
+2026-02-17 21:54:53.416 -08:00 [INF] Executing endpoint 'CleanMvcApp.Controllers.AccountController.Login (CleanMvcApp)'
+2026-02-17 21:54:53.508 -08:00 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(System.String) on controller CleanMvcApp.Controllers.AccountController (CleanMvcApp).
+2026-02-17 21:54:54.080 -08:00 [INF] Executing ViewResult, running view Login.
+2026-02-17 21:54:54.564 -08:00 [INF] Executed ViewResult - view Login executed in 624.2108ms.
+2026-02-17 21:54:54.577 -08:00 [INF] Executed action CleanMvcApp.Controllers.AccountController.Login (CleanMvcApp) in 666.5216ms
+2026-02-17 21:54:54.588 -08:00 [INF] Executed endpoint 'CleanMvcApp.Controllers.AccountController.Login (CleanMvcApp)'
+2026-02-17 21:54:54.666 -08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5264/ - 200 null text/html; charset=utf-8 1480.8285ms
+2026-02-17 21:55:10.332 -08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5264/Home/Privacy - null null
+2026-02-17 21:55:10.546 -08:00 [INF] Executing endpoint 'CleanMvcApp.Controllers.HomeController.Privacy (CleanMvcApp)'
+2026-02-17 21:55:10.552 -08:00 [INF] Route matched with {action = "Privacy", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Privacy() on controller CleanMvcApp.Controllers.HomeController (CleanMvcApp).
+2026-02-17 21:55:10.559 -08:00 [INF] Executing ViewResult, running view Privacy.
+2026-02-17 21:55:10.895 -08:00 [INF] Executed ViewResult - view Privacy executed in 337.2141ms.
+2026-02-17 21:55:10.898 -08:00 [INF] Executed action CleanMvcApp.Controllers.HomeController.Privacy (CleanMvcApp) in 341.0555ms
+2026-02-17 21:55:10.900 -08:00 [INF] Executed endpoint 'CleanMvcApp.Controllers.HomeController.Privacy (CleanMvcApp)'
+2026-02-17 21:55:11.054 -08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5264/Home/Privacy - 200 null text/html; charset=utf-8 721.2796ms
+2026-02-17 21:55:16.391 -08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5264/ - null null
+2026-02-17 21:55:16.692 -08:00 [INF] Executing endpoint 'CleanMvcApp.Controllers.AccountController.Login (CleanMvcApp)'
+2026-02-17 21:55:16.695 -08:00 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(System.String) on controller CleanMvcApp.Controllers.AccountController (CleanMvcApp).
+2026-02-17 21:55:16.703 -08:00 [INF] Executing ViewResult, running view Login.
+2026-02-17 21:55:16.711 -08:00 [INF] Executed ViewResult - view Login executed in 8.7017ms.
+2026-02-17 21:55:16.714 -08:00 [INF] Executed action CleanMvcApp.Controllers.AccountController.Login (CleanMvcApp) in 13.269ms
+2026-02-17 21:55:16.724 -08:00 [INF] Executed endpoint 'CleanMvcApp.Controllers.AccountController.Login (CleanMvcApp)'
+2026-02-17 21:55:16.928 -08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5264/ - 200 null text/html; charset=utf-8 536.8864ms
+2026-02-17 21:55:26.488 -08:00 [INF] Request starting HTTP/1.1 POST http://localhost:5264/ - application/x-www-form-urlencoded 294
+2026-02-17 21:55:26.494 -08:00 [INF] Executing endpoint 'CleanMvcApp.Controllers.AccountController.Login (CleanMvcApp)'
+2026-02-17 21:55:26.596 -08:00 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(CleanMvcApp.Models.ViewModels.LoginViewModel, System.String) on controller CleanMvcApp.Controllers.AccountController (CleanMvcApp).
+2026-02-17 21:55:26.870 -08:00 [INF] Executed DbCommand (4ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[Address], [a].[ConcurrencyStamp], [a].[CreatedAt], [a].[Email], [a].[EmailConfirmed], [a].[FullName], [a].[IsActive], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2026-02-17 21:55:26.881 -08:00 [WRN] Login attempt for non-existent user shetesagar87@gmail.com
+2026-02-17 21:55:26.888 -08:00 [INF] Executing ViewResult, running view Login.
+2026-02-17 21:55:26.895 -08:00 [INF] Executed ViewResult - view Login executed in 6.958ms.
+2026-02-17 21:55:26.898 -08:00 [INF] Executed action CleanMvcApp.Controllers.AccountController.Login (CleanMvcApp) in 298.6448ms
+2026-02-17 21:55:26.901 -08:00 [INF] Executed endpoint 'CleanMvcApp.Controllers.AccountController.Login (CleanMvcApp)'
+2026-02-17 21:55:27.168 -08:00 [INF] Request finished HTTP/1.1 POST http://localhost:5264/ - 200 null text/html; charset=utf-8 680.5985ms
+2026-02-17 21:55:37.303 -08:00 [INF] Request starting HTTP/1.1 POST http://localhost:5264/ - application/x-www-form-urlencoded 294
+2026-02-17 21:55:37.308 -08:00 [INF] Executing endpoint 'CleanMvcApp.Controllers.AccountController.Login (CleanMvcApp)'
+2026-02-17 21:55:37.316 -08:00 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(CleanMvcApp.Models.ViewModels.LoginViewModel, System.String) on controller CleanMvcApp.Controllers.AccountController (CleanMvcApp).
+2026-02-17 21:55:37.433 -08:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[Address], [a].[ConcurrencyStamp], [a].[CreatedAt], [a].[Email], [a].[EmailConfirmed], [a].[FullName], [a].[IsActive], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2026-02-17 21:55:37.826 -08:00 [INF] Executed DbCommand (2ms) [Parameters=[@__user_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[ClaimType], [a].[ClaimValue], [a].[UserId]
+FROM [AspNetUserClaims] AS [a]
+WHERE [a].[UserId] = @__user_Id_0
+2026-02-17 21:55:37.922 -08:00 [INF] Executed DbCommand (5ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2026-02-17 21:55:37.933 -08:00 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2026-02-17 21:55:38.157 -08:00 [INF] Executed DbCommand (9ms) [Parameters=[@__role_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[ClaimType], [a].[ClaimValue]
+FROM [AspNetRoleClaims] AS [a]
+WHERE [a].[RoleId] = @__role_Id_0
+2026-02-17 21:55:38.174 -08:00 [INF] AuthenticationScheme: Identity.Application signed in.
+2026-02-17 21:55:38.179 -08:00 [INF] User shetesagar88@gmail.com logged in successfully
+2026-02-17 21:55:38.182 -08:00 [INF] User shetesagar88@gmail.com logged in successfully
+2026-02-17 21:55:38.238 -08:00 [INF] Executing RedirectResult, redirecting to /Home/Index.
+2026-02-17 21:55:38.241 -08:00 [INF] Executed action CleanMvcApp.Controllers.AccountController.Login (CleanMvcApp) in 833.5326ms
+2026-02-17 21:55:38.253 -08:00 [INF] Executed endpoint 'CleanMvcApp.Controllers.AccountController.Login (CleanMvcApp)'
+2026-02-17 21:55:38.255 -08:00 [INF] Request finished HTTP/1.1 POST http://localhost:5264/ - 302 0 null 951.8158ms
+2026-02-17 21:55:38.334 -08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5264/Home/Index - null null
+2026-02-17 21:55:38.418 -08:00 [INF] Executing endpoint 'CleanMvcApp.Controllers.HomeController.Index (CleanMvcApp)'
+2026-02-17 21:55:38.427 -08:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller CleanMvcApp.Controllers.HomeController (CleanMvcApp).
+2026-02-17 21:55:38.441 -08:00 [INF] Executing ViewResult, running view Index.
+2026-02-17 21:55:38.511 -08:00 [INF] Executed ViewResult - view Index executed in 77.8298ms.
+2026-02-17 21:55:38.755 -08:00 [INF] Executed action CleanMvcApp.Controllers.HomeController.Index (CleanMvcApp) in 322.3691ms
+2026-02-17 21:55:38.763 -08:00 [INF] Executed endpoint 'CleanMvcApp.Controllers.HomeController.Index (CleanMvcApp)'
+2026-02-17 21:55:38.772 -08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5264/Home/Index - 200 null text/html; charset=utf-8 437.9512ms
+2026-02-17 21:55:47.666 -08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5264/Dashboard/Index - null null
+2026-02-17 21:55:47.673 -08:00 [INF] Executing endpoint 'CleanMvcApp.Controllers.DashboardController.Index (CleanMvcApp)'
+2026-02-17 21:55:47.677 -08:00 [INF] Route matched with {action = "Index", controller = "Dashboard"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller CleanMvcApp.Controllers.DashboardController (CleanMvcApp).
+2026-02-17 21:55:47.682 -08:00 [INF] Executing ViewResult, running view Index.
+2026-02-17 21:55:47.759 -08:00 [INF] Executed ViewResult - view Index executed in 77.776ms.
+2026-02-17 21:55:47.916 -08:00 [INF] Executed action CleanMvcApp.Controllers.DashboardController.Index (CleanMvcApp) in 235.7545ms
+2026-02-17 21:55:47.918 -08:00 [INF] Executed endpoint 'CleanMvcApp.Controllers.DashboardController.Index (CleanMvcApp)'
+2026-02-17 21:55:47.921 -08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5264/Dashboard/Index - 200 null text/html; charset=utf-8 254.5647ms
+2026-02-17 21:55:50.702 -08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5264/Home/Index - null null
+2026-02-17 21:55:50.710 -08:00 [INF] Executing endpoint 'CleanMvcApp.Controllers.HomeController.Index (CleanMvcApp)'
+2026-02-17 21:55:50.743 -08:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller CleanMvcApp.Controllers.HomeController (CleanMvcApp).
+2026-02-17 21:55:50.804 -08:00 [INF] Executing ViewResult, running view Index.
+2026-02-17 21:55:50.809 -08:00 [INF] Executed ViewResult - view Index executed in 5.1388ms.
+2026-02-17 21:55:50.959 -08:00 [INF] Executed action CleanMvcApp.Controllers.HomeController.Index (CleanMvcApp) in 155.4679ms
+2026-02-17 21:55:50.962 -08:00 [INF] Executed endpoint 'CleanMvcApp.Controllers.HomeController.Index (CleanMvcApp)'
+2026-02-17 21:55:50.965 -08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5264/Home/Index - 200 null text/html; charset=utf-8 262.9835ms
+2026-02-17 21:55:52.920 -08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5264/Dashboard/Index - null null
+2026-02-17 21:55:53.014 -08:00 [INF] Executing endpoint 'CleanMvcApp.Controllers.DashboardController.Index (CleanMvcApp)'
+2026-02-17 21:55:53.033 -08:00 [INF] Route matched with {action = "Index", controller = "Dashboard"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller CleanMvcApp.Controllers.DashboardController (CleanMvcApp).
+2026-02-17 21:55:53.042 -08:00 [INF] Executing ViewResult, running view Index.
+2026-02-17 21:55:53.117 -08:00 [INF] Executed ViewResult - view Index executed in 74.9073ms.
+2026-02-17 21:55:53.306 -08:00 [INF] Executed action CleanMvcApp.Controllers.DashboardController.Index (CleanMvcApp) in 264.0003ms
+2026-02-17 21:55:53.308 -08:00 [INF] Executed endpoint 'CleanMvcApp.Controllers.DashboardController.Index (CleanMvcApp)'
+2026-02-17 21:55:53.317 -08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5264/Dashboard/Index - 200 null text/html; charset=utf-8 397.9082ms
+2026-02-17 21:55:54.954 -08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5264/Home/Index - null null
+2026-02-17 21:55:54.959 -08:00 [INF] Executing endpoint 'CleanMvcApp.Controllers.HomeController.Index (CleanMvcApp)'
+2026-02-17 21:55:54.962 -08:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller CleanMvcApp.Controllers.HomeController (CleanMvcApp).
+2026-02-17 21:55:54.970 -08:00 [INF] Executing ViewResult, running view Index.
+2026-02-17 21:55:54.976 -08:00 [INF] Executed ViewResult - view Index executed in 3.5485ms.
+2026-02-17 21:55:55.120 -08:00 [INF] Executed action CleanMvcApp.Controllers.HomeController.Index (CleanMvcApp) in 150.9444ms
+2026-02-17 21:55:55.126 -08:00 [INF] Executed endpoint 'CleanMvcApp.Controllers.HomeController.Index (CleanMvcApp)'
+2026-02-17 21:55:55.128 -08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5264/Home/Index - 200 null text/html; charset=utf-8 174.4206ms
+2026-02-17 21:56:03.672 -08:00 [INF] Request starting HTTP/1.1 POST http://localhost:5264/Account/Logout - application/x-www-form-urlencoded 225
+2026-02-17 21:56:03.680 -08:00 [INF] Executing endpoint 'CleanMvcApp.Controllers.AccountController.Logout (CleanMvcApp)'
+2026-02-17 21:56:03.771 -08:00 [INF] Route matched with {action = "Logout", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Logout() on controller CleanMvcApp.Controllers.AccountController (CleanMvcApp).
+2026-02-17 21:56:03.782 -08:00 [INF] AuthenticationScheme: Identity.Application signed out.
+2026-02-17 21:56:03.787 -08:00 [INF] AuthenticationScheme: Identity.External signed out.
+2026-02-17 21:56:03.790 -08:00 [INF] AuthenticationScheme: Identity.TwoFactorUserId signed out.
+2026-02-17 21:56:03.792 -08:00 [INF] User logged out successfully
+2026-02-17 21:56:03.857 -08:00 [INF] User logged out
+2026-02-17 21:56:03.860 -08:00 [INF] Executing RedirectResult, redirecting to /Home/Index.
+2026-02-17 21:56:03.863 -08:00 [INF] Executed action CleanMvcApp.Controllers.AccountController.Logout (CleanMvcApp) in 87.355ms
+2026-02-17 21:56:03.865 -08:00 [INF] Executed endpoint 'CleanMvcApp.Controllers.AccountController.Logout (CleanMvcApp)'
+2026-02-17 21:56:03.867 -08:00 [INF] Request finished HTTP/1.1 POST http://localhost:5264/Account/Logout - 302 0 null 194.6976ms
+2026-02-17 21:56:03.878 -08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5264/Home/Index - null null
+2026-02-17 21:56:03.884 -08:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2026-02-17 21:56:03.901 -08:00 [INF] AuthenticationScheme: Identity.Application was challenged.
+2026-02-17 21:56:03.959 -08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5264/Home/Index - 302 0 null 80.189ms
+2026-02-17 21:56:03.966 -08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5264/Account/Login?ReturnUrl=%2FHome%2FIndex - null null
+2026-02-17 21:56:03.975 -08:00 [INF] Executing endpoint 'CleanMvcApp.Controllers.AccountController.Login (CleanMvcApp)'
+2026-02-17 21:56:03.977 -08:00 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(System.String) on controller CleanMvcApp.Controllers.AccountController (CleanMvcApp).
+2026-02-17 21:56:04.055 -08:00 [INF] Executing ViewResult, running view Login.
+2026-02-17 21:56:04.060 -08:00 [INF] Executed ViewResult - view Login executed in 4.7922ms.
+2026-02-17 21:56:04.067 -08:00 [INF] Executed action CleanMvcApp.Controllers.AccountController.Login (CleanMvcApp) in 87.379ms
+2026-02-17 21:56:04.081 -08:00 [INF] Executed endpoint 'CleanMvcApp.Controllers.AccountController.Login (CleanMvcApp)'
+2026-02-17 21:56:04.083 -08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5264/Account/Login?ReturnUrl=%2FHome%2FIndex - 200 null text/html; charset=utf-8 117.3184ms
+2026-02-17 21:57:13.763 -08:00 [INF] Request starting HTTP/1.1 POST http://localhost:5264/ - application/x-www-form-urlencoded 251
+2026-02-17 21:57:13.768 -08:00 [INF] Executing endpoint 'CleanMvcApp.Controllers.AccountController.Login (CleanMvcApp)'
+2026-02-17 21:57:13.770 -08:00 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(CleanMvcApp.Models.ViewModels.LoginViewModel, System.String) on controller CleanMvcApp.Controllers.AccountController (CleanMvcApp).
+2026-02-17 21:57:13.862 -08:00 [INF] Executed DbCommand (82ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[Address], [a].[ConcurrencyStamp], [a].[CreatedAt], [a].[Email], [a].[EmailConfirmed], [a].[FullName], [a].[IsActive], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2026-02-17 21:57:14.141 -08:00 [INF] Executed DbCommand (3ms) [Parameters=[@__user_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[ClaimType], [a].[ClaimValue], [a].[UserId]
+FROM [AspNetUserClaims] AS [a]
+WHERE [a].[UserId] = @__user_Id_0
+2026-02-17 21:57:14.152 -08:00 [INF] Executed DbCommand (3ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2026-02-17 21:57:14.162 -08:00 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2026-02-17 21:57:14.170 -08:00 [INF] Executed DbCommand (2ms) [Parameters=[@__role_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[ClaimType], [a].[ClaimValue]
+FROM [AspNetRoleClaims] AS [a]
+WHERE [a].[RoleId] = @__role_Id_0
+2026-02-17 21:57:14.176 -08:00 [INF] AuthenticationScheme: Identity.Application signed in.
+2026-02-17 21:57:14.178 -08:00 [INF] User shetesagar88@gmail.com logged in successfully
+2026-02-17 21:57:14.179 -08:00 [INF] User shetesagar88@gmail.com logged in successfully
+2026-02-17 21:57:14.182 -08:00 [INF] Executing RedirectResult, redirecting to /Home/Index.
+2026-02-17 21:57:14.187 -08:00 [INF] Executed action CleanMvcApp.Controllers.AccountController.Login (CleanMvcApp) in 412.068ms
+2026-02-17 21:57:14.236 -08:00 [INF] Executed endpoint 'CleanMvcApp.Controllers.AccountController.Login (CleanMvcApp)'
+2026-02-17 21:57:14.239 -08:00 [INF] Request finished HTTP/1.1 POST http://localhost:5264/ - 302 0 null 476.0519ms
+2026-02-17 21:57:14.259 -08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5264/Home/Index - null null
+2026-02-17 21:57:14.323 -08:00 [INF] Executing endpoint 'CleanMvcApp.Controllers.HomeController.Index (CleanMvcApp)'
+2026-02-17 21:57:14.325 -08:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller CleanMvcApp.Controllers.HomeController (CleanMvcApp).
+2026-02-17 21:57:14.330 -08:00 [INF] Executing ViewResult, running view Index.
+2026-02-17 21:57:14.333 -08:00 [INF] Executed ViewResult - view Index executed in 3.8201ms.
+2026-02-17 21:57:14.335 -08:00 [INF] Executed action CleanMvcApp.Controllers.HomeController.Index (CleanMvcApp) in 6.0506ms
+2026-02-17 21:57:14.338 -08:00 [INF] Executed endpoint 'CleanMvcApp.Controllers.HomeController.Index (CleanMvcApp)'
+2026-02-17 21:57:14.448 -08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5264/Home/Index - 200 null text/html; charset=utf-8 188.619ms
+2026-02-17 21:57:22.194 -08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5264/Home/Index - null null
+2026-02-17 21:57:22.205 -08:00 [INF] Executing endpoint 'CleanMvcApp.Controllers.HomeController.Index (CleanMvcApp)'
+2026-02-17 21:57:22.207 -08:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller CleanMvcApp.Controllers.HomeController (CleanMvcApp).
+2026-02-17 21:57:22.270 -08:00 [INF] Executing ViewResult, running view Index.
+2026-02-17 21:57:22.274 -08:00 [INF] Executed ViewResult - view Index executed in 3.684ms.
+2026-02-17 21:57:22.415 -08:00 [INF] Executed action CleanMvcApp.Controllers.HomeController.Index (CleanMvcApp) in 145.2549ms
+2026-02-17 21:57:22.421 -08:00 [INF] Executed endpoint 'CleanMvcApp.Controllers.HomeController.Index (CleanMvcApp)'
+2026-02-17 21:57:22.425 -08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5264/Home/Index - 200 null text/html; charset=utf-8 230.8825ms
+2026-02-17 21:57:24.618 -08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5264/Dashboard/Index - null null
+2026-02-17 21:57:24.625 -08:00 [INF] Executing endpoint 'CleanMvcApp.Controllers.DashboardController.Index (CleanMvcApp)'
+2026-02-17 21:57:24.632 -08:00 [INF] Route matched with {action = "Index", controller = "Dashboard"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller CleanMvcApp.Controllers.DashboardController (CleanMvcApp).
+2026-02-17 21:57:24.634 -08:00 [INF] Executing ViewResult, running view Index.
+2026-02-17 21:57:24.637 -08:00 [INF] Executed ViewResult - view Index executed in 3.2577ms.
+2026-02-17 21:57:24.769 -08:00 [INF] Executed action CleanMvcApp.Controllers.DashboardController.Index (CleanMvcApp) in 135.4413ms
+2026-02-17 21:57:24.775 -08:00 [INF] Executed endpoint 'CleanMvcApp.Controllers.DashboardController.Index (CleanMvcApp)'
+2026-02-17 21:57:24.785 -08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5264/Dashboard/Index - 200 null text/html; charset=utf-8 166.7738ms
+2026-02-17 21:57:29.101 -08:00 [INF] Request starting HTTP/1.1 POST http://localhost:5264/Account/Logout - application/x-www-form-urlencoded 225
+2026-02-17 21:57:29.110 -08:00 [INF] Executing endpoint 'CleanMvcApp.Controllers.AccountController.Logout (CleanMvcApp)'
+2026-02-17 21:57:29.199 -08:00 [INF] Route matched with {action = "Logout", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Logout() on controller CleanMvcApp.Controllers.AccountController (CleanMvcApp).
+2026-02-17 21:57:29.210 -08:00 [INF] AuthenticationScheme: Identity.Application signed out.
+2026-02-17 21:57:29.213 -08:00 [INF] AuthenticationScheme: Identity.External signed out.
+2026-02-17 21:57:29.221 -08:00 [INF] AuthenticationScheme: Identity.TwoFactorUserId signed out.
+2026-02-17 21:57:29.223 -08:00 [INF] User logged out successfully
+2026-02-17 21:57:29.225 -08:00 [INF] User logged out
+2026-02-17 21:57:29.292 -08:00 [INF] Executing RedirectResult, redirecting to /Home/Index.
+2026-02-17 21:57:29.294 -08:00 [INF] Executed action CleanMvcApp.Controllers.AccountController.Logout (CleanMvcApp) in 85.0836ms
+2026-02-17 21:57:29.297 -08:00 [INF] Executed endpoint 'CleanMvcApp.Controllers.AccountController.Logout (CleanMvcApp)'
+2026-02-17 21:57:29.301 -08:00 [INF] Request finished HTTP/1.1 POST http://localhost:5264/Account/Logout - 302 0 null 200.2813ms
+2026-02-17 21:57:29.308 -08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5264/Home/Index - null null
+2026-02-17 21:57:29.314 -08:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2026-02-17 21:57:29.316 -08:00 [INF] AuthenticationScheme: Identity.Application was challenged.
+2026-02-17 21:57:29.318 -08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5264/Home/Index - 302 0 null 9.9746ms
+2026-02-17 21:57:29.327 -08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5264/Account/Login?ReturnUrl=%2FHome%2FIndex - null null
+2026-02-17 21:57:29.397 -08:00 [INF] Executing endpoint 'CleanMvcApp.Controllers.AccountController.Login (CleanMvcApp)'
+2026-02-17 21:57:29.398 -08:00 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(System.String) on controller CleanMvcApp.Controllers.AccountController (CleanMvcApp).
+2026-02-17 21:57:29.403 -08:00 [INF] Executing ViewResult, running view Login.
+2026-02-17 21:57:29.412 -08:00 [INF] Executed ViewResult - view Login executed in 9.2609ms.
+2026-02-17 21:57:29.583 -08:00 [INF] Executed action CleanMvcApp.Controllers.AccountController.Login (CleanMvcApp) in 181.1194ms
+2026-02-17 21:57:29.584 -08:00 [INF] Executed endpoint 'CleanMvcApp.Controllers.AccountController.Login (CleanMvcApp)'
+2026-02-17 21:57:29.586 -08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5264/Account/Login?ReturnUrl=%2FHome%2FIndex - 200 null text/html; charset=utf-8 258.7706ms
+2026-02-17 21:58:31.437 -08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5264/Home/Index - null null
+2026-02-17 21:58:31.444 -08:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2026-02-17 21:58:31.446 -08:00 [INF] AuthenticationScheme: Identity.Application was challenged.
+2026-02-17 21:58:31.447 -08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5264/Home/Index - 302 0 null 10.348ms
+2026-02-17 21:58:31.461 -08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5264/Account/Login?ReturnUrl=%2FHome%2FIndex - null null
+2026-02-17 21:58:31.466 -08:00 [INF] Executing endpoint 'CleanMvcApp.Controllers.AccountController.Login (CleanMvcApp)'
+2026-02-17 21:58:31.469 -08:00 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(System.String) on controller CleanMvcApp.Controllers.AccountController (CleanMvcApp).
+2026-02-17 21:58:31.473 -08:00 [INF] Executing ViewResult, running view Login.
+2026-02-17 21:58:31.477 -08:00 [INF] Executed ViewResult - view Login executed in 3.6ms.
+2026-02-17 21:58:31.483 -08:00 [INF] Executed action CleanMvcApp.Controllers.AccountController.Login (CleanMvcApp) in 11.4415ms
+2026-02-17 21:58:31.541 -08:00 [INF] Executed endpoint 'CleanMvcApp.Controllers.AccountController.Login (CleanMvcApp)'
+2026-02-17 21:58:31.567 -08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5264/Account/Login?ReturnUrl=%2FHome%2FIndex - 200 null text/html; charset=utf-8 106.5847ms
+2026-02-17 21:58:40.061 -08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5264/Homw/Privacy - null null
+2026-02-17 21:58:40.067 -08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5264/Homw/Privacy - 404 0 null 6.3549ms
+2026-02-17 21:58:40.076 -08:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5264/Homw/Privacy, Response status code: 404
+2026-02-17 21:58:48.124 -08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5264/Home/Privacy - null null
+2026-02-17 21:58:48.130 -08:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2026-02-17 21:58:48.132 -08:00 [INF] AuthenticationScheme: Identity.Application was challenged.
+2026-02-17 21:58:48.133 -08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5264/Home/Privacy - 302 0 null 8.9914ms
+2026-02-17 21:58:48.147 -08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5264/Account/Login?ReturnUrl=%2FHome%2FPrivacy - null null
+2026-02-17 21:58:48.152 -08:00 [INF] Executing endpoint 'CleanMvcApp.Controllers.AccountController.Login (CleanMvcApp)'
+2026-02-17 21:58:48.155 -08:00 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(System.String) on controller CleanMvcApp.Controllers.AccountController (CleanMvcApp).
+2026-02-17 21:58:48.161 -08:00 [INF] Executing ViewResult, running view Login.
+2026-02-17 21:58:48.165 -08:00 [INF] Executed ViewResult - view Login executed in 3.2693ms.
+2026-02-17 21:58:48.174 -08:00 [INF] Executed action CleanMvcApp.Controllers.AccountController.Login (CleanMvcApp) in 14.3976ms
+2026-02-17 21:58:48.199 -08:00 [INF] Executed endpoint 'CleanMvcApp.Controllers.AccountController.Login (CleanMvcApp)'
+2026-02-17 21:58:48.201 -08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5264/Account/Login?ReturnUrl=%2FHome%2FPrivacy - 200 null text/html; charset=utf-8 54.3128ms
+2026-02-17 21:59:58.424 -08:00 [INF] Application is shutting down...

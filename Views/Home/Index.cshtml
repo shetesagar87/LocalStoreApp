@@ -1,8 +1,39 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Home";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div class="text-center mt-5">
+    <h1 class="display-4">Welcome to Local Store Platform</h1>
+    <p class="lead">Your one-stop solution for local store delivery and management</p>
+    
+    <div class="row mt-5">
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">🏪 Browse Stores</h5>
+                    <p class="card-text">Discover local stores near you and shop from your favorite merchants</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">🛒 Easy Shopping</h5>
+                    <p class="card-text">Add items to cart, checkout securely, and track your orders</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">🚚 Fast Delivery</h5>
+                    <p class="card-text">Get your orders delivered quickly from local stores in your area</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="mt-5">
+        <a asp-controller="Dashboard" asp-action="Index" class="btn btn-primary btn-lg">Go to Dashboard</a>
+    </div>
 </div>
