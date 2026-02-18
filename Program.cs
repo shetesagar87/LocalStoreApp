@@ -78,6 +78,7 @@ builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 
 // Register application services
 builder.Services.AddScoped<IAuthenticationService, AuthenticationService>();
+builder.Services.AddScoped<IStoreService, StoreService>();
 builder.Services.AddScoped<IExampleService, ExampleService>();
 builder.Services.AddScoped<IAuthService, AuthService>();
 

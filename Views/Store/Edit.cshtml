@@ -1,0 +1,88 @@
+@model CleanMvcApp.Models.ViewModels.CreateStoreViewModel
+@{
+    ViewData["Title"] = "Edit Store";
+    var storeId = ViewBag.StoreId;
+    var currentImageUrl = ViewBag.CurrentImageUrl;
+}
+
+<div class="container mt-4">
+    <h2>Edit Store</h2>
+    <hr />
+
+    <form asp-action="Edit" asp-route-id="@storeId" method="post" enctype="multipart/form-data">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+        <div class="row">
+            <div class="col-md-6">
+                <div class="mb-3">
+                    <label asp-for="StoreName" class="form-label"></label>
+                    <input asp-for="StoreName" class="form-control" />
+                    <span asp-validation-for="StoreName" class="text-danger"></span>
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="Address" class="form-label"></label>
+                    <textarea asp-for="Address" class="form-control" rows="3"></textarea>
+                    <span asp-validation-for="Address" class="text-danger"></span>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <label asp-for="Latitude" class="form-label"></label>
+                        <input asp-for="Latitude" class="form-control" type="number" step="any" />
+                        <span asp-validation-for="Latitude" class="text-danger"></span>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label asp-for="Longitude" class="form-label"></label>
+                        <input asp-for="Longitude" class="form-control" type="number" step="any" />
+                        <span asp-validation-for="Longitude" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="LicenseNumber" class="form-label"></label>
+                    <input asp-for="LicenseNumber" class="form-control" />
+                    <span asp-validation-for="LicenseNumber" class="text-danger"></span>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="mb-3">
+                    <label asp-for="DeliveryRadius" class="form-label"></label>
+                    <input asp-for="DeliveryRadius" class="form-control" type="number" step="0.1" />
+                    <span asp-validation-for="DeliveryRadius" class="text-danger"></span>
+                    <small class="form-text text-muted">Delivery radius in kilometers</small>
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="DeliveryCharge" class="form-label"></label>
+                    <input asp-for="DeliveryCharge" class="form-control" type="number" step="0.01" />
+                    <span asp-validation-for="DeliveryCharge" class="text-danger"></span>
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="StoreImage" class="form-label"></label>
+                    @if (!string.IsNullOrEmpty(currentImageUrl))
+                    {
+                        <div class="mb-2">
+                            <img src="@currentImageUrl" alt="Current store image" class="img-thumbnail" style="max-width: 200px;" />
+                            <p class="text-muted small">Current image</p>
+                        </div>
+                    }
+                    <input asp-for="StoreImage" class="form-control" type="file" accept="image/*" />
+                    <span asp-validation-for="StoreImage" class="text-danger"></span>
+                    <small class="form-text text-muted">Leave empty to keep current image</small>
+                </div>
+            </div>
+        </div>
+
+        <div class="mt-3">
+            <button type="submit" class="btn btn-primary">Update Store</button>
+            <a asp-action="Index" class="btn btn-secondary">Cancel</a>
+        </div>
+    </form>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

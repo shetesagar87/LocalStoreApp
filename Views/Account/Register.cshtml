@@ -112,9 +112,14 @@
                     <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
                 </div>
 
-                <div class="mb-3 form-check">
-                    <input asp-for="IsStoreOwner" class="form-check-input" />
-                    <label asp-for="IsStoreOwner" class="form-check-label">Register as Store Owner</label>
+                <div class="mb-4">
+                    <div class="form-check">
+                        <input asp-for="IsStoreOwner" class="form-check-input" type="checkbox" />
+                        <label asp-for="IsStoreOwner" class="form-check-label">
+                            Register as Store Owner
+                        </label>
+                    </div>
+                    <small class="text-muted">Check this if you want to register and manage stores on the platform</small>
                 </div>
 
                 <button type="submit" class="btn btn-primary btn-register">Register</button>

@@ -1,0 +1,82 @@
+@model CleanMvcApp.Models.ViewModels.CreateStoreViewModel
+@{
+    ViewData["Title"] = "Register Store";
+}
+
+<div class="container mt-4">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-header">
+                    <h3>Register New Store</h3>
+                </div>
+                <div class="card-body">
+                    <form asp-action="Create" method="post" enctype="multipart/form-data">
+                        <div asp-validation-summary="ModelOnly" class="text-danger mb-3"></div>
+
+                        <div class="mb-3">
+                            <label asp-for="StoreName" class="form-label"></label>
+                            <input asp-for="StoreName" class="form-control" />
+                            <span asp-validation-for="StoreName" class="text-danger"></span>
+                        </div>
+
+                        <div class="mb-3">
+                            <label asp-for="Address" class="form-label"></label>
+                            <textarea asp-for="Address" class="form-control" rows="2"></textarea>
+                            <span asp-validation-for="Address" class="text-danger"></span>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label asp-for="Latitude" class="form-label"></label>
+                                <input asp-for="Latitude" class="form-control" step="0.000001" />
+                                <span asp-validation-for="Latitude" class="text-danger"></span>
+                                <small class="form-text text-muted">Example: 37.7749</small>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label asp-for="Longitude" class="form-label"></label>
+                                <input asp-for="Longitude" class="form-control" step="0.000001" />
+                                <span asp-validation-for="Longitude" class="text-danger"></span>
+                                <small class="form-text text-muted">Example: -122.4194</small>
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label asp-for="LicenseNumber" class="form-label"></label>
+                            <input asp-for="LicenseNumber" class="form-control" />
+                            <span asp-validation-for="LicenseNumber" class="text-danger"></span>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label asp-for="DeliveryRadius" class="form-label"></label>
+                                <input asp-for="DeliveryRadius" class="form-control" step="0.1" />
+                                <span asp-validation-for="DeliveryRadius" class="text-danger"></span>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label asp-for="DeliveryCharge" class="form-label"></label>
+                                <input asp-for="DeliveryCharge" class="form-control" step="0.01" />
+                                <span asp-validation-for="DeliveryCharge" class="text-danger"></span>
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label asp-for="StoreImage" class="form-label"></label>
+                            <input asp-for="StoreImage" class="form-control" type="file" accept="image/*" />
+                            <span asp-validation-for="StoreImage" class="text-danger"></span>
+                        </div>
+
+                        <div class="d-grid gap-2">
+                            <button type="submit" class="btn btn-primary">Register Store</button>
+                            <a asp-action="Index" class="btn btn-secondary">Cancel</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

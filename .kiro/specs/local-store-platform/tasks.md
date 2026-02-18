@@ -56,7 +56,7 @@ The implementation uses ASP.NET Core MVC 6.0+ with Entity Framework Core, ASP.NE
     - Test transaction rollback scenarios
     - _Requirements: 3.1, 4.1, 8.4_
 
-- [-] 4. Authentication and authorization
+- [x] 4. Authentication and authorization
   - [x] 4.1 Configure ASP.NET Core Identity
     - Configure Identity services in Program.cs
     - Set password requirements and lockout settings
@@ -88,7 +88,7 @@ The implementation uses ASP.NET Core MVC 6.0+ with Entity Framework Core, ASP.NE
     - **Property 4: Duplicate Email Registration Rejected**
     - **Validates: Requirements 1.7**
 
-  - [ ] 4.7 Create authentication controllers and views
+  - [x] 4.7 Create authentication controllers and views
     - Create AccountController with Register, Login, Logout, VerifyEmail actions
     - Create Razor views for registration and login forms
     - Implement client-side validation with jQuery
@@ -101,8 +101,8 @@ The implementation uses ASP.NET Core MVC 6.0+ with Entity Framework Core, ASP.NE
 - [ ] 5. Checkpoint - Ensure authentication tests pass
   - Ensure all tests pass, ask the user if questions arise.
 
-- [ ] 6. Store management
-  - [ ] 6.1 Implement store service
+- [x] 6. Store management
+  - [x] 6.1 Implement store service
     - Create IStoreService interface
     - Implement CreateStoreAsync setting status to Pending
     - Implement UpdateStoreAsync
@@ -123,7 +123,7 @@ The implementation uses ASP.NET Core MVC 6.0+ with Entity Framework Core, ASP.NE
     - **Property 8: Disabled Stores Hidden From Search**
     - **Validates: Requirements 3.8**
 
-  - [ ] 6.5 Create store controllers and views
+  - [x] 6.5 Create store controllers and views
     - Create StoreController with Create, Edit, Details, ToggleStatus actions (StoreOwner role)
     - Create AdminStoreController with ApproveStore, RejectStore actions (Admin role)
     - Create Razor views for store registration and management

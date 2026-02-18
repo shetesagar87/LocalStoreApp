@@ -1,0 +1,72 @@
+@model IEnumerable<CleanMvcApp.Models.Entities.Store>
+@{
+    ViewData["Title"] = "All Stores";
+}
+
+<div class="container mt-4">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h2>All Stores</h2>
+        <a asp-action="Pending" class="btn btn-warning">
+            <i class="bi bi-clock"></i> Pending Approvals
+        </a>
+    </div>
+
+    @if (TempData["SuccessMessage"] != null)
+    {
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+            @TempData["SuccessMessage"]
+            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+        </div>
+    }
+
+    @if (!Model.Any())
+    {
+        <div class="alert alert-info">
+            <p>No stores registered yet.</p>
+        </div>
+    }
+    else
+    {
+        <div class="table-responsive">
+            <table class="table table-striped table-hover">
+                <thead>
+                    <tr>
+                        <th>Store Name</th>
+                        <th>Owner</th>
+                        <th>Address</th>
+                        <th>Status</th>
+                        <th>Active</th>
+                        <th>Rating</th>
+                        <th>Created</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var store in Model)
+                    {
+                        <tr>
+                            <td>@store.StoreName</td>
+                            <td>@store.Owner?.Email</td>
+                            <td>@store.Address</td>
+                            <td>
+                                <span class="badge @(store.Status == CleanMvcApp.Models.Enums.StoreStatus.Approved ? "bg-success" : store.Status == CleanMvcApp.Models.Enums.StoreStatus.Pending ? "bg-warning" : "bg-danger")">
+                                    @store.Status
+                                </span>
+                            </td>
+                            <td>
+                                <span class="badge @(store.IsActive ? "bg-success" : "bg-secondary")">
+                                    @(store.IsActive ? "Active" : "Inactive")
+                                </span>
+                            </td>
+                            <td>@store.AverageRating.ToString("F1") (@store.TotalReviews)</td>
+                            <td>@store.CreatedAt.ToString("yyyy-MM-dd")</td>
+                            <td>
+                                <a asp-action="Details" asp-route-id="@store.StoreId" class="btn btn-sm btn-primary">Details</a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    }
+</div>

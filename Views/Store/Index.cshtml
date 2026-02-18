@@ -1,0 +1,77 @@
+@model IEnumerable<CleanMvcApp.Models.Entities.Store>
+@{
+    ViewData["Title"] = "My Stores";
+}
+
+<div class="container mt-4">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h2>My Stores</h2>
+        <a asp-action="Create" class="btn btn-primary">
+            <i class="bi bi-plus-circle"></i> Register New Store
+        </a>
+    </div>
+
+    @if (TempData["SuccessMessage"] != null)
+    {
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+            @TempData["SuccessMessage"]
+            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+        </div>
+    }
+
+    @if (TempData["ErrorMessage"] != null)
+    {
+        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+            @TempData["ErrorMessage"]
+            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+        </div>
+    }
+
+    @if (!Model.Any())
+    {
+        <div class="alert alert-info">
+            <h5>No stores registered yet</h5>
+            <p>Click the "Register New Store" button to add your first store.</p>
+        </div>
+    }
+    else
+    {
+        <div class="row">
+            @foreach (var store in Model)
+            {
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="card h-100">
+                        @if (!string.IsNullOrEmpty(store.StoreImageUrl))
+                        {
+                            <img src="@store.StoreImageUrl" class="card-img-top" alt="@store.StoreName" style="height: 200px; object-fit: cover;">
+                        }
+                        else
+                        {
+                            <div class="card-img-top bg-secondary d-flex align-items-center justify-content-center" style="height: 200px;">
+                                <span class="text-white">No Image</span>
+                            </div>
+                        }
+                        <div class="card-body">
+                            <h5 class="card-title">@store.StoreName</h5>
+                            <p class="card-text">
+                                <small class="text-muted">@store.Address</small>
+                            </p>
+                            <div class="mb-2">
+                                <span class="badge @(store.Status == CleanMvcApp.Models.Enums.StoreStatus.Approved ? "bg-success" : store.Status == CleanMvcApp.Models.Enums.StoreStatus.Pending ? "bg-warning" : "bg-danger")">
+                                    @store.Status
+                                </span>
+                                <span class="badge @(store.IsActive ? "bg-success" : "bg-secondary")">
+                                    @(store.IsActive ? "Active" : "Inactive")
+                                </span>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <a asp-action="Details" asp-route-id="@store.StoreId" class="btn btn-sm btn-primary">View Details</a>
+                            <a asp-action="Edit" asp-route-id="@store.StoreId" class="btn btn-sm btn-secondary">Edit</a>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    }
+</div>
