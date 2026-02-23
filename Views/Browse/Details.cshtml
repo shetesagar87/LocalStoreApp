@@ -47,7 +47,10 @@
                             <i class="bi bi-star"></i>
                         }
                     </span>
-                    <span class="text-muted">(@Model.TotalReviews reviews)</span>
+                    <span class="text-muted">(@Model.AverageRating.ToString("F1"))</span>
+                    <a asp-controller="Review" asp-action="ProductReviews" asp-route-id="@Model.ProductId" class="ms-2">
+                        View all reviews
+                    </a>
                 }
                 else
                 {

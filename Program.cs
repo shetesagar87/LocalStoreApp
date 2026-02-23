@@ -83,6 +83,10 @@ builder.Services.AddScoped<IGeoLocationService, GeoLocationService>();
 builder.Services.AddScoped<ICategoryService, CategoryService>();
 builder.Services.AddScoped<IProductService, ProductService>();
 builder.Services.AddScoped<ICartService, CartService>();
+builder.Services.AddScoped<IOrderService, OrderService>();
+builder.Services.AddScoped<IReviewService, ReviewService>();
+builder.Services.AddScoped<IAdminDashboardService, AdminDashboardService>();
+builder.Services.AddScoped<IStoreDashboardService, StoreDashboardService>();
 builder.Services.AddScoped<IExampleService, ExampleService>();
 builder.Services.AddScoped<IAuthService, AuthService>();
 

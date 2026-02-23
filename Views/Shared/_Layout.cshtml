@@ -25,13 +25,36 @@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Browse" asp-action="Search">Browse Products</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Dashboard" asp-action="Index">Dashboard</a>
-                        </li>
+                        @if (User.IsInRole("Admin"))
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-controller="AdminDashboard" asp-action="Index">Dashboard</a>
+                            </li>
+                        }
                         @if (User.IsInRole("StoreOwner"))
                         {
                             <li class="nav-item">
-                                <a class="nav-link text-dark" asp-controller="Store" asp-action="Index">My Stores</a>
+                                <a class="nav-link text-dark" asp-controller="StoreDashboard" asp-action="Index">Dashboard</a>
+                            </li>
+                        }
+                        @if (User.IsInRole("Customer"))
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-controller="Order" asp-action="MyOrders">My Orders</a>
+                            </li>
+                        }
+                        @if (User.IsInRole("StoreOwner"))
+                        {
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle text-dark" href="#" id="storeDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Store Management
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="storeDropdown">
+                                    <li><a class="dropdown-item" asp-controller="Store" asp-action="Index">My Stores</a></li>
+                                    <li><a class="dropdown-item" asp-controller="Product" asp-action="Index">Products</a></li>
+                                    <li><hr class="dropdown-divider"></li>
+                                    <li><a class="dropdown-item" asp-controller="StoreOrder" asp-action="Index">Orders</a></li>
+                                </ul>
                             </li>
                         }
                         @if (User.IsInRole("Admin"))
@@ -45,8 +68,7 @@
                                     <li><a class="dropdown-item" asp-controller="AdminStore" asp-action="Index">All Stores</a></li>
                                     <li><a class="dropdown-item" asp-controller="AdminCategory" asp-action="Index">Categories</a></li>
                                     <li><hr class="dropdown-divider"></li>
-                                    <li><a class="dropdown-item" asp-controller="Admin" asp-action="ManageUsers">Manage Users</a></li>
-                                    <li><a class="dropdown-item" asp-controller="Admin" asp-action="Settings">Settings</a></li>
+                                    <li><a class="dropdown-item" asp-controller="AdminUser" asp-action="ListUsers">Manage Users</a></li>
                                 </ul>
                             </li>
                         }

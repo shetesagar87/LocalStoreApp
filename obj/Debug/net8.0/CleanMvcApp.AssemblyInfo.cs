@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CleanMvcApp")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b0f8ebf3c1a1571e4bbcd922326e9c17c1441d4b")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+024841e25c022887a692fb02b948ed1463167dad")]
 [assembly: System.Reflection.AssemblyProductAttribute("CleanMvcApp")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CleanMvcApp")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

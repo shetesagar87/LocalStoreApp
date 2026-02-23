@@ -1,0 +1,160 @@
+@model CleanMvcApp.Models.Entities.Order
+
+@{
+    ViewData["Title"] = "Order Confirmation";
+}
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <!-- Success Message -->
+            <div class="text-center mb-4">
+                <div class="mb-3">
+                    <i class="bi bi-check-circle-fill text-success" style="font-size: 5rem;"></i>
+                </div>
+                <h2 class="text-success">Order Placed Successfully!</h2>
+                <p class="lead">Thank you for your order. Your order has been received and is being processed.</p>
+            </div>
+
+            <!-- Order Details Card -->
+            <div class="card shadow-sm mb-4">
+                <div class="card-header bg-success text-white">
+                    <h5 class="mb-0">
+                        <i class="bi bi-receipt"></i> Order Details
+                    </h5>
+                </div>
+                <div class="card-body">
+                    <div class="row mb-3">
+                        <div class="col-md-6">
+                            <strong>Order Number:</strong>
+                            <p class="text-primary">@Model.OrderNumber</p>
+                        </div>
+                        <div class="col-md-6">
+                            <strong>Order Date:</strong>
+                            <p>@Model.CreatedAt.ToString("MMMM dd, yyyy hh:mm tt")</p>
+                        </div>
+                    </div>
+
+                    <div class="row mb-3">
+                        <div class="col-md-6">
+                            <strong>Status:</strong>
+                            <p>
+                                <span class="badge bg-warning">@Model.Status</span>
+                            </p>
+                        </div>
+                        <div class="col-md-6">
+                            <strong>Store:</strong>
+                            <p>@Model.Store?.StoreName</p>
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <strong>Delivery Address:</strong>
+                        <p>@Model.DeliveryAddress</p>
+                    </div>
+
+                    <hr>
+
+                    <div class="row">
+                        <div class="col-md-6">
+                            <strong>Subtotal:</strong>
+                            <p>₹@Model.SubTotal.ToString("F2")</p>
+                        </div>
+                        <div class="col-md-6">
+                            <strong>Delivery Charge:</strong>
+                            <p>₹@Model.DeliveryCharge.ToString("F2")</p>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-12">
+                            <strong>Total Amount:</strong>
+                            <h4 class="text-success">₹@Model.TotalAmount.ToString("F2")</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Order Items -->
+            <div class="card shadow-sm mb-4">
+                <div class="card-header">
+                    <h5 class="mb-0">
+                        <i class="bi bi-bag"></i> Order Items
+                    </h5>
+                </div>
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Product</th>
+                                    <th>Price</th>
+                                    <th>Quantity</th>
+                                    <th class="text-end">Total</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model.OrderItems)
+                                {
+                                    <tr>
+                                        <td>
+                                            <strong>@item.ProductName</strong>
+                                            @if (item.DiscountPercentage > 0)
+                                            {
+                                                <br />
+                                                <span class="badge bg-danger">@item.DiscountPercentage% OFF</span>
+                                            }
+                                        </td>
+                                        <td>
+                                            @if (item.DiscountPercentage > 0)
+                                            {
+                                                var discountedPrice = item.UnitPrice * (1 - item.DiscountPercentage / 100);
+                                                <span class="text-decoration-line-through text-muted">₹@item.UnitPrice</span>
+                                                <br />
+                                                <span class="text-success">₹@discountedPrice.ToString("F2")</span>
+                                            }
+                                            else
+                                            {
+                                                <span>₹@item.UnitPrice</span>
+                                            }
+                                        </td>
+                                        <td>@item.Quantity</td>
+                                        <td class="text-end">₹@item.LineTotal.ToString("F2")</td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Next Steps -->
+            <div class="card shadow-sm mb-4">
+                <div class="card-header bg-info text-white">
+                    <h5 class="mb-0">
+                        <i class="bi bi-info-circle"></i> What's Next?
+                    </h5>
+                </div>
+                <div class="card-body">
+                    <ol class="mb-0">
+                        <li>The store will review and accept your order</li>
+                        <li>Once accepted, your order will be prepared</li>
+                        <li>You'll receive updates on your order status</li>
+                        <li>Your order will be delivered to the specified address</li>
+                        <li>Payment will be collected on delivery (COD)</li>
+                    </ol>
+                </div>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="d-grid gap-2 d-md-flex justify-content-md-center mb-5">
+                <a asp-controller="Order" asp-action="MyOrders" class="btn btn-primary">
+                    <i class="bi bi-list-ul"></i> View My Orders
+                </a>
+                <a asp-controller="Home" asp-action="Index" class="btn btn-outline-secondary">
+                    <i class="bi bi-house"></i> Continue Shopping
+                </a>
+            </div>
+        </div>
+    </div>
+</div>

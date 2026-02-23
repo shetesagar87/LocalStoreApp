@@ -1,0 +1,147 @@
+@model IEnumerable<(CleanMvcApp.Models.Entities.ApplicationUser User, IList<string> Roles)>
+
+@{
+    ViewData["Title"] = "Manage Users";
+    var searchTerm = ViewBag.SearchTerm as string;
+    var selectedRole = ViewBag.SelectedRole as string;
+}
+
+<div class="container mt-4">
+    <h2 class="mb-4">
+        <i class="bi bi-people"></i> Manage Users
+    </h2>
+
+    <!-- Search and Filter -->
+    <div class="card mb-4">
+        <div class="card-body">
+            <form asp-action="ListUsers" method="get" class="row g-3">
+                <div class="col-md-5">
+                    <label for="searchTerm" class="form-label">Search</label>
+                    <input type="text" class="form-control" id="searchTerm" name="searchTerm" 
+                           value="@searchTerm" placeholder="Search by email or name...">
+                </div>
+                <div class="col-md-3">
+                    <label for="role" class="form-label">Filter by Role</label>
+                    <select class="form-select" id="role" name="role">
+                        <option value="">All Roles</option>
+                        <option value="Admin" selected="@(selectedRole == "Admin")">Admin</option>
+                        <option value="StoreOwner" selected="@(selectedRole == "StoreOwner")">Store Owner</option>
+                        <option value="Customer" selected="@(selectedRole == "Customer")">Customer</option>
+                    </select>
+                </div>
+                <div class="col-md-4 d-flex align-items-end">
+                    <button type="submit" class="btn btn-primary me-2">
+                        <i class="bi bi-search"></i> Search
+                    </button>
+                    <a asp-action="ListUsers" class="btn btn-outline-secondary">
+                        <i class="bi bi-x-circle"></i> Clear
+                    </a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Users Table -->
+    @if (Model != null && Model.Any())
+    {
+        <div class="card">
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-hover">
+                        <thead class="table-light">
+                            <tr>
+                                <th>Email</th>
+                                <th>Full Name</th>
+                                <th>Roles</th>
+                                <th>Email Verified</th>
+                                <th>Status</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model)
+                            {
+                                var user = item.User;
+                                var roles = item.Roles;
+                                var isLocked = user.LockoutEnd.HasValue && user.LockoutEnd.Value > DateTimeOffset.UtcNow;
+
+                                <tr>
+                                    <td>@user.Email</td>
+                                    <td>@user.FullName</td>
+                                    <td>
+                                        @foreach (var role in roles)
+                                        {
+                                            <span class="badge bg-@(role == "Admin" ? "danger" : role == "StoreOwner" ? "primary" : "info")">
+                                                @role
+                                            </span>
+                                        }
+                                    </td>
+                                    <td>
+                                        @if (user.EmailConfirmed)
+                                        {
+                                            <span class="badge bg-success">
+                                                <i class="bi bi-check-circle"></i> Verified
+                                            </span>
+                                        }
+                                        else
+                                        {
+                                            <span class="badge bg-warning">
+                                                <i class="bi bi-exclamation-circle"></i> Not Verified
+                                            </span>
+                                        }
+                                    </td>
+                                    <td>
+                                        @if (isLocked)
+                                        {
+                                            <span class="badge bg-danger">Disabled</span>
+                                        }
+                                        else
+                                        {
+                                            <span class="badge bg-success">Active</span>
+                                        }
+                                    </td>
+                                    <td>
+                                        @if (!roles.Contains("Admin"))
+                                        {
+                                            @if (isLocked)
+                                            {
+                                                <form asp-action="EnableUser" asp-route-id="@user.Id" method="post" class="d-inline">
+                                                    @Html.AntiForgeryToken()
+                                                    <button type="submit" class="btn btn-sm btn-success">
+                                                        <i class="bi bi-unlock"></i> Enable
+                                                    </button>
+                                                </form>
+                                            }
+                                            else
+                                            {
+                                                <form asp-action="DisableUser" asp-route-id="@user.Id" method="post" class="d-inline"
+                                                      onsubmit="return confirm('Are you sure you want to disable this user?');">
+                                                    @Html.AntiForgeryToken()
+                                                    <button type="submit" class="btn btn-sm btn-danger">
+                                                        <i class="bi bi-lock"></i> Disable
+                                                    </button>
+                                                </form>
+                                            }
+                                        }
+                                        else
+                                        {
+                                            <span class="text-muted">Protected</span>
+                                        }
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    }
+    else
+    {
+        <div class="text-center py-5">
+            <i class="bi bi-people" style="font-size: 5rem; color: #ccc;"></i>
+            <h3 class="mt-3">No users found</h3>
+            <p class="text-muted">Try adjusting your search criteria.</p>
+        </div>
+    }
+</div>

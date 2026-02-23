@@ -239,8 +239,8 @@ The implementation uses ASP.NET Core MVC 6.0+ with Entity Framework Core, ASP.NE
     - Display cart items with product details and line totals
     - _Requirements: 7.1, 7.2, 7.3, 7.7_
 
-- [ ] 12. Checkout and order placement
-  - [ ] 12.1 Implement order service
+- [x] 12. Checkout and order placement
+  - [x] 12.1 Implement order service
     - Create IOrderService interface
     - Implement CreateOrderAsync with stock validation, order creation, stock reduction, cart clearing
     - Generate unique order numbers
@@ -261,7 +261,7 @@ The implementation uses ASP.NET Core MVC 6.0+ with Entity Framework Core, ASP.NE
     - **Property 22: Order Lifecycle State Machine**
     - **Validates: Requirements 10.2, 10.4, 10.6**
 
-  - [ ] 12.5 Create checkout controllers and views
+  - [x] 12.5 Create checkout controllers and views
     - Create CheckoutController with Checkout, ConfirmOrder actions
     - Create Razor views for checkout flow
     - Implement address selection
@@ -301,8 +301,8 @@ The implementation uses ASP.NET Core MVC 6.0+ with Entity Framework Core, ASP.NE
     - Display payment success/failure messages
     - _Requirements: 9.2, 9.3, 9.4_
 
-- [ ] 14. Order management
-  - [ ] 14.1 Create order management controllers and views
+- [x] 14. Order management
+  - [x] 14.1 Create order management controllers and views
     - Create OrderController with MyOrders, OrderDetails actions (Customer role)
     - Create StoreOrderController with StoreOrders, AcceptOrder, RejectOrder, UpdateStatus actions (StoreOwner role)
     - Create Razor views for order listing and details

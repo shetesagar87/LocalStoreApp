@@ -1,0 +1,89 @@
+@model IEnumerable<CleanMvcApp.Models.Entities.Order>
+
+@{
+    ViewData["Title"] = "My Orders";
+}
+
+<div class="container mt-4">
+    <h2 class="mb-4">
+        <i class="bi bi-bag-check"></i> My Orders
+    </h2>
+
+    @if (Model != null && Model.Any())
+    {
+        <div class="row mb-3">
+            <div class="col-md-12">
+                <div class="btn-group" role="group">
+                    <a asp-action="MyOrders" class="btn btn-outline-primary">All</a>
+                    <a asp-action="MyOrders" asp-route-status="Pending" class="btn btn-outline-warning">Pending</a>
+                    <a asp-action="MyOrders" asp-route-status="Accepted" class="btn btn-outline-info">Accepted</a>
+                    <a asp-action="MyOrders" asp-route-status="Preparing" class="btn btn-outline-secondary">Preparing</a>
+                    <a asp-action="MyOrders" asp-route-status="OutForDelivery" class="btn btn-outline-primary">Out for Delivery</a>
+                    <a asp-action="MyOrders" asp-route-status="Delivered" class="btn btn-outline-success">Delivered</a>
+                    <a asp-action="MyOrders" asp-route-status="Cancelled" class="btn btn-outline-danger">Cancelled</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="table-responsive">
+            <table class="table table-hover">
+                <thead class="table-light">
+                    <tr>
+                        <th>Order Number</th>
+                        <th>Store</th>
+                        <th>Date</th>
+                        <th>Items</th>
+                        <th>Total Amount</th>
+                        <th>Status</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var order in Model)
+                    {
+                        var statusClass = order.Status switch
+                        {
+                            CleanMvcApp.Models.Enums.OrderStatus.Pending => "warning",
+                            CleanMvcApp.Models.Enums.OrderStatus.Accepted => "info",
+                            CleanMvcApp.Models.Enums.OrderStatus.Preparing => "secondary",
+                            CleanMvcApp.Models.Enums.OrderStatus.OutForDelivery => "primary",
+                            CleanMvcApp.Models.Enums.OrderStatus.Delivered => "success",
+                            CleanMvcApp.Models.Enums.OrderStatus.Cancelled => "danger",
+                            CleanMvcApp.Models.Enums.OrderStatus.Refunded => "dark",
+                            _ => "secondary"
+                        };
+
+                        <tr>
+                            <td>
+                                <strong>@order.OrderNumber</strong>
+                            </td>
+                            <td>@order.Store?.StoreName</td>
+                            <td>@order.CreatedAt.ToString("MMM dd, yyyy")</td>
+                            <td>@order.OrderItems.Count items</td>
+                            <td>₹@order.TotalAmount.ToString("F2")</td>
+                            <td>
+                                <span class="badge bg-@statusClass">@order.Status</span>
+                            </td>
+                            <td>
+                                <a asp-action="Details" asp-route-id="@order.OrderId" class="btn btn-sm btn-outline-primary">
+                                    <i class="bi bi-eye"></i> View
+                                </a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    }
+    else
+    {
+        <div class="text-center py-5">
+            <i class="bi bi-bag-x" style="font-size: 5rem; color: #ccc;"></i>
+            <h3 class="mt-3">No orders yet</h3>
+            <p class="text-muted">Start shopping to place your first order!</p>
+            <a asp-controller="Browse" asp-action="Search" class="btn btn-primary">
+                <i class="bi bi-search"></i> Browse Products
+            </a>
+        </div>
+    }
+</div>

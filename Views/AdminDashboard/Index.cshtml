@@ -1,0 +1,199 @@
+@{
+    ViewData["Title"] = "Admin Dashboard";
+    var totalSales = ViewBag.TotalSales as decimal? ?? 0;
+    var activeStores = ViewBag.ActiveStores as int? ?? 0;
+    var totalOrders = ViewBag.TotalOrders as int? ?? 0;
+    var pendingStoresCount = ViewBag.PendingStoresCount as int? ?? 0;
+    var topProducts = ViewBag.TopProducts as IEnumerable<(string ProductName, int TotalQuantity)> ?? new List<(string, int)>();
+    var monthlyRevenue = ViewBag.MonthlyRevenue as IEnumerable<(string Month, decimal Revenue)> ?? new List<(string, decimal)>();
+}
+
+<div class="container mt-4">
+    <h2 class="mb-4">
+        <i class="bi bi-speedometer2"></i> Admin Dashboard
+    </h2>
+
+    <!-- Key Metrics -->
+    <div class="row mb-4">
+        <div class="col-md-3">
+            <div class="card text-white bg-success">
+                <div class="card-body">
+                    <h5 class="card-title">Total Sales</h5>
+                    <h2 class="mb-0">₹@totalSales.ToString("N0")</h2>
+                    <small>All time</small>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card text-white bg-primary">
+                <div class="card-body">
+                    <h5 class="card-title">Active Stores</h5>
+                    <h2 class="mb-0">@activeStores</h2>
+                    <small>Currently active</small>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card text-white bg-info">
+                <div class="card-body">
+                    <h5 class="card-title">Total Orders</h5>
+                    <h2 class="mb-0">@totalOrders</h2>
+                    <small>All time</small>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card text-white bg-warning">
+                <div class="card-body">
+                    <h5 class="card-title">Pending Stores</h5>
+                    <h2 class="mb-0">@pendingStoresCount</h2>
+                    <small>
+                        <a asp-controller="AdminStore" asp-action="Pending" class="text-white">
+                            Review now <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </small>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <!-- Top Selling Products -->
+        <div class="col-md-6 mb-4">
+            <div class="card">
+                <div class="card-header bg-light">
+                    <h5 class="mb-0">
+                        <i class="bi bi-trophy"></i> Top Selling Products
+                    </h5>
+                </div>
+                <div class="card-body">
+                    @if (topProducts.Any())
+                    {
+                        <div class="table-responsive">
+                            <table class="table table-sm">
+                                <thead>
+                                    <tr>
+                                        <th>Rank</th>
+                                        <th>Product</th>
+                                        <th>Quantity Sold</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @{
+                                        int rank = 1;
+                                    }
+                                    @foreach (var product in topProducts)
+                                    {
+                                        <tr>
+                                            <td>
+                                                @if (rank == 1)
+                                                {
+                                                    <span class="badge bg-warning">🥇</span>
+                                                }
+                                                else if (rank == 2)
+                                                {
+                                                    <span class="badge bg-secondary">🥈</span>
+                                                }
+                                                else if (rank == 3)
+                                                {
+                                                    <span class="badge bg-danger">🥉</span>
+                                                }
+                                                else
+                                                {
+                                                    <span>@rank</span>
+                                                }
+                                            </td>
+                                            <td>@product.ProductName</td>
+                                            <td>@product.TotalQuantity</td>
+                                        </tr>
+                                        rank++;
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                    }
+                    else
+                    {
+                        <p class="text-muted text-center">No sales data available yet.</p>
+                    }
+                </div>
+            </div>
+        </div>
+
+        <!-- Monthly Revenue Trends -->
+        <div class="col-md-6 mb-4">
+            <div class="card">
+                <div class="card-header bg-light">
+                    <h5 class="mb-0">
+                        <i class="bi bi-graph-up"></i> Monthly Revenue (Last 12 Months)
+                    </h5>
+                </div>
+                <div class="card-body">
+                    @if (monthlyRevenue.Any())
+                    {
+                        <div class="table-responsive">
+                            <table class="table table-sm">
+                                <thead>
+                                    <tr>
+                                        <th>Month</th>
+                                        <th>Revenue</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var month in monthlyRevenue.Reverse())
+                                    {
+                                        <tr>
+                                            <td>@month.Month</td>
+                                            <td>₹@month.Revenue.ToString("N2")</td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                    }
+                    else
+                    {
+                        <p class="text-muted text-center">No revenue data available yet.</p>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Quick Actions -->
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-header bg-light">
+                    <h5 class="mb-0">
+                        <i class="bi bi-lightning"></i> Quick Actions
+                    </h5>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-3 mb-2">
+                            <a asp-controller="AdminStore" asp-action="Pending" class="btn btn-outline-warning w-100">
+                                <i class="bi bi-clock"></i> Pending Stores
+                            </a>
+                        </div>
+                        <div class="col-md-3 mb-2">
+                            <a asp-controller="AdminStore" asp-action="Index" class="btn btn-outline-primary w-100">
+                                <i class="bi bi-shop"></i> All Stores
+                            </a>
+                        </div>
+                        <div class="col-md-3 mb-2">
+                            <a asp-controller="AdminCategory" asp-action="Index" class="btn btn-outline-info w-100">
+                                <i class="bi bi-tags"></i> Categories
+                            </a>
+                        </div>
+                        <div class="col-md-3 mb-2">
+                            <a asp-controller="AdminUser" asp-action="ListUsers" class="btn btn-outline-secondary w-100">
+                                <i class="bi bi-people"></i> Users
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

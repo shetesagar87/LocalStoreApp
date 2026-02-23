@@ -1,0 +1,192 @@
+@model object
+
+@{
+    ViewData["Title"] = "Checkout";
+    var store = ViewBag.Store as CleanMvcApp.Models.Entities.Store;
+    var cartItems = ViewBag.CartItems as List<CleanMvcApp.Models.Entities.CartItem>;
+    var subtotal = ViewBag.Subtotal as decimal? ?? 0;
+    var deliveryCharge = ViewBag.DeliveryCharge as decimal? ?? 0;
+    var total = ViewBag.Total as decimal? ?? 0;
+    var userAddress = ViewBag.UserAddress as string ?? "";
+}
+
+<div class="container mt-4">
+    <h2 class="mb-4">
+        <i class="bi bi-credit-card"></i> Checkout
+    </h2>
+
+    @if (TempData["Error"] != null)
+    {
+        <div class="alert alert-danger alert-dismissible fade show">
+            @TempData["Error"]
+            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+        </div>
+    }
+
+    <div class="row">
+        <!-- Order Summary -->
+        <div class="col-md-8">
+            <!-- Store Information -->
+            <div class="card mb-3">
+                <div class="card-header bg-primary text-white">
+                    <h5 class="mb-0">
+                        <i class="bi bi-shop"></i> Store Information
+                    </h5>
+                </div>
+                <div class="card-body">
+                    <h6>@store?.StoreName</h6>
+                    <p class="text-muted mb-1">
+                        <i class="bi bi-geo-alt"></i> @store?.Address
+                    </p>
+                    <p class="text-muted mb-0">
+                        <i class="bi bi-telephone"></i> Contact store for inquiries
+                    </p>
+                </div>
+            </div>
+
+            <!-- Order Items -->
+            <div class="card mb-3">
+                <div class="card-header">
+                    <h5 class="mb-0">
+                        <i class="bi bi-bag"></i> Order Items
+                    </h5>
+                </div>
+                <div class="card-body">
+                    @if (cartItems != null && cartItems.Any())
+                    {
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>Product</th>
+                                        <th>Price</th>
+                                        <th>Quantity</th>
+                                        <th class="text-end">Total</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var item in cartItems)
+                                    {
+                                        var product = item.Product;
+                                        var itemPrice = product.Price * (1 - product.DiscountPercentage / 100);
+                                        var itemTotal = itemPrice * item.Quantity;
+
+                                        <tr>
+                                            <td>
+                                                <strong>@product.ProductName</strong>
+                                                @if (product.DiscountPercentage > 0)
+                                                {
+                                                    <br />
+                                                    <span class="badge bg-danger">@product.DiscountPercentage% OFF</span>
+                                                }
+                                            </td>
+                                            <td>
+                                                @if (product.DiscountPercentage > 0)
+                                                {
+                                                    <span class="text-decoration-line-through text-muted">₹@product.Price</span>
+                                                    <br />
+                                                    <span class="text-success">₹@itemPrice.ToString("F2")</span>
+                                                }
+                                                else
+                                                {
+                                                    <span>₹@product.Price</span>
+                                                }
+                                            </td>
+                                            <td>@item.Quantity</td>
+                                            <td class="text-end">₹@itemTotal.ToString("F2")</td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                    }
+                </div>
+            </div>
+
+            <!-- Delivery Address -->
+            <div class="card mb-3">
+                <div class="card-header">
+                    <h5 class="mb-0">
+                        <i class="bi bi-geo-alt"></i> Delivery Address
+                    </h5>
+                </div>
+                <div class="card-body">
+                    <form asp-action="PlaceOrder" method="post" id="checkoutForm">
+                        <input type="hidden" name="storeId" value="@store?.StoreId" />
+                        
+                        <div class="mb-3">
+                            <label for="deliveryAddress" class="form-label">Delivery Address *</label>
+                            <textarea class="form-control" id="deliveryAddress" name="deliveryAddress" rows="3" required>@userAddress</textarea>
+                            <div class="form-text">Please provide complete address with landmarks</div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Payment Method *</label>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="paymentMethod" id="cod" value="CashOnDelivery" checked>
+                                <label class="form-check-label" for="cod">
+                                    <i class="bi bi-cash"></i> Cash on Delivery
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="paymentMethod" id="online" value="Online">
+                                <label class="form-check-label" for="online">
+                                    <i class="bi bi-credit-card"></i> Online Payment (Coming Soon)
+                                </label>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- Price Summary -->
+        <div class="col-md-4">
+            <div class="card sticky-top" style="top: 20px;">
+                <div class="card-header bg-success text-white">
+                    <h5 class="mb-0">
+                        <i class="bi bi-receipt"></i> Price Summary
+                    </h5>
+                </div>
+                <div class="card-body">
+                    <div class="d-flex justify-content-between mb-2">
+                        <span>Subtotal:</span>
+                        <span>₹@subtotal.ToString("F2")</span>
+                    </div>
+                    <div class="d-flex justify-content-between mb-2">
+                        <span>Delivery Charge:</span>
+                        <span>₹@deliveryCharge.ToString("F2")</span>
+                    </div>
+                    <hr>
+                    <div class="d-flex justify-content-between mb-3">
+                        <strong>Total Amount:</strong>
+                        <strong class="text-success">₹@total.ToString("F2")</strong>
+                    </div>
+
+                    <div class="d-grid gap-2">
+                        <button type="submit" form="checkoutForm" class="btn btn-success btn-lg">
+                            <i class="bi bi-check-circle"></i> Place Order
+                        </button>
+                        <a asp-controller="Cart" asp-action="Index" class="btn btn-outline-secondary">
+                            <i class="bi bi-arrow-left"></i> Back to Cart
+                        </a>
+                    </div>
+
+                    <div class="alert alert-info mt-3 mb-0">
+                        <small>
+                            <i class="bi bi-info-circle"></i> 
+                            By placing this order, you agree to our terms and conditions.
+                        </small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        // Disable online payment temporarily
+        document.getElementById('online').disabled = true;
+    </script>
+}
