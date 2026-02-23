@@ -1,0 +1,1045 @@
+2026-02-22 20:01:36.241 -08:00 [INF] Starting Local Store Delivery Platform
+2026-02-22 20:01:40.889 -08:00 [INF] User profile is available. Using 'C:\Users\SShete\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-02-22 20:01:43.389 -08:00 [INF] Executed DbCommand (46ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2026-02-22 20:01:43.574 -08:00 [INF] Executed DbCommand (4ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2026-02-22 20:01:43.595 -08:00 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2026-02-22 20:01:43.654 -08:00 [INF] Executed DbCommand (7ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[Address], [a].[ConcurrencyStamp], [a].[CreatedAt], [a].[Email], [a].[EmailConfirmed], [a].[FullName], [a].[IsActive], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2026-02-22 20:01:43.851 -08:00 [INF] Database seeded successfully
+2026-02-22 20:01:44.049 -08:00 [INF] Now listening on: http://localhost:5264
+2026-02-22 20:01:44.055 -08:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-02-22 20:01:44.057 -08:00 [INF] Hosting environment: Development
+2026-02-22 20:01:44.059 -08:00 [INF] Content root path: C:\LearningProjects\LearningProjects\LocalStoreWebsite
+2026-02-22 20:01:45.978 -08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5264/Account/Login?ReturnUrl=%2FHome%2FIndex - null null
+2026-02-22 20:01:47.702 -08:00 [WRN] Failed to determine the https port for redirect.
+2026-02-22 20:01:47.996 -08:00 [INF] Executing endpoint 'CleanMvcApp.Controllers.AccountController.Login (CleanMvcApp)'
+2026-02-22 20:01:48.150 -08:00 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(System.String) on controller CleanMvcApp.Controllers.AccountController (CleanMvcApp).
+2026-02-22 20:01:48.425 -08:00 [INF] Executing ViewResult, running view Login.
+2026-02-22 20:01:48.798 -08:00 [INF] Executed ViewResult - view Login executed in 360.5039ms.
+2026-02-22 20:01:48.859 -08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5264/css/site.css?v=pAGv4ietcJNk_EwsQZ5BN9-K4MuNYS2a9wl4Jw-q9D0 - null null
+2026-02-22 20:01:48.859 -08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5264/lib/bootstrap/dist/css/bootstrap.min.css - null null
+2026-02-22 20:01:48.918 -08:00 [INF] Executed action CleanMvcApp.Controllers.AccountController.Login (CleanMvcApp) in 674.0578ms
+2026-02-22 20:01:48.958 -08:00 [INF] Executed endpoint 'CleanMvcApp.Controllers.AccountController.Login (CleanMvcApp)'
+2026-02-22 20:01:49.078 -08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5264/lib/bootstrap/dist/js/bootstrap.bundle.min.js - null null
+2026-02-22 20:01:49.136 -08:00 [INF] Sending file. Request path: '/css/site.css'. Physical path: 'C:\LearningProjects\LearningProjects\LocalStoreWebsite\wwwroot\css\site.css'
+2026-02-22 20:01:49.139 -08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5264/lib/jquery/dist/jquery.min.js - null null
+2026-02-22 20:01:49.232 -08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5264/lib/jquery-validation/dist/jquery.validate.min.js - null null
+2026-02-22 20:01:49.326 -08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5264/Account/Login?ReturnUrl=%2FHome%2FIndex - 200 null text/html; charset=utf-8 3342.4576ms
+2026-02-22 20:01:49.701 -08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5264/css/site.css?v=pAGv4ietcJNk_EwsQZ5BN9-K4MuNYS2a9wl4Jw-q9D0 - 200 362 text/css 839.315ms
+2026-02-22 20:01:49.767 -08:00 [INF] Sending file. Request path: '/lib/bootstrap/dist/js/bootstrap.bundle.min.js'. Physical path: 'C:\LearningProjects\LearningProjects\LocalStoreWebsite\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js'
+2026-02-22 20:01:50.179 -08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5264/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js - null null
+2026-02-22 20:01:50.182 -08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5264/lib/bootstrap/dist/js/bootstrap.bundle.min.js - 200 78468 text/javascript 1103.5133ms
+2026-02-22 20:01:50.310 -08:00 [INF] Sending file. Request path: '/lib/bootstrap/dist/css/bootstrap.min.css'. Physical path: 'C:\LearningProjects\LearningProjects\LocalStoreWebsite\wwwroot\lib\bootstrap\dist\css\bootstrap.min.css'
+2026-02-22 20:01:50.319 -08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5264/lib/bootstrap/dist/css/bootstrap.min.css - 200 162720 text/css 1460.0196ms
+2026-02-22 20:01:50.310 -08:00 [INF] Sending file. Request path: '/lib/jquery/dist/jquery.min.js'. Physical path: 'C:\LearningProjects\LearningProjects\LocalStoreWebsite\wwwroot\lib\jquery\dist\jquery.min.js'
+2026-02-22 20:01:50.610 -08:00 [INF] Sending file. Request path: '/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js'. Physical path: 'C:\LearningProjects\LearningProjects\LocalStoreWebsite\wwwroot\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.min.js'
+2026-02-22 20:01:51.843 -08:00 [INF] Sending file. Request path: '/lib/jquery-validation/dist/jquery.validate.min.js'. Physical path: 'C:\LearningProjects\LearningProjects\LocalStoreWebsite\wwwroot\lib\jquery-validation\dist\jquery.validate.min.js'
+2026-02-22 20:01:52.049 -08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5264/lib/jquery/dist/jquery.min.js - 200 89501 text/javascript 2909.5706ms
+2026-02-22 20:01:52.052 -08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5264/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js - 200 5824 text/javascript 1872.5963ms
+2026-02-22 20:01:52.054 -08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5264/lib/jquery-validation/dist/jquery.validate.min.js - 200 24601 text/javascript 2822.3446ms
+2026-02-22 20:01:53.950 -08:00 [INF] Request starting HTTP/1.1 POST http://localhost:5264/ - application/x-www-form-urlencoded 249
+2026-02-22 20:01:54.026 -08:00 [INF] Executing endpoint 'CleanMvcApp.Controllers.AccountController.Login (CleanMvcApp)'
+2026-02-22 20:01:54.110 -08:00 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(CleanMvcApp.Models.ViewModels.LoginViewModel, System.String) on controller CleanMvcApp.Controllers.AccountController (CleanMvcApp).
+2026-02-22 20:01:54.357 -08:00 [INF] Executed DbCommand (16ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[Address], [a].[ConcurrencyStamp], [a].[CreatedAt], [a].[Email], [a].[EmailConfirmed], [a].[FullName], [a].[IsActive], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2026-02-22 20:01:54.818 -08:00 [INF] Executed DbCommand (7ms) [Parameters=[@__user_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[ClaimType], [a].[ClaimValue], [a].[UserId]
+FROM [AspNetUserClaims] AS [a]
+WHERE [a].[UserId] = @__user_Id_0
+2026-02-22 20:01:54.916 -08:00 [INF] Executed DbCommand (16ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2026-02-22 20:01:54.924 -08:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2026-02-22 20:01:54.983 -08:00 [INF] Executed DbCommand (33ms) [Parameters=[@__role_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[ClaimType], [a].[ClaimValue]
+FROM [AspNetRoleClaims] AS [a]
+WHERE [a].[RoleId] = @__role_Id_0
+2026-02-22 20:01:54.997 -08:00 [INF] AuthenticationScheme: Identity.Application signed in.
+2026-02-22 20:01:55.029 -08:00 [INF] User sagarOwner@gmail.com logged in successfully
+2026-02-22 20:01:55.139 -08:00 [INF] User sagarOwner@gmail.com logged in successfully
+2026-02-22 20:01:55.150 -08:00 [INF] Executing RedirectResult, redirecting to /Home/Index.
+2026-02-22 20:01:55.176 -08:00 [INF] Executed action CleanMvcApp.Controllers.AccountController.Login (CleanMvcApp) in 1061.1221ms
+2026-02-22 20:01:55.184 -08:00 [INF] Executed endpoint 'CleanMvcApp.Controllers.AccountController.Login (CleanMvcApp)'
+2026-02-22 20:01:55.259 -08:00 [INF] Request finished HTTP/1.1 POST http://localhost:5264/ - 302 0 null 1308.7048ms
+2026-02-22 20:01:55.262 -08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5264/Home/Index - null null
+2026-02-22 20:01:55.417 -08:00 [INF] Executing endpoint 'CleanMvcApp.Controllers.HomeController.Index (CleanMvcApp)'
+2026-02-22 20:01:55.421 -08:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller CleanMvcApp.Controllers.HomeController (CleanMvcApp).
+2026-02-22 20:01:55.428 -08:00 [INF] Executing ViewResult, running view Index.
+2026-02-22 20:01:55.655 -08:00 [INF] Executed ViewResult - view Index executed in 227.9169ms.
+2026-02-22 20:01:55.667 -08:00 [INF] Executed action CleanMvcApp.Controllers.HomeController.Index (CleanMvcApp) in 240.6329ms
+2026-02-22 20:01:55.675 -08:00 [INF] Executed endpoint 'CleanMvcApp.Controllers.HomeController.Index (CleanMvcApp)'
+2026-02-22 20:01:55.679 -08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5264/Home/Index - 200 null text/html; charset=utf-8 416.8708ms
+2026-02-22 20:01:55.743 -08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5264/CleanMvcApp.styles.css?v=rNvCYQnCPlaT1iQD1vA-7zPF3iL5CmzKrQH7JorfKUc - null null
+2026-02-22 20:01:55.745 -08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5264/js/site.js?v=hRQyftXiu1lLX2P9Ly9xa4gHJgLeR1uGN5qegUobtGo - null null
+2026-02-22 20:01:55.757 -08:00 [INF] Sending file. Request path: '/CleanMvcApp.styles.css'. Physical path: 'C:\LearningProjects\LearningProjects\LocalStoreWebsite\obj\Debug\net8.0\scopedcss\bundle\CleanMvcApp.styles.css'
+2026-02-22 20:01:55.826 -08:00 [INF] Sending file. Request path: '/js/site.js'. Physical path: 'C:\LearningProjects\LearningProjects\LocalStoreWebsite\wwwroot\js\site.js'
+2026-02-22 20:01:55.838 -08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5264/CleanMvcApp.styles.css?v=rNvCYQnCPlaT1iQD1vA-7zPF3iL5CmzKrQH7JorfKUc - 200 1129 text/css 95.5892ms
+2026-02-22 20:01:55.840 -08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5264/js/site.js?v=hRQyftXiu1lLX2P9Ly9xa4gHJgLeR1uGN5qegUobtGo - 200 231 text/javascript 94.3ms
+2026-02-22 20:01:58.631 -08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5264/Dashboard/Index - null null
+2026-02-22 20:01:58.644 -08:00 [INF] Executing endpoint 'CleanMvcApp.Controllers.DashboardController.Index (CleanMvcApp)'
+2026-02-22 20:01:58.649 -08:00 [INF] Route matched with {action = "Index", controller = "Dashboard"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller CleanMvcApp.Controllers.DashboardController (CleanMvcApp).
+2026-02-22 20:01:58.653 -08:00 [INF] Executing ViewResult, running view Index.
+2026-02-22 20:01:58.675 -08:00 [INF] Executed ViewResult - view Index executed in 22.2223ms.
+2026-02-22 20:01:58.838 -08:00 [INF] Executed action CleanMvcApp.Controllers.DashboardController.Index (CleanMvcApp) in 185.7338ms
+2026-02-22 20:01:58.980 -08:00 [INF] Executed endpoint 'CleanMvcApp.Controllers.DashboardController.Index (CleanMvcApp)'
+2026-02-22 20:01:58.982 -08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5264/Dashboard/Index - 200 null text/html; charset=utf-8 350.7848ms
+2026-02-22 20:02:00.526 -08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5264/Home/Index - null null
+2026-02-22 20:02:00.557 -08:00 [INF] Executing endpoint 'CleanMvcApp.Controllers.HomeController.Index (CleanMvcApp)'
+2026-02-22 20:02:00.560 -08:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller CleanMvcApp.Controllers.HomeController (CleanMvcApp).
+2026-02-22 20:02:00.570 -08:00 [INF] Executing ViewResult, running view Index.
+2026-02-22 20:02:00.574 -08:00 [INF] Executed ViewResult - view Index executed in 3.8041ms.
+2026-02-22 20:02:00.644 -08:00 [INF] Executed action CleanMvcApp.Controllers.HomeController.Index (CleanMvcApp) in 74.0559ms
+2026-02-22 20:02:00.871 -08:00 [INF] Executed endpoint 'CleanMvcApp.Controllers.HomeController.Index (CleanMvcApp)'
+2026-02-22 20:02:00.873 -08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5264/Home/Index - 200 null text/html; charset=utf-8 347.1984ms
+2026-02-22 20:02:02.045 -08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5264/Dashboard/Index - null null
+2026-02-22 20:02:02.052 -08:00 [INF] Executing endpoint 'CleanMvcApp.Controllers.DashboardController.Index (CleanMvcApp)'
+2026-02-22 20:02:02.054 -08:00 [INF] Route matched with {action = "Index", controller = "Dashboard"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller CleanMvcApp.Controllers.DashboardController (CleanMvcApp).
+2026-02-22 20:02:02.058 -08:00 [INF] Executing ViewResult, running view Index.
+2026-02-22 20:02:02.062 -08:00 [INF] Executed ViewResult - view Index executed in 4.6414ms.
+2026-02-22 20:02:02.245 -08:00 [INF] Executed action CleanMvcApp.Controllers.DashboardController.Index (CleanMvcApp) in 187.545ms
+2026-02-22 20:02:02.247 -08:00 [INF] Executed endpoint 'CleanMvcApp.Controllers.DashboardController.Index (CleanMvcApp)'
+2026-02-22 20:02:02.325 -08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5264/Dashboard/Index - 200 null text/html; charset=utf-8 279.8698ms
+2026-02-22 20:02:04.649 -08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5264/Store/Index - null null
+2026-02-22 20:02:04.666 -08:00 [INF] Executing endpoint 'CleanMvcApp.Controllers.StoreController.Index (CleanMvcApp)'
+2026-02-22 20:02:04.674 -08:00 [INF] Route matched with {action = "Index", controller = "Store"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller CleanMvcApp.Controllers.StoreController (CleanMvcApp).
+2026-02-22 20:02:04.998 -08:00 [INF] Executed DbCommand (8ms) [Parameters=[@__ownerId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[StoreId], [s].[Address], [s].[AverageRating], [s].[ClosingTime], [s].[CreatedAt], [s].[DeliveryCharge], [s].[DeliveryRadius], [s].[IsActive], [s].[Latitude], [s].[LicenseNumber], [s].[Longitude], [s].[OpeningTime], [s].[OwnerId], [s].[Status], [s].[StoreImageUrl], [s].[StoreName], [s].[TotalReviews], [s].[UpdatedAt]
+FROM [Stores] AS [s]
+WHERE [s].[OwnerId] = @__ownerId_0
+2026-02-22 20:02:05.316 -08:00 [INF] Executing ViewResult, running view Index.
+2026-02-22 20:02:05.334 -08:00 [INF] Executed ViewResult - view Index executed in 22.8025ms.
+2026-02-22 20:02:05.436 -08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5264/images/stores/fe9372b3-7c20-4888-b66e-9d0040340501_LocalImage.jpg - null null
+2026-02-22 20:02:05.524 -08:00 [INF] Executed action CleanMvcApp.Controllers.StoreController.Index (CleanMvcApp) in 842.7724ms
+2026-02-22 20:02:05.527 -08:00 [INF] Executed endpoint 'CleanMvcApp.Controllers.StoreController.Index (CleanMvcApp)'
+2026-02-22 20:02:05.635 -08:00 [INF] Sending file. Request path: '/images/stores/fe9372b3-7c20-4888-b66e-9d0040340501_LocalImage.jpg'. Physical path: 'C:\LearningProjects\LearningProjects\LocalStoreWebsite\wwwroot\images\stores\fe9372b3-7c20-4888-b66e-9d0040340501_LocalImage.jpg'
+2026-02-22 20:02:05.774 -08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5264/Store/Index - 200 null text/html; charset=utf-8 1088.2601ms
+2026-02-22 20:02:05.841 -08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5264/images/stores/fe9372b3-7c20-4888-b66e-9d0040340501_LocalImage.jpg - 200 347018 image/jpeg 404.9327ms
+2026-02-22 20:02:10.996 -08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5264/Store/Details/1 - null null
+2026-02-22 20:02:11.013 -08:00 [INF] Executing endpoint 'CleanMvcApp.Controllers.StoreController.Details (CleanMvcApp)'
+2026-02-22 20:02:11.081 -08:00 [INF] Route matched with {action = "Details", controller = "Store"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Details(Int32) on controller CleanMvcApp.Controllers.StoreController (CleanMvcApp).
+2026-02-22 20:02:11.240 -08:00 [INF] Executed DbCommand (3ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [s].[StoreId], [s].[Address], [s].[AverageRating], [s].[ClosingTime], [s].[CreatedAt], [s].[DeliveryCharge], [s].[DeliveryRadius], [s].[IsActive], [s].[Latitude], [s].[LicenseNumber], [s].[Longitude], [s].[OpeningTime], [s].[OwnerId], [s].[Status], [s].[StoreImageUrl], [s].[StoreName], [s].[TotalReviews], [s].[UpdatedAt]
+FROM [Stores] AS [s]
+WHERE [s].[StoreId] = @__p_0
+2026-02-22 20:02:11.246 -08:00 [INF] Executing ViewResult, running view Details.
+2026-02-22 20:02:11.340 -08:00 [INF] Executed ViewResult - view Details executed in 94.1427ms.
+2026-02-22 20:02:11.342 -08:00 [INF] Executed action CleanMvcApp.Controllers.StoreController.Details (CleanMvcApp) in 258.0286ms
+2026-02-22 20:02:11.364 -08:00 [INF] Executed endpoint 'CleanMvcApp.Controllers.StoreController.Details (CleanMvcApp)'
+2026-02-22 20:02:11.366 -08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5264/Store/Details/1 - 200 null text/html; charset=utf-8 369.764ms
+2026-02-22 20:02:17.543 -08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5264/Store/Index - null null
+2026-02-22 20:02:18.996 -08:00 [INF] Executing endpoint 'CleanMvcApp.Controllers.StoreController.Index (CleanMvcApp)'
+2026-02-22 20:02:19.329 -08:00 [INF] Route matched with {action = "Index", controller = "Store"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller CleanMvcApp.Controllers.StoreController (CleanMvcApp).
+2026-02-22 20:02:19.459 -08:00 [INF] Executed DbCommand (104ms) [Parameters=[@__ownerId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[StoreId], [s].[Address], [s].[AverageRating], [s].[ClosingTime], [s].[CreatedAt], [s].[DeliveryCharge], [s].[DeliveryRadius], [s].[IsActive], [s].[Latitude], [s].[LicenseNumber], [s].[Longitude], [s].[OpeningTime], [s].[OwnerId], [s].[Status], [s].[StoreImageUrl], [s].[StoreName], [s].[TotalReviews], [s].[UpdatedAt]
+FROM [Stores] AS [s]
+WHERE [s].[OwnerId] = @__ownerId_0
+2026-02-22 20:02:19.546 -08:00 [INF] Executing ViewResult, running view Index.
+2026-02-22 20:02:19.550 -08:00 [INF] Executed ViewResult - view Index executed in 4.2445ms.
+2026-02-22 20:02:19.554 -08:00 [INF] Executed action CleanMvcApp.Controllers.StoreController.Index (CleanMvcApp) in 211.8619ms
+2026-02-22 20:02:20.054 -08:00 [INF] Executed endpoint 'CleanMvcApp.Controllers.StoreController.Index (CleanMvcApp)'
+2026-02-22 20:02:20.135 -08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5264/Store/Index - 200 null text/html; charset=utf-8 2591.8895ms
+2026-02-22 20:02:46.643 -08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5264/Store - null null
+2026-02-22 20:02:46.654 -08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5264/Store - 404 0 null 10.7698ms
+2026-02-22 20:02:46.927 -08:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5264/Store, Response status code: 404
+2026-02-22 20:02:59.277 -08:00 [INF] Request starting HTTP/1.1 POST http://localhost:5264/Account/Logout - application/x-www-form-urlencoded 225
+2026-02-22 20:02:59.298 -08:00 [INF] Executing endpoint 'CleanMvcApp.Controllers.AccountController.Logout (CleanMvcApp)'
+2026-02-22 20:02:59.311 -08:00 [INF] Route matched with {action = "Logout", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Logout() on controller CleanMvcApp.Controllers.AccountController (CleanMvcApp).
+2026-02-22 20:02:59.374 -08:00 [INF] AuthenticationScheme: Identity.Application signed out.
+2026-02-22 20:02:59.425 -08:00 [INF] AuthenticationScheme: Identity.External signed out.
+2026-02-22 20:02:59.429 -08:00 [INF] AuthenticationScheme: Identity.TwoFactorUserId signed out.
+2026-02-22 20:02:59.431 -08:00 [INF] User logged out successfully
+2026-02-22 20:02:59.432 -08:00 [INF] User logged out
+2026-02-22 20:02:59.434 -08:00 [INF] Executing RedirectResult, redirecting to /Home/Index.
+2026-02-22 20:02:59.436 -08:00 [INF] Executed action CleanMvcApp.Controllers.AccountController.Logout (CleanMvcApp) in 66.8055ms
+2026-02-22 20:02:59.447 -08:00 [INF] Executed endpoint 'CleanMvcApp.Controllers.AccountController.Logout (CleanMvcApp)'
+2026-02-22 20:02:59.448 -08:00 [INF] Request finished HTTP/1.1 POST http://localhost:5264/Account/Logout - 302 0 null 171.2319ms
+2026-02-22 20:02:59.557 -08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5264/Home/Index - null null
+2026-02-22 20:02:59.562 -08:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2026-02-22 20:02:59.618 -08:00 [INF] AuthenticationScheme: Identity.Application was challenged.
+2026-02-22 20:02:59.621 -08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5264/Home/Index - 302 0 null 64.1489ms
+2026-02-22 20:02:59.637 -08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5264/Account/Login?ReturnUrl=%2FHome%2FIndex - null null
+2026-02-22 20:02:59.644 -08:00 [INF] Executing endpoint 'CleanMvcApp.Controllers.AccountController.Login (CleanMvcApp)'
+2026-02-22 20:02:59.646 -08:00 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(System.String) on controller CleanMvcApp.Controllers.AccountController (CleanMvcApp).
+2026-02-22 20:02:59.694 -08:00 [INF] Executing ViewResult, running view Login.
+2026-02-22 20:02:59.768 -08:00 [INF] Executed ViewResult - view Login executed in 74.7291ms.
+2026-02-22 20:02:59.774 -08:00 [INF] Executed action CleanMvcApp.Controllers.AccountController.Login (CleanMvcApp) in 87.7404ms
+2026-02-22 20:02:59.777 -08:00 [INF] Executed endpoint 'CleanMvcApp.Controllers.AccountController.Login (CleanMvcApp)'
+2026-02-22 20:02:59.898 -08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5264/Account/Login?ReturnUrl=%2FHome%2FIndex - 200 null text/html; charset=utf-8 259.9091ms
+2026-02-22 20:03:06.572 -08:00 [INF] Application is shutting down...
+2026-02-22 20:06:16.979 -08:00 [INF] Starting Local Store Delivery Platform
+2026-02-22 20:06:17.718 -08:00 [INF] User profile is available. Using 'C:\Users\SShete\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-02-22 20:06:19.413 -08:00 [INF] Executed DbCommand (47ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2026-02-22 20:06:19.601 -08:00 [INF] Executed DbCommand (3ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2026-02-22 20:06:19.608 -08:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2026-02-22 20:06:19.633 -08:00 [INF] Executed DbCommand (7ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[Address], [a].[ConcurrencyStamp], [a].[CreatedAt], [a].[Email], [a].[EmailConfirmed], [a].[FullName], [a].[IsActive], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2026-02-22 20:06:19.812 -08:00 [INF] Database seeded successfully
+2026-02-22 20:06:19.950 -08:00 [INF] Now listening on: http://localhost:5264
+2026-02-22 20:06:19.955 -08:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-02-22 20:06:19.957 -08:00 [INF] Hosting environment: Development
+2026-02-22 20:06:19.959 -08:00 [INF] Content root path: C:\LearningProjects\LearningProjects\LocalStoreWebsite
+2026-02-22 20:06:26.655 -08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5264/Account/Login?ReturnUrl=%2FHome%2FIndex - null null
+2026-02-22 20:06:26.686 -08:00 [WRN] Failed to determine the https port for redirect.
+2026-02-22 20:06:26.999 -08:00 [INF] Executing endpoint 'CleanMvcApp.Controllers.AccountController.Login (CleanMvcApp)'
+2026-02-22 20:06:27.098 -08:00 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(System.String) on controller CleanMvcApp.Controllers.AccountController (CleanMvcApp).
+2026-02-22 20:06:27.230 -08:00 [INF] Executing ViewResult, running view Login.
+2026-02-22 20:06:27.445 -08:00 [INF] Executed ViewResult - view Login executed in 244.6028ms.
+2026-02-22 20:06:27.449 -08:00 [INF] Executed action CleanMvcApp.Controllers.AccountController.Login (CleanMvcApp) in 334.6243ms
+2026-02-22 20:06:27.455 -08:00 [INF] Executed endpoint 'CleanMvcApp.Controllers.AccountController.Login (CleanMvcApp)'
+2026-02-22 20:06:27.467 -08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5264/Account/Login?ReturnUrl=%2FHome%2FIndex - 200 null text/html; charset=utf-8 814.1614ms
+2026-02-22 20:06:34.829 -08:00 [INF] Request starting HTTP/1.1 POST http://localhost:5264/ - application/x-www-form-urlencoded 249
+2026-02-22 20:06:34.837 -08:00 [INF] Executing endpoint 'CleanMvcApp.Controllers.AccountController.Login (CleanMvcApp)'
+2026-02-22 20:06:34.890 -08:00 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(CleanMvcApp.Models.ViewModels.LoginViewModel, System.String) on controller CleanMvcApp.Controllers.AccountController (CleanMvcApp).
+2026-02-22 20:06:35.072 -08:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[Address], [a].[ConcurrencyStamp], [a].[CreatedAt], [a].[Email], [a].[EmailConfirmed], [a].[FullName], [a].[IsActive], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2026-02-22 20:06:35.379 -08:00 [INF] Executed DbCommand (5ms) [Parameters=[@__user_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[ClaimType], [a].[ClaimValue], [a].[UserId]
+FROM [AspNetUserClaims] AS [a]
+WHERE [a].[UserId] = @__user_Id_0
+2026-02-22 20:06:35.486 -08:00 [INF] Executed DbCommand (4ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2026-02-22 20:06:35.494 -08:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2026-02-22 20:06:35.536 -08:00 [INF] Executed DbCommand (14ms) [Parameters=[@__role_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[ClaimType], [a].[ClaimValue]
+FROM [AspNetRoleClaims] AS [a]
+WHERE [a].[RoleId] = @__role_Id_0
+2026-02-22 20:06:35.553 -08:00 [INF] AuthenticationScheme: Identity.Application signed in.
+2026-02-22 20:06:35.557 -08:00 [INF] User admin@localstore.com logged in successfully
+2026-02-22 20:06:35.559 -08:00 [INF] User admin@localstore.com logged in successfully
+2026-02-22 20:06:35.575 -08:00 [INF] Executing RedirectResult, redirecting to /Home/Index.
+2026-02-22 20:06:35.607 -08:00 [INF] Executed action CleanMvcApp.Controllers.AccountController.Login (CleanMvcApp) in 713.4163ms
+2026-02-22 20:06:35.613 -08:00 [INF] Executed endpoint 'CleanMvcApp.Controllers.AccountController.Login (CleanMvcApp)'
+2026-02-22 20:06:35.622 -08:00 [INF] Request finished HTTP/1.1 POST http://localhost:5264/ - 302 0 null 793.5694ms
+2026-02-22 20:06:35.633 -08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5264/Home/Index - null null
+2026-02-22 20:06:35.675 -08:00 [INF] Executing endpoint 'CleanMvcApp.Controllers.HomeController.Index (CleanMvcApp)'
+2026-02-22 20:06:35.678 -08:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller CleanMvcApp.Controllers.HomeController (CleanMvcApp).
+2026-02-22 20:06:35.683 -08:00 [INF] Executing ViewResult, running view Index.
+2026-02-22 20:06:35.796 -08:00 [INF] Executed ViewResult - view Index executed in 114.5292ms.
+2026-02-22 20:06:35.833 -08:00 [INF] Executed action CleanMvcApp.Controllers.HomeController.Index (CleanMvcApp) in 151.4395ms
+2026-02-22 20:06:35.842 -08:00 [INF] Executed endpoint 'CleanMvcApp.Controllers.HomeController.Index (CleanMvcApp)'
+2026-02-22 20:06:35.896 -08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5264/Home/Index - 200 null text/html; charset=utf-8 263.3817ms
+2026-02-22 20:06:42.326 -08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5264/Admin/ManageUsers - null null
+2026-02-22 20:06:42.335 -08:00 [INF] Executing endpoint 'CleanMvcApp.Controllers.AdminController.ManageUsers (CleanMvcApp)'
+2026-02-22 20:06:42.342 -08:00 [INF] Route matched with {action = "ManageUsers", controller = "Admin"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult ManageUsers() on controller CleanMvcApp.Controllers.AdminController (CleanMvcApp).
+2026-02-22 20:06:42.356 -08:00 [INF] Authorization failed for the request at filter 'CleanMvcApp.Attributes.PermissionFilter'.
+2026-02-22 20:06:42.391 -08:00 [INF] Executing RedirectResult, redirecting to /Account/AccessDenied.
+2026-02-22 20:06:42.393 -08:00 [INF] Executed action CleanMvcApp.Controllers.AdminController.ManageUsers (CleanMvcApp) in 43.4547ms
+2026-02-22 20:06:42.396 -08:00 [INF] Executed endpoint 'CleanMvcApp.Controllers.AdminController.ManageUsers (CleanMvcApp)'
+2026-02-22 20:06:42.398 -08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5264/Admin/ManageUsers - 302 0 null 72.4582ms
+2026-02-22 20:06:42.405 -08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5264/Account/AccessDenied - null null
+2026-02-22 20:06:42.466 -08:00 [INF] Executing endpoint 'CleanMvcApp.Controllers.AccountController.AccessDenied (CleanMvcApp)'
+2026-02-22 20:06:42.472 -08:00 [INF] Route matched with {action = "AccessDenied", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult AccessDenied() on controller CleanMvcApp.Controllers.AccountController (CleanMvcApp).
+2026-02-22 20:06:42.507 -08:00 [INF] Executing ViewResult, running view AccessDenied.
+2026-02-22 20:06:42.516 -08:00 [INF] Executed ViewResult - view AccessDenied executed in 11.411ms.
+2026-02-22 20:06:42.518 -08:00 [INF] Executed action CleanMvcApp.Controllers.AccountController.AccessDenied (CleanMvcApp) in 40.7848ms
+2026-02-22 20:06:42.521 -08:00 [INF] Executed endpoint 'CleanMvcApp.Controllers.AccountController.AccessDenied (CleanMvcApp)'
+2026-02-22 20:06:42.523 -08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5264/Account/AccessDenied - 200 null text/html; charset=utf-8 118.027ms
+2026-02-22 20:06:45.598 -08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5264/AdminStore/Pending - null null
+2026-02-22 20:06:45.609 -08:00 [INF] Executing endpoint 'CleanMvcApp.Controllers.AdminStoreController.Pending (CleanMvcApp)'
+2026-02-22 20:06:45.616 -08:00 [INF] Route matched with {action = "Pending", controller = "AdminStore"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Pending() on controller CleanMvcApp.Controllers.AdminStoreController (CleanMvcApp).
+2026-02-22 20:06:45.756 -08:00 [INF] Executed DbCommand (11ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[StoreId], [s].[Address], [s].[AverageRating], [s].[ClosingTime], [s].[CreatedAt], [s].[DeliveryCharge], [s].[DeliveryRadius], [s].[IsActive], [s].[Latitude], [s].[LicenseNumber], [s].[Longitude], [s].[OpeningTime], [s].[OwnerId], [s].[Status], [s].[StoreImageUrl], [s].[StoreName], [s].[TotalReviews], [s].[UpdatedAt]
+FROM [Stores] AS [s]
+WHERE [s].[Status] = N'Pending'
+2026-02-22 20:06:45.763 -08:00 [INF] Executing ViewResult, running view Pending.
+2026-02-22 20:06:45.775 -08:00 [INF] Executed ViewResult - view Pending executed in 13.0296ms.
+2026-02-22 20:06:45.777 -08:00 [INF] Executed action CleanMvcApp.Controllers.AdminStoreController.Pending (CleanMvcApp) in 157.9459ms
+2026-02-22 20:06:45.780 -08:00 [INF] Executed endpoint 'CleanMvcApp.Controllers.AdminStoreController.Pending (CleanMvcApp)'
+2026-02-22 20:06:45.794 -08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5264/AdminStore/Pending - 200 null text/html; charset=utf-8 195.5419ms
+2026-02-22 20:06:49.619 -08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5264/AdminStore/Index - null null
+2026-02-22 20:06:49.630 -08:00 [INF] Executing endpoint 'CleanMvcApp.Controllers.AdminStoreController.Index (CleanMvcApp)'
+2026-02-22 20:06:49.638 -08:00 [INF] Route matched with {action = "Index", controller = "AdminStore"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller CleanMvcApp.Controllers.AdminStoreController (CleanMvcApp).
+2026-02-22 20:06:49.692 -08:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[StoreId], [s].[Address], [s].[AverageRating], [s].[ClosingTime], [s].[CreatedAt], [s].[DeliveryCharge], [s].[DeliveryRadius], [s].[IsActive], [s].[Latitude], [s].[LicenseNumber], [s].[Longitude], [s].[OpeningTime], [s].[OwnerId], [s].[Status], [s].[StoreImageUrl], [s].[StoreName], [s].[TotalReviews], [s].[UpdatedAt]
+FROM [Stores] AS [s]
+2026-02-22 20:06:49.881 -08:00 [INF] Executing ViewResult, running view Index.
+2026-02-22 20:06:49.893 -08:00 [INF] Executed ViewResult - view Index executed in 12.9735ms.
+2026-02-22 20:06:49.897 -08:00 [INF] Executed action CleanMvcApp.Controllers.AdminStoreController.Index (CleanMvcApp) in 254.6722ms
+2026-02-22 20:06:50.058 -08:00 [INF] Executed endpoint 'CleanMvcApp.Controllers.AdminStoreController.Index (CleanMvcApp)'
+2026-02-22 20:06:50.061 -08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5264/AdminStore/Index - 200 null text/html; charset=utf-8 442.3653ms
+2026-02-22 20:06:58.660 -08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5264/AdminCategory/Index - null null
+2026-02-22 20:06:58.667 -08:00 [INF] Executing endpoint 'CleanMvcApp.Controllers.AdminCategoryController.Index (CleanMvcApp)'
+2026-02-22 20:06:58.676 -08:00 [INF] Route matched with {action = "Index", controller = "AdminCategory"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller CleanMvcApp.Controllers.AdminCategoryController (CleanMvcApp).
+2026-02-22 20:06:58.738 -08:00 [ERR] Failed executing DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CategoryId], [c].[CategoryName], [c].[CreatedAt], [c].[Description], [c].[IsActive], [c].[UpdatedAt]
+FROM [Categories] AS [c]
+2026-02-22 20:06:58.803 -08:00 [ERR] An exception occurred while iterating over the results of a query for context type 'CleanMvcApp.Data.ApplicationDbContext'.
+Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid column name 'UpdatedAt'.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__211_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:f0ec0750-6c96-4b38-90a3-4d0ee7e591c4
+Error Number:207,State:1,Class:16
+Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid column name 'UpdatedAt'.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__211_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:f0ec0750-6c96-4b38-90a3-4d0ee7e591c4
+Error Number:207,State:1,Class:16
+2026-02-22 20:06:58.859 -08:00 [INF] Executed action CleanMvcApp.Controllers.AdminCategoryController.Index (CleanMvcApp) in 178.7821ms
+2026-02-22 20:06:58.866 -08:00 [INF] Executed endpoint 'CleanMvcApp.Controllers.AdminCategoryController.Index (CleanMvcApp)'
+2026-02-22 20:06:58.868 -08:00 [ERR] An unhandled exception occurred
+Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid column name 'UpdatedAt'.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__211_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at CleanMvcApp.Repositories.GenericRepository`1.GetAllAsync() in C:\LearningProjects\LearningProjects\LocalStoreWebsite\Repositories\GenericRepository.cs:line 25
+   at CleanMvcApp.Services.CategoryService.GetAllCategoriesAsync() in C:\LearningProjects\LearningProjects\LocalStoreWebsite\Services\CategoryService.cs:line 46
+   at CleanMvcApp.Controllers.AdminCategoryController.Index() in C:\LearningProjects\LearningProjects\LocalStoreWebsite\Controllers\AdminCategoryController.cs:line 23
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at CleanMvcApp.Middleware.ErrorHandlingMiddleware.InvokeAsync(HttpContext context) in C:\LearningProjects\LearningProjects\LocalStoreWebsite\Middleware\ErrorHandlingMiddleware.cs:line 21
+ClientConnectionId:f0ec0750-6c96-4b38-90a3-4d0ee7e591c4
+Error Number:207,State:1,Class:16
+2026-02-22 20:06:59.703 -08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5264/AdminCategory/Index - 500 null application/json 1043.5008ms
+2026-02-22 20:07:26.228 -08:00 [INF] Application is shutting down...
+2026-02-22 20:11:11.683 -08:00 [INF] Starting Local Store Delivery Platform
+2026-02-22 20:11:12.133 -08:00 [FTL] Application terminated unexpectedly
+Microsoft.Extensions.Hosting.HostAbortedException: The host was aborted.
+   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.ThrowHostAborted()
+   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.OnNext(KeyValuePair`2 value)
+   at System.Diagnostics.DiagnosticListener.Write(String name, Object value)
+   at System.Diagnostics.DiagnosticSource.Write[T](String name, T value)
+   at Microsoft.Extensions.Hosting.HostBuilder.ResolveHost(IServiceProvider serviceProvider, DiagnosticListener diagnosticListener)
+   at Microsoft.Extensions.Hosting.HostApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Builder.WebApplicationBuilder.Build()
+   at Program.<Main>$(String[] args) in C:\LearningProjects\LearningProjects\LocalStoreWebsite\Program.cs:line 94
+2026-02-22 20:11:32.407 -08:00 [INF] Starting Local Store Delivery Platform
+2026-02-22 20:11:32.689 -08:00 [FTL] Application terminated unexpectedly
+Microsoft.Extensions.Hosting.HostAbortedException: The host was aborted.
+   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.ThrowHostAborted()
+   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.OnNext(KeyValuePair`2 value)
+   at System.Diagnostics.DiagnosticListener.Write(String name, Object value)
+   at System.Diagnostics.DiagnosticSource.Write[T](String name, T value)
+   at Microsoft.Extensions.Hosting.HostBuilder.ResolveHost(IServiceProvider serviceProvider, DiagnosticListener diagnosticListener)
+   at Microsoft.Extensions.Hosting.HostApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Builder.WebApplicationBuilder.Build()
+   at Program.<Main>$(String[] args) in C:\LearningProjects\LearningProjects\LocalStoreWebsite\Program.cs:line 94
+2026-02-22 20:14:26.661 -08:00 [INF] Starting Local Store Delivery Platform
+2026-02-22 20:14:27.063 -08:00 [FTL] Application terminated unexpectedly
+Microsoft.Extensions.Hosting.HostAbortedException: The host was aborted.
+   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.ThrowHostAborted()
+   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.OnNext(KeyValuePair`2 value)
+   at System.Diagnostics.DiagnosticListener.Write(String name, Object value)
+   at System.Diagnostics.DiagnosticSource.Write[T](String name, T value)
+   at Microsoft.Extensions.Hosting.HostBuilder.ResolveHost(IServiceProvider serviceProvider, DiagnosticListener diagnosticListener)
+   at Microsoft.Extensions.Hosting.HostApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Builder.WebApplicationBuilder.Build()
+   at Program.<Main>$(String[] args) in C:\LearningProjects\LearningProjects\LocalStoreWebsite\Program.cs:line 94
+2026-02-22 20:15:09.654 -08:00 [INF] Starting Local Store Delivery Platform
+2026-02-22 20:15:10.053 -08:00 [FTL] Application terminated unexpectedly
+Microsoft.Extensions.Hosting.HostAbortedException: The host was aborted.
+   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.ThrowHostAborted()
+   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.OnNext(KeyValuePair`2 value)
+   at System.Diagnostics.DiagnosticListener.Write(String name, Object value)
+   at System.Diagnostics.DiagnosticSource.Write[T](String name, T value)
+   at Microsoft.Extensions.Hosting.HostBuilder.ResolveHost(IServiceProvider serviceProvider, DiagnosticListener diagnosticListener)
+   at Microsoft.Extensions.Hosting.HostApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Builder.WebApplicationBuilder.Build()
+   at Program.<Main>$(String[] args) in C:\LearningProjects\LearningProjects\LocalStoreWebsite\Program.cs:line 94
+2026-02-22 20:17:58.810 -08:00 [INF] Starting Local Store Delivery Platform
+2026-02-22 20:17:59.206 -08:00 [FTL] Application terminated unexpectedly
+Microsoft.Extensions.Hosting.HostAbortedException: The host was aborted.
+   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.ThrowHostAborted()
+   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.OnNext(KeyValuePair`2 value)
+   at System.Diagnostics.DiagnosticListener.Write(String name, Object value)
+   at System.Diagnostics.DiagnosticSource.Write[T](String name, T value)
+   at Microsoft.Extensions.Hosting.HostBuilder.ResolveHost(IServiceProvider serviceProvider, DiagnosticListener diagnosticListener)
+   at Microsoft.Extensions.Hosting.HostApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Builder.WebApplicationBuilder.Build()
+   at Program.<Main>$(String[] args) in C:\LearningProjects\LearningProjects\LocalStoreWebsite\Program.cs:line 94
+2026-02-22 20:18:56.599 -08:00 [INF] Starting Local Store Delivery Platform
+2026-02-22 20:18:56.974 -08:00 [FTL] Application terminated unexpectedly
+Microsoft.Extensions.Hosting.HostAbortedException: The host was aborted.
+   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.ThrowHostAborted()
+   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.OnNext(KeyValuePair`2 value)
+   at System.Diagnostics.DiagnosticListener.Write(String name, Object value)
+   at System.Diagnostics.DiagnosticSource.Write[T](String name, T value)
+   at Microsoft.Extensions.Hosting.HostBuilder.ResolveHost(IServiceProvider serviceProvider, DiagnosticListener diagnosticListener)
+   at Microsoft.Extensions.Hosting.HostApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Builder.WebApplicationBuilder.Build()
+   at Program.<Main>$(String[] args) in C:\LearningProjects\LearningProjects\LocalStoreWebsite\Program.cs:line 94
+2026-02-22 20:19:36.742 -08:00 [INF] Starting Local Store Delivery Platform
+2026-02-22 20:19:37.724 -08:00 [INF] User profile is available. Using 'C:\Users\SShete\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-02-22 20:19:39.444 -08:00 [INF] Executed DbCommand (44ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2026-02-22 20:19:39.623 -08:00 [INF] Executed DbCommand (3ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2026-02-22 20:19:39.629 -08:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2026-02-22 20:19:39.689 -08:00 [INF] Executed DbCommand (4ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[Address], [a].[ConcurrencyStamp], [a].[CreatedAt], [a].[Email], [a].[EmailConfirmed], [a].[FullName], [a].[IsActive], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2026-02-22 20:19:39.831 -08:00 [INF] Database seeded successfully
+2026-02-22 20:19:39.998 -08:00 [INF] Now listening on: http://localhost:5264
+2026-02-22 20:19:40.004 -08:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-02-22 20:19:40.006 -08:00 [INF] Hosting environment: Development
+2026-02-22 20:19:40.020 -08:00 [INF] Content root path: C:\LearningProjects\LearningProjects\LocalStoreWebsite
+2026-02-22 20:20:32.440 -08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5264/AdminCategory/Index - null null
+2026-02-22 20:20:32.524 -08:00 [WRN] Failed to determine the https port for redirect.
+2026-02-22 20:20:32.703 -08:00 [INF] Executing endpoint 'CleanMvcApp.Controllers.AdminCategoryController.Index (CleanMvcApp)'
+2026-02-22 20:20:32.751 -08:00 [INF] Route matched with {action = "Index", controller = "AdminCategory"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller CleanMvcApp.Controllers.AdminCategoryController (CleanMvcApp).
+2026-02-22 20:20:32.913 -08:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CategoryId], [c].[CategoryName], [c].[CreatedAt], [c].[Description], [c].[IsActive], [c].[UpdatedAt]
+FROM [Categories] AS [c]
+2026-02-22 20:20:32.982 -08:00 [INF] Executing ViewResult, running view Index.
+2026-02-22 20:20:33.243 -08:00 [INF] Executed ViewResult - view Index executed in 266.6155ms.
+2026-02-22 20:20:33.250 -08:00 [INF] Executed action CleanMvcApp.Controllers.AdminCategoryController.Index (CleanMvcApp) in 483.9284ms
+2026-02-22 20:20:33.320 -08:00 [INF] Executed endpoint 'CleanMvcApp.Controllers.AdminCategoryController.Index (CleanMvcApp)'
+2026-02-22 20:20:33.378 -08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5264/AdminCategory/Index - 200 null text/html; charset=utf-8 935.694ms
+2026-02-22 20:20:35.917 -08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5264/AdminCategory/Create - null null
+2026-02-22 20:20:35.975 -08:00 [INF] Executing endpoint 'CleanMvcApp.Controllers.AdminCategoryController.Create (CleanMvcApp)'
+2026-02-22 20:20:36.020 -08:00 [INF] Route matched with {action = "Create", controller = "AdminCategory"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Create() on controller CleanMvcApp.Controllers.AdminCategoryController (CleanMvcApp).
+2026-02-22 20:20:36.027 -08:00 [INF] Executing ViewResult, running view Create.
+2026-02-22 20:20:36.166 -08:00 [INF] Executed ViewResult - view Create executed in 140.7447ms.
+2026-02-22 20:20:36.170 -08:00 [INF] Executed action CleanMvcApp.Controllers.AdminCategoryController.Create (CleanMvcApp) in 146.9402ms
+2026-02-22 20:20:36.173 -08:00 [INF] Executed endpoint 'CleanMvcApp.Controllers.AdminCategoryController.Create (CleanMvcApp)'
+2026-02-22 20:20:36.185 -08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5264/AdminCategory/Create - 200 null text/html; charset=utf-8 266.2889ms
+2026-02-22 20:21:01.531 -08:00 [INF] Request starting HTTP/1.1 POST http://localhost:5264/AdminCategory/Create - application/x-www-form-urlencoded 294
+2026-02-22 20:21:01.612 -08:00 [INF] Executing endpoint 'CleanMvcApp.Controllers.AdminCategoryController.Create (CleanMvcApp)'
+2026-02-22 20:21:01.740 -08:00 [INF] Route matched with {action = "Create", controller = "AdminCategory"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(CleanMvcApp.Models.Entities.Category) on controller CleanMvcApp.Controllers.AdminCategoryController (CleanMvcApp).
+2026-02-22 20:21:01.987 -08:00 [INF] Executed DbCommand (6ms) [Parameters=[@p0='?' (Size = 100), @p1='?' (DbType = DateTime2), @p2='?' (Size = 500), @p3='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Categories] ([CategoryName], [CreatedAt], [Description], [UpdatedAt])
+OUTPUT INSERTED.[CategoryId], INSERTED.[IsActive]
+VALUES (@p0, @p1, @p2, @p3);
+2026-02-22 20:21:02.098 -08:00 [INF] Category Dairy Products created with ID 1
+2026-02-22 20:21:02.106 -08:00 [INF] Executing RedirectResult, redirecting to /AdminCategory/Index.
+2026-02-22 20:21:02.122 -08:00 [INF] Executed action CleanMvcApp.Controllers.AdminCategoryController.Create (CleanMvcApp) in 378.9374ms
+2026-02-22 20:21:02.126 -08:00 [INF] Executed endpoint 'CleanMvcApp.Controllers.AdminCategoryController.Create (CleanMvcApp)'
+2026-02-22 20:21:02.128 -08:00 [INF] Request finished HTTP/1.1 POST http://localhost:5264/AdminCategory/Create - 302 0 null 597.3966ms
+2026-02-22 20:21:02.136 -08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5264/AdminCategory/Index - null null
+2026-02-22 20:21:02.172 -08:00 [INF] Executing endpoint 'CleanMvcApp.Controllers.AdminCategoryController.Index (CleanMvcApp)'
+2026-02-22 20:21:02.176 -08:00 [INF] Route matched with {action = "Index", controller = "AdminCategory"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller CleanMvcApp.Controllers.AdminCategoryController (CleanMvcApp).
+2026-02-22 20:21:02.249 -08:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CategoryId], [c].[CategoryName], [c].[CreatedAt], [c].[Description], [c].[IsActive], [c].[UpdatedAt]
+FROM [Categories] AS [c]
+2026-02-22 20:21:02.255 -08:00 [INF] Executing ViewResult, running view Index.
+2026-02-22 20:21:02.375 -08:00 [INF] Executed ViewResult - view Index executed in 119.9463ms.
+2026-02-22 20:21:02.382 -08:00 [INF] Executed action CleanMvcApp.Controllers.AdminCategoryController.Index (CleanMvcApp) in 171.3555ms
+2026-02-22 20:21:02.470 -08:00 [INF] Executed endpoint 'CleanMvcApp.Controllers.AdminCategoryController.Index (CleanMvcApp)'
+2026-02-22 20:21:02.530 -08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5264/AdminCategory/Index - 200 null text/html; charset=utf-8 335.3078ms
+2026-02-22 20:21:04.928 -08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5264/AdminCategory/Edit/1 - null null
+2026-02-22 20:21:04.935 -08:00 [INF] Executing endpoint 'CleanMvcApp.Controllers.AdminCategoryController.Edit (CleanMvcApp)'
+2026-02-22 20:21:04.945 -08:00 [INF] Route matched with {action = "Edit", controller = "AdminCategory"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Edit(Int32) on controller CleanMvcApp.Controllers.AdminCategoryController (CleanMvcApp).
+2026-02-22 20:21:05.069 -08:00 [INF] Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[CategoryId], [c].[CategoryName], [c].[CreatedAt], [c].[Description], [c].[IsActive], [c].[UpdatedAt]
+FROM [Categories] AS [c]
+WHERE [c].[CategoryId] = @__p_0
+2026-02-22 20:21:05.113 -08:00 [INF] Executing ViewResult, running view Edit.
+2026-02-22 20:21:05.132 -08:00 [INF] Executed ViewResult - view Edit executed in 21.4749ms.
+2026-02-22 20:21:05.211 -08:00 [INF] Executed action CleanMvcApp.Controllers.AdminCategoryController.Edit (CleanMvcApp) in 225.3905ms
+2026-02-22 20:21:05.215 -08:00 [INF] Executed endpoint 'CleanMvcApp.Controllers.AdminCategoryController.Edit (CleanMvcApp)'
+2026-02-22 20:21:05.220 -08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5264/AdminCategory/Edit/1 - 200 null text/html; charset=utf-8 291.6754ms
+2026-02-22 20:21:06.631 -08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5264/AdminCategory/Index - null null
+2026-02-22 20:21:06.642 -08:00 [INF] Executing endpoint 'CleanMvcApp.Controllers.AdminCategoryController.Index (CleanMvcApp)'
+2026-02-22 20:21:06.647 -08:00 [INF] Route matched with {action = "Index", controller = "AdminCategory"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller CleanMvcApp.Controllers.AdminCategoryController (CleanMvcApp).
+2026-02-22 20:21:06.741 -08:00 [INF] Executed DbCommand (36ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CategoryId], [c].[CategoryName], [c].[CreatedAt], [c].[Description], [c].[IsActive], [c].[UpdatedAt]
+FROM [Categories] AS [c]
+2026-02-22 20:21:06.751 -08:00 [INF] Executing ViewResult, running view Index.
+2026-02-22 20:21:06.756 -08:00 [INF] Executed ViewResult - view Index executed in 4.9006ms.
+2026-02-22 20:21:06.835 -08:00 [INF] Executed action CleanMvcApp.Controllers.AdminCategoryController.Index (CleanMvcApp) in 139.5968ms
+2026-02-22 20:21:06.838 -08:00 [INF] Executed endpoint 'CleanMvcApp.Controllers.AdminCategoryController.Index (CleanMvcApp)'
+2026-02-22 20:21:06.840 -08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5264/AdminCategory/Index - 200 null text/html; charset=utf-8 209.3266ms
+2026-02-22 20:21:12.584 -08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5264/Admin/ManageUsers - null null
+2026-02-22 20:21:12.590 -08:00 [INF] Executing endpoint 'CleanMvcApp.Controllers.AdminController.ManageUsers (CleanMvcApp)'
+2026-02-22 20:21:12.595 -08:00 [INF] Route matched with {action = "ManageUsers", controller = "Admin"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult ManageUsers() on controller CleanMvcApp.Controllers.AdminController (CleanMvcApp).
+2026-02-22 20:21:12.600 -08:00 [INF] Authorization failed for the request at filter 'CleanMvcApp.Attributes.PermissionFilter'.
+2026-02-22 20:21:12.602 -08:00 [INF] Executing RedirectResult, redirecting to /Account/AccessDenied.
+2026-02-22 20:21:12.632 -08:00 [INF] Executed action CleanMvcApp.Controllers.AdminController.ManageUsers (CleanMvcApp) in 33.221ms
+2026-02-22 20:21:12.695 -08:00 [INF] Executed endpoint 'CleanMvcApp.Controllers.AdminController.ManageUsers (CleanMvcApp)'
+2026-02-22 20:21:12.859 -08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5264/Admin/ManageUsers - 302 0 null 275.0824ms
+2026-02-22 20:21:12.865 -08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5264/Account/AccessDenied - null null
+2026-02-22 20:21:12.881 -08:00 [INF] Executing endpoint 'CleanMvcApp.Controllers.AccountController.AccessDenied (CleanMvcApp)'
+2026-02-22 20:21:12.889 -08:00 [INF] Route matched with {action = "AccessDenied", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult AccessDenied() on controller CleanMvcApp.Controllers.AccountController (CleanMvcApp).
+2026-02-22 20:21:12.981 -08:00 [INF] Executing ViewResult, running view AccessDenied.
+2026-02-22 20:21:13.023 -08:00 [INF] Executed ViewResult - view AccessDenied executed in 69.3393ms.
+2026-02-22 20:21:13.282 -08:00 [INF] Executed action CleanMvcApp.Controllers.AccountController.AccessDenied (CleanMvcApp) in 329.7509ms
+2026-02-22 20:21:13.288 -08:00 [INF] Executed endpoint 'CleanMvcApp.Controllers.AccountController.AccessDenied (CleanMvcApp)'
+2026-02-22 20:21:13.301 -08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5264/Account/AccessDenied - 200 null text/html; charset=utf-8 435.6723ms
+2026-02-22 20:21:16.348 -08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5264/Admin/Settings - null null
+2026-02-22 20:21:16.368 -08:00 [INF] Executing endpoint 'CleanMvcApp.Controllers.AdminController.Settings (CleanMvcApp)'
+2026-02-22 20:21:16.423 -08:00 [INF] Route matched with {action = "Settings", controller = "Admin"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Settings() on controller CleanMvcApp.Controllers.AdminController (CleanMvcApp).
+2026-02-22 20:21:16.457 -08:00 [INF] Authorization failed for the request at filter 'CleanMvcApp.Attributes.PermissionFilter'.
+2026-02-22 20:21:16.459 -08:00 [INF] Executing RedirectResult, redirecting to /Account/AccessDenied.
+2026-02-22 20:21:16.461 -08:00 [INF] Executed action CleanMvcApp.Controllers.AdminController.Settings (CleanMvcApp) in 5.0512ms
+2026-02-22 20:21:16.464 -08:00 [INF] Executed endpoint 'CleanMvcApp.Controllers.AdminController.Settings (CleanMvcApp)'
+2026-02-22 20:21:16.466 -08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5264/Admin/Settings - 302 0 null 117.627ms
+2026-02-22 20:21:16.472 -08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5264/Account/AccessDenied - null null
+2026-02-22 20:21:16.477 -08:00 [INF] Executing endpoint 'CleanMvcApp.Controllers.AccountController.AccessDenied (CleanMvcApp)'
+2026-02-22 20:21:16.485 -08:00 [INF] Route matched with {action = "AccessDenied", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult AccessDenied() on controller CleanMvcApp.Controllers.AccountController (CleanMvcApp).
+2026-02-22 20:21:16.508 -08:00 [INF] Executing ViewResult, running view AccessDenied.
+2026-02-22 20:21:16.524 -08:00 [INF] Executed ViewResult - view AccessDenied executed in 25.6219ms.
+2026-02-22 20:21:16.599 -08:00 [INF] Executed action CleanMvcApp.Controllers.AccountController.AccessDenied (CleanMvcApp) in 111.4417ms
+2026-02-22 20:21:16.602 -08:00 [INF] Executed endpoint 'CleanMvcApp.Controllers.AccountController.AccessDenied (CleanMvcApp)'
+2026-02-22 20:21:16.614 -08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5264/Account/AccessDenied - 200 null text/html; charset=utf-8 142.3038ms
+2026-02-22 20:21:21.553 -08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5264/Dashboard/Index - null null
+2026-02-22 20:21:21.559 -08:00 [INF] Executing endpoint 'CleanMvcApp.Controllers.DashboardController.Index (CleanMvcApp)'
+2026-02-22 20:21:21.598 -08:00 [INF] Route matched with {action = "Index", controller = "Dashboard"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller CleanMvcApp.Controllers.DashboardController (CleanMvcApp).
+2026-02-22 20:21:21.602 -08:00 [INF] Executing ViewResult, running view Index.
+2026-02-22 20:21:21.644 -08:00 [INF] Executed ViewResult - view Index executed in 43.2994ms.
+2026-02-22 20:21:21.649 -08:00 [INF] Executed action CleanMvcApp.Controllers.DashboardController.Index (CleanMvcApp) in 49.1327ms
+2026-02-22 20:21:21.661 -08:00 [INF] Executed endpoint 'CleanMvcApp.Controllers.DashboardController.Index (CleanMvcApp)'
+2026-02-22 20:21:21.663 -08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5264/Dashboard/Index - 200 null text/html; charset=utf-8 110.2474ms
+2026-02-22 20:21:25.536 -08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5264/Home/Index - null null
+2026-02-22 20:21:25.539 -08:00 [INF] Executing endpoint 'CleanMvcApp.Controllers.HomeController.Index (CleanMvcApp)'
+2026-02-22 20:21:25.545 -08:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller CleanMvcApp.Controllers.HomeController (CleanMvcApp).
+2026-02-22 20:21:25.591 -08:00 [INF] Executing ViewResult, running view Index.
+2026-02-22 20:21:25.598 -08:00 [INF] Executed ViewResult - view Index executed in 7.6982ms.
+2026-02-22 20:21:25.602 -08:00 [INF] Executed action CleanMvcApp.Controllers.HomeController.Index (CleanMvcApp) in 12.0304ms
+2026-02-22 20:21:25.772 -08:00 [INF] Executed endpoint 'CleanMvcApp.Controllers.HomeController.Index (CleanMvcApp)'
+2026-02-22 20:21:25.805 -08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5264/Home/Index - 200 null text/html; charset=utf-8 269.7973ms
+2026-02-22 20:21:28.739 -08:00 [INF] Request starting HTTP/1.1 POST http://localhost:5264/Account/Logout - application/x-www-form-urlencoded 225
+2026-02-22 20:21:28.744 -08:00 [INF] Executing endpoint 'CleanMvcApp.Controllers.AccountController.Logout (CleanMvcApp)'
+2026-02-22 20:21:28.752 -08:00 [INF] Route matched with {action = "Logout", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Logout() on controller CleanMvcApp.Controllers.AccountController (CleanMvcApp).
+2026-02-22 20:21:28.803 -08:00 [INF] AuthenticationScheme: Identity.Application signed out.
+2026-02-22 20:21:28.806 -08:00 [INF] AuthenticationScheme: Identity.External signed out.
+2026-02-22 20:21:28.808 -08:00 [INF] AuthenticationScheme: Identity.TwoFactorUserId signed out.
+2026-02-22 20:21:28.810 -08:00 [INF] User logged out successfully
+2026-02-22 20:21:28.811 -08:00 [INF] User logged out
+2026-02-22 20:21:28.813 -08:00 [INF] Executing RedirectResult, redirecting to /Home/Index.
+2026-02-22 20:21:28.815 -08:00 [INF] Executed action CleanMvcApp.Controllers.AccountController.Logout (CleanMvcApp) in 59.1438ms
+2026-02-22 20:21:28.817 -08:00 [INF] Executed endpoint 'CleanMvcApp.Controllers.AccountController.Logout (CleanMvcApp)'
+2026-02-22 20:21:28.818 -08:00 [INF] Request finished HTTP/1.1 POST http://localhost:5264/Account/Logout - 302 0 null 79.9028ms
+2026-02-22 20:21:28.863 -08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5264/Home/Index - null null
+2026-02-22 20:21:28.869 -08:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2026-02-22 20:21:28.874 -08:00 [INF] AuthenticationScheme: Identity.Application was challenged.
+2026-02-22 20:21:28.876 -08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5264/Home/Index - 302 0 null 13.2113ms
+2026-02-22 20:21:28.882 -08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5264/Account/Login?ReturnUrl=%2FHome%2FIndex - null null
+2026-02-22 20:21:28.888 -08:00 [INF] Executing endpoint 'CleanMvcApp.Controllers.AccountController.Login (CleanMvcApp)'
+2026-02-22 20:21:28.892 -08:00 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(System.String) on controller CleanMvcApp.Controllers.AccountController (CleanMvcApp).
+2026-02-22 20:21:28.929 -08:00 [INF] Executing ViewResult, running view Login.
+2026-02-22 20:21:28.982 -08:00 [INF] Executed ViewResult - view Login executed in 54.4908ms.
+2026-02-22 20:21:28.986 -08:00 [INF] Executed action CleanMvcApp.Controllers.AccountController.Login (CleanMvcApp) in 63.4255ms
+2026-02-22 20:21:28.993 -08:00 [INF] Executed endpoint 'CleanMvcApp.Controllers.AccountController.Login (CleanMvcApp)'
+2026-02-22 20:21:29.000 -08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5264/Account/Login?ReturnUrl=%2FHome%2FIndex - 200 null text/html; charset=utf-8 113.9318ms
+2026-02-22 20:21:35.534 -08:00 [INF] Application is shutting down...
+2026-02-22 20:48:49.156 -08:00 [INF] Starting Local Store Delivery Platform
+2026-02-22 20:48:50.582 -08:00 [INF] User profile is available. Using 'C:\Users\SShete\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-02-22 20:48:52.536 -08:00 [INF] Executed DbCommand (60ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2026-02-22 20:48:52.764 -08:00 [INF] Executed DbCommand (9ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2026-02-22 20:48:52.773 -08:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2026-02-22 20:48:52.843 -08:00 [INF] Executed DbCommand (7ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[Address], [a].[ConcurrencyStamp], [a].[CreatedAt], [a].[Email], [a].[EmailConfirmed], [a].[FullName], [a].[IsActive], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2026-02-22 20:48:53.165 -08:00 [INF] Executed DbCommand (10ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[Address], [a].[ConcurrencyStamp], [a].[CreatedAt], [a].[Email], [a].[EmailConfirmed], [a].[FullName], [a].[IsActive], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2026-02-22 20:48:53.487 -08:00 [INF] Executed DbCommand (31ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[Address], [a].[ConcurrencyStamp], [a].[CreatedAt], [a].[Email], [a].[EmailConfirmed], [a].[FullName], [a].[IsActive], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2026-02-22 20:48:53.500 -08:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[Address], [a].[ConcurrencyStamp], [a].[CreatedAt], [a].[Email], [a].[EmailConfirmed], [a].[FullName], [a].[IsActive], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2026-02-22 20:48:53.784 -08:00 [INF] Executed DbCommand (19ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (DbType = Int32), @p2='?' (Size = 500), @p3='?' (Size = 4000), @p4='?' (DbType = DateTime2), @p5='?' (Size = 256), @p6='?' (DbType = Boolean), @p7='?' (Size = 200), @p8='?' (DbType = Boolean), @p9='?' (DbType = DateTimeOffset), @p10='?' (Size = 256), @p11='?' (Size = 256), @p12='?' (Size = 4000), @p13='?' (Size = 4000), @p14='?' (DbType = Boolean), @p15='?' (Size = 4000), @p16='?' (DbType = Boolean), @p17='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [AspNetUsers] ([Id], [AccessFailedCount], [Address], [ConcurrencyStamp], [CreatedAt], [Email], [EmailConfirmed], [FullName], [LockoutEnabled], [LockoutEnd], [NormalizedEmail], [NormalizedUserName], [PasswordHash], [PhoneNumber], [PhoneNumberConfirmed], [SecurityStamp], [TwoFactorEnabled], [UserName])
+OUTPUT INSERTED.[IsActive]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15, @p16, @p17);
+2026-02-22 20:48:53.968 -08:00 [INF] Executed DbCommand (4ms) [Parameters=[@__normalizedRoleName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedRoleName_0
+2026-02-22 20:48:54.136 -08:00 [INF] Executed DbCommand (2ms) [Parameters=[@__p_0='?' (Size = 450), @__p_1='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[UserId], [a].[RoleId]
+FROM [AspNetUserRoles] AS [a]
+WHERE [a].[UserId] = @__p_0 AND [a].[RoleId] = @__p_1
+2026-02-22 20:48:54.147 -08:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedRoleName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedRoleName_0
+2026-02-22 20:48:54.201 -08:00 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[Address], [a].[ConcurrencyStamp], [a].[CreatedAt], [a].[Email], [a].[EmailConfirmed], [a].[FullName], [a].[IsActive], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2026-02-22 20:48:54.211 -08:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[Address], [a].[ConcurrencyStamp], [a].[CreatedAt], [a].[Email], [a].[EmailConfirmed], [a].[FullName], [a].[IsActive], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2026-02-22 20:48:54.350 -08:00 [INF] Executed DbCommand (21ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (Size = 450), @p20='?' (Size = 450), @p2='?' (DbType = Int32), @p3='?' (Size = 500), @p4='?' (Size = 4000), @p21='?' (Size = 4000), @p5='?' (DbType = DateTime2), @p6='?' (Size = 256), @p7='?' (DbType = Boolean), @p8='?' (Size = 200), @p9='?' (DbType = Boolean), @p10='?' (DbType = Boolean), @p11='?' (DbType = DateTimeOffset), @p12='?' (Size = 256), @p13='?' (Size = 256), @p14='?' (Size = 4000), @p15='?' (Size = 4000), @p16='?' (DbType = Boolean), @p17='?' (Size = 4000), @p18='?' (DbType = Boolean), @p19='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [AspNetUserRoles] ([RoleId], [UserId])
+VALUES (@p0, @p1);
+UPDATE [AspNetUsers] SET [AccessFailedCount] = @p2, [Address] = @p3, [ConcurrencyStamp] = @p4, [CreatedAt] = @p5, [Email] = @p6, [EmailConfirmed] = @p7, [FullName] = @p8, [IsActive] = @p9, [LockoutEnabled] = @p10, [LockoutEnd] = @p11, [NormalizedEmail] = @p12, [NormalizedUserName] = @p13, [PasswordHash] = @p14, [PhoneNumber] = @p15, [PhoneNumberConfirmed] = @p16, [SecurityStamp] = @p17, [TwoFactorEnabled] = @p18, [UserName] = @p19
+OUTPUT 1
+WHERE [Id] = @p20 AND [ConcurrencyStamp] = @p21;
+2026-02-22 20:48:54.422 -08:00 [INF] Executed DbCommand (36ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[Address], [a].[ConcurrencyStamp], [a].[CreatedAt], [a].[Email], [a].[EmailConfirmed], [a].[FullName], [a].[IsActive], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2026-02-22 20:48:54.717 -08:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[Address], [a].[ConcurrencyStamp], [a].[CreatedAt], [a].[Email], [a].[EmailConfirmed], [a].[FullName], [a].[IsActive], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2026-02-22 20:48:54.770 -08:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[Address], [a].[ConcurrencyStamp], [a].[CreatedAt], [a].[Email], [a].[EmailConfirmed], [a].[FullName], [a].[IsActive], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2026-02-22 20:48:54.826 -08:00 [INF] Executed DbCommand (46ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (DbType = Int32), @p2='?' (Size = 500), @p3='?' (Size = 4000), @p4='?' (DbType = DateTime2), @p5='?' (Size = 256), @p6='?' (DbType = Boolean), @p7='?' (Size = 200), @p8='?' (DbType = Boolean), @p9='?' (DbType = DateTimeOffset), @p10='?' (Size = 256), @p11='?' (Size = 256), @p12='?' (Size = 4000), @p13='?' (Size = 4000), @p14='?' (DbType = Boolean), @p15='?' (Size = 4000), @p16='?' (DbType = Boolean), @p17='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [AspNetUsers] ([Id], [AccessFailedCount], [Address], [ConcurrencyStamp], [CreatedAt], [Email], [EmailConfirmed], [FullName], [LockoutEnabled], [LockoutEnd], [NormalizedEmail], [NormalizedUserName], [PasswordHash], [PhoneNumber], [PhoneNumberConfirmed], [SecurityStamp], [TwoFactorEnabled], [UserName])
+OUTPUT INSERTED.[IsActive]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15, @p16, @p17);
+2026-02-22 20:48:54.839 -08:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedRoleName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedRoleName_0
+2026-02-22 20:48:54.902 -08:00 [INF] Executed DbCommand (17ms) [Parameters=[@__p_0='?' (Size = 450), @__p_1='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[UserId], [a].[RoleId]
+FROM [AspNetUserRoles] AS [a]
+WHERE [a].[UserId] = @__p_0 AND [a].[RoleId] = @__p_1
+2026-02-22 20:48:54.985 -08:00 [INF] Executed DbCommand (12ms) [Parameters=[@__normalizedRoleName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedRoleName_0
+2026-02-22 20:48:55.044 -08:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[Address], [a].[ConcurrencyStamp], [a].[CreatedAt], [a].[Email], [a].[EmailConfirmed], [a].[FullName], [a].[IsActive], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2026-02-22 20:48:55.107 -08:00 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[Address], [a].[ConcurrencyStamp], [a].[CreatedAt], [a].[Email], [a].[EmailConfirmed], [a].[FullName], [a].[IsActive], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2026-02-22 20:48:55.249 -08:00 [INF] Executed DbCommand (3ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (Size = 450), @p20='?' (Size = 450), @p2='?' (DbType = Int32), @p3='?' (Size = 500), @p4='?' (Size = 4000), @p21='?' (Size = 4000), @p5='?' (DbType = DateTime2), @p6='?' (Size = 256), @p7='?' (DbType = Boolean), @p8='?' (Size = 200), @p9='?' (DbType = Boolean), @p10='?' (DbType = Boolean), @p11='?' (DbType = DateTimeOffset), @p12='?' (Size = 256), @p13='?' (Size = 256), @p14='?' (Size = 4000), @p15='?' (Size = 4000), @p16='?' (DbType = Boolean), @p17='?' (Size = 4000), @p18='?' (DbType = Boolean), @p19='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [AspNetUserRoles] ([RoleId], [UserId])
+VALUES (@p0, @p1);
+UPDATE [AspNetUsers] SET [AccessFailedCount] = @p2, [Address] = @p3, [ConcurrencyStamp] = @p4, [CreatedAt] = @p5, [Email] = @p6, [EmailConfirmed] = @p7, [FullName] = @p8, [IsActive] = @p9, [LockoutEnabled] = @p10, [LockoutEnd] = @p11, [NormalizedEmail] = @p12, [NormalizedUserName] = @p13, [PasswordHash] = @p14, [PhoneNumber] = @p15, [PhoneNumberConfirmed] = @p16, [SecurityStamp] = @p17, [TwoFactorEnabled] = @p18, [UserName] = @p19
+OUTPUT 1
+WHERE [Id] = @p20 AND [ConcurrencyStamp] = @p21;
+2026-02-22 20:48:55.434 -08:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[Address], [a].[ConcurrencyStamp], [a].[CreatedAt], [a].[Email], [a].[EmailConfirmed], [a].[FullName], [a].[IsActive], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2026-02-22 20:48:55.695 -08:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[Address], [a].[ConcurrencyStamp], [a].[CreatedAt], [a].[Email], [a].[EmailConfirmed], [a].[FullName], [a].[IsActive], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2026-02-22 20:48:55.700 -08:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[Address], [a].[ConcurrencyStamp], [a].[CreatedAt], [a].[Email], [a].[EmailConfirmed], [a].[FullName], [a].[IsActive], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2026-02-22 20:48:55.708 -08:00 [INF] Executed DbCommand (1ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (DbType = Int32), @p2='?' (Size = 500), @p3='?' (Size = 4000), @p4='?' (DbType = DateTime2), @p5='?' (Size = 256), @p6='?' (DbType = Boolean), @p7='?' (Size = 200), @p8='?' (DbType = Boolean), @p9='?' (DbType = DateTimeOffset), @p10='?' (Size = 256), @p11='?' (Size = 256), @p12='?' (Size = 4000), @p13='?' (Size = 4000), @p14='?' (DbType = Boolean), @p15='?' (Size = 4000), @p16='?' (DbType = Boolean), @p17='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [AspNetUsers] ([Id], [AccessFailedCount], [Address], [ConcurrencyStamp], [CreatedAt], [Email], [EmailConfirmed], [FullName], [LockoutEnabled], [LockoutEnd], [NormalizedEmail], [NormalizedUserName], [PasswordHash], [PhoneNumber], [PhoneNumberConfirmed], [SecurityStamp], [TwoFactorEnabled], [UserName])
+OUTPUT INSERTED.[IsActive]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15, @p16, @p17);
+2026-02-22 20:48:55.715 -08:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedRoleName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedRoleName_0
+2026-02-22 20:48:55.727 -08:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (Size = 450), @__p_1='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[UserId], [a].[RoleId]
+FROM [AspNetUserRoles] AS [a]
+WHERE [a].[UserId] = @__p_0 AND [a].[RoleId] = @__p_1
+2026-02-22 20:48:55.768 -08:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedRoleName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedRoleName_0
+2026-02-22 20:48:55.775 -08:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[Address], [a].[ConcurrencyStamp], [a].[CreatedAt], [a].[Email], [a].[EmailConfirmed], [a].[FullName], [a].[IsActive], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2026-02-22 20:48:55.782 -08:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[Address], [a].[ConcurrencyStamp], [a].[CreatedAt], [a].[Email], [a].[EmailConfirmed], [a].[FullName], [a].[IsActive], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2026-02-22 20:48:55.936 -08:00 [INF] Executed DbCommand (1ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (Size = 450), @p20='?' (Size = 450), @p2='?' (DbType = Int32), @p3='?' (Size = 500), @p4='?' (Size = 4000), @p21='?' (Size = 4000), @p5='?' (DbType = DateTime2), @p6='?' (Size = 256), @p7='?' (DbType = Boolean), @p8='?' (Size = 200), @p9='?' (DbType = Boolean), @p10='?' (DbType = Boolean), @p11='?' (DbType = DateTimeOffset), @p12='?' (Size = 256), @p13='?' (Size = 256), @p14='?' (Size = 4000), @p15='?' (Size = 4000), @p16='?' (DbType = Boolean), @p17='?' (Size = 4000), @p18='?' (DbType = Boolean), @p19='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [AspNetUserRoles] ([RoleId], [UserId])
+VALUES (@p0, @p1);
+UPDATE [AspNetUsers] SET [AccessFailedCount] = @p2, [Address] = @p3, [ConcurrencyStamp] = @p4, [CreatedAt] = @p5, [Email] = @p6, [EmailConfirmed] = @p7, [FullName] = @p8, [IsActive] = @p9, [LockoutEnabled] = @p10, [LockoutEnd] = @p11, [NormalizedEmail] = @p12, [NormalizedUserName] = @p13, [PasswordHash] = @p14, [PhoneNumber] = @p15, [PhoneNumberConfirmed] = @p16, [SecurityStamp] = @p17, [TwoFactorEnabled] = @p18, [UserName] = @p19
+OUTPUT 1
+WHERE [Id] = @p20 AND [ConcurrencyStamp] = @p21;
+2026-02-22 20:48:56.112 -08:00 [INF] Executed DbCommand (49ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[Address], [a].[ConcurrencyStamp], [a].[CreatedAt], [a].[Email], [a].[EmailConfirmed], [a].[FullName], [a].[IsActive], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2026-02-22 20:48:56.370 -08:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[Address], [a].[ConcurrencyStamp], [a].[CreatedAt], [a].[Email], [a].[EmailConfirmed], [a].[FullName], [a].[IsActive], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2026-02-22 20:48:56.376 -08:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[Address], [a].[ConcurrencyStamp], [a].[CreatedAt], [a].[Email], [a].[EmailConfirmed], [a].[FullName], [a].[IsActive], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2026-02-22 20:48:56.394 -08:00 [INF] Executed DbCommand (3ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (DbType = Int32), @p2='?' (Size = 500), @p3='?' (Size = 4000), @p4='?' (DbType = DateTime2), @p5='?' (Size = 256), @p6='?' (DbType = Boolean), @p7='?' (Size = 200), @p8='?' (DbType = Boolean), @p9='?' (DbType = DateTimeOffset), @p10='?' (Size = 256), @p11='?' (Size = 256), @p12='?' (Size = 4000), @p13='?' (Size = 4000), @p14='?' (DbType = Boolean), @p15='?' (Size = 4000), @p16='?' (DbType = Boolean), @p17='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [AspNetUsers] ([Id], [AccessFailedCount], [Address], [ConcurrencyStamp], [CreatedAt], [Email], [EmailConfirmed], [FullName], [LockoutEnabled], [LockoutEnd], [NormalizedEmail], [NormalizedUserName], [PasswordHash], [PhoneNumber], [PhoneNumberConfirmed], [SecurityStamp], [TwoFactorEnabled], [UserName])
+OUTPUT INSERTED.[IsActive]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15, @p16, @p17);
+2026-02-22 20:48:56.401 -08:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedRoleName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedRoleName_0
+2026-02-22 20:48:56.410 -08:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (Size = 450), @__p_1='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[UserId], [a].[RoleId]
+FROM [AspNetUserRoles] AS [a]
+WHERE [a].[UserId] = @__p_0 AND [a].[RoleId] = @__p_1
+2026-02-22 20:48:56.461 -08:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedRoleName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedRoleName_0
+2026-02-22 20:48:56.467 -08:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[Address], [a].[ConcurrencyStamp], [a].[CreatedAt], [a].[Email], [a].[EmailConfirmed], [a].[FullName], [a].[IsActive], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2026-02-22 20:48:56.507 -08:00 [INF] Executed DbCommand (8ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[Address], [a].[ConcurrencyStamp], [a].[CreatedAt], [a].[Email], [a].[EmailConfirmed], [a].[FullName], [a].[IsActive], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2026-02-22 20:48:56.521 -08:00 [INF] Executed DbCommand (1ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (Size = 450), @p20='?' (Size = 450), @p2='?' (DbType = Int32), @p3='?' (Size = 500), @p4='?' (Size = 4000), @p21='?' (Size = 4000), @p5='?' (DbType = DateTime2), @p6='?' (Size = 256), @p7='?' (DbType = Boolean), @p8='?' (Size = 200), @p9='?' (DbType = Boolean), @p10='?' (DbType = Boolean), @p11='?' (DbType = DateTimeOffset), @p12='?' (Size = 256), @p13='?' (Size = 256), @p14='?' (Size = 4000), @p15='?' (Size = 4000), @p16='?' (DbType = Boolean), @p17='?' (Size = 4000), @p18='?' (DbType = Boolean), @p19='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [AspNetUserRoles] ([RoleId], [UserId])
+VALUES (@p0, @p1);
+UPDATE [AspNetUsers] SET [AccessFailedCount] = @p2, [Address] = @p3, [ConcurrencyStamp] = @p4, [CreatedAt] = @p5, [Email] = @p6, [EmailConfirmed] = @p7, [FullName] = @p8, [IsActive] = @p9, [LockoutEnabled] = @p10, [LockoutEnd] = @p11, [NormalizedEmail] = @p12, [NormalizedUserName] = @p13, [PasswordHash] = @p14, [PhoneNumber] = @p15, [PhoneNumberConfirmed] = @p16, [SecurityStamp] = @p17, [TwoFactorEnabled] = @p18, [UserName] = @p19
+OUTPUT 1
+WHERE [Id] = @p20 AND [ConcurrencyStamp] = @p21;
+2026-02-22 20:48:56.531 -08:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[Address], [a].[ConcurrencyStamp], [a].[CreatedAt], [a].[Email], [a].[EmailConfirmed], [a].[FullName], [a].[IsActive], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2026-02-22 20:48:56.906 -08:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[Address], [a].[ConcurrencyStamp], [a].[CreatedAt], [a].[Email], [a].[EmailConfirmed], [a].[FullName], [a].[IsActive], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2026-02-22 20:48:56.914 -08:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[Address], [a].[ConcurrencyStamp], [a].[CreatedAt], [a].[Email], [a].[EmailConfirmed], [a].[FullName], [a].[IsActive], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2026-02-22 20:48:56.922 -08:00 [INF] Executed DbCommand (2ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (DbType = Int32), @p2='?' (Size = 500), @p3='?' (Size = 4000), @p4='?' (DbType = DateTime2), @p5='?' (Size = 256), @p6='?' (DbType = Boolean), @p7='?' (Size = 200), @p8='?' (DbType = Boolean), @p9='?' (DbType = DateTimeOffset), @p10='?' (Size = 256), @p11='?' (Size = 256), @p12='?' (Size = 4000), @p13='?' (Size = 4000), @p14='?' (DbType = Boolean), @p15='?' (Size = 4000), @p16='?' (DbType = Boolean), @p17='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [AspNetUsers] ([Id], [AccessFailedCount], [Address], [ConcurrencyStamp], [CreatedAt], [Email], [EmailConfirmed], [FullName], [LockoutEnabled], [LockoutEnd], [NormalizedEmail], [NormalizedUserName], [PasswordHash], [PhoneNumber], [PhoneNumberConfirmed], [SecurityStamp], [TwoFactorEnabled], [UserName])
+OUTPUT INSERTED.[IsActive]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15, @p16, @p17);
+2026-02-22 20:48:56.927 -08:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedRoleName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedRoleName_0
+2026-02-22 20:48:56.932 -08:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_0='?' (Size = 450), @__p_1='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[UserId], [a].[RoleId]
+FROM [AspNetUserRoles] AS [a]
+WHERE [a].[UserId] = @__p_0 AND [a].[RoleId] = @__p_1
+2026-02-22 20:48:56.938 -08:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedRoleName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedRoleName_0
+2026-02-22 20:48:56.945 -08:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[Address], [a].[ConcurrencyStamp], [a].[CreatedAt], [a].[Email], [a].[EmailConfirmed], [a].[FullName], [a].[IsActive], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2026-02-22 20:48:56.981 -08:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[Address], [a].[ConcurrencyStamp], [a].[CreatedAt], [a].[Email], [a].[EmailConfirmed], [a].[FullName], [a].[IsActive], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2026-02-22 20:48:56.992 -08:00 [INF] Executed DbCommand (1ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (Size = 450), @p20='?' (Size = 450), @p2='?' (DbType = Int32), @p3='?' (Size = 500), @p4='?' (Size = 4000), @p21='?' (Size = 4000), @p5='?' (DbType = DateTime2), @p6='?' (Size = 256), @p7='?' (DbType = Boolean), @p8='?' (Size = 200), @p9='?' (DbType = Boolean), @p10='?' (DbType = Boolean), @p11='?' (DbType = DateTimeOffset), @p12='?' (Size = 256), @p13='?' (Size = 256), @p14='?' (Size = 4000), @p15='?' (Size = 4000), @p16='?' (DbType = Boolean), @p17='?' (Size = 4000), @p18='?' (DbType = Boolean), @p19='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [AspNetUserRoles] ([RoleId], [UserId])
+VALUES (@p0, @p1);
+UPDATE [AspNetUsers] SET [AccessFailedCount] = @p2, [Address] = @p3, [ConcurrencyStamp] = @p4, [CreatedAt] = @p5, [Email] = @p6, [EmailConfirmed] = @p7, [FullName] = @p8, [IsActive] = @p9, [LockoutEnabled] = @p10, [LockoutEnd] = @p11, [NormalizedEmail] = @p12, [NormalizedUserName] = @p13, [PasswordHash] = @p14, [PhoneNumber] = @p15, [PhoneNumberConfirmed] = @p16, [SecurityStamp] = @p17, [TwoFactorEnabled] = @p18, [UserName] = @p19
+OUTPUT 1
+WHERE [Id] = @p20 AND [ConcurrencyStamp] = @p21;
+2026-02-22 20:48:56.998 -08:00 [INF] Database seeded successfully
+2026-02-22 20:48:57.201 -08:00 [INF] Now listening on: http://localhost:5264
+2026-02-22 20:48:57.206 -08:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-02-22 20:48:57.209 -08:00 [INF] Hosting environment: Development
+2026-02-22 20:48:57.228 -08:00 [INF] Content root path: C:\LearningProjects\LearningProjects\LocalStoreWebsite
+2026-02-22 20:49:04.109 -08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5264/Account/Login?ReturnUrl=%2FHome%2FIndex - null null
+2026-02-22 20:49:04.207 -08:00 [WRN] Failed to determine the https port for redirect.
+2026-02-22 20:49:04.417 -08:00 [INF] Executing endpoint 'CleanMvcApp.Controllers.AccountController.Login (CleanMvcApp)'
+2026-02-22 20:49:04.475 -08:00 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(System.String) on controller CleanMvcApp.Controllers.AccountController (CleanMvcApp).
+2026-02-22 20:49:04.599 -08:00 [INF] Executing ViewResult, running view Login.
+2026-02-22 20:49:04.801 -08:00 [INF] Executed ViewResult - view Login executed in 237.4422ms.
+2026-02-22 20:49:04.806 -08:00 [INF] Executed action CleanMvcApp.Controllers.AccountController.Login (CleanMvcApp) in 322.524ms
+2026-02-22 20:49:04.810 -08:00 [INF] Executed endpoint 'CleanMvcApp.Controllers.AccountController.Login (CleanMvcApp)'
+2026-02-22 20:49:04.999 -08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5264/Account/Login?ReturnUrl=%2FHome%2FIndex - 200 null text/html; charset=utf-8 892.1206ms
+2026-02-22 20:50:14.387 -08:00 [INF] Request starting HTTP/1.1 POST http://localhost:5264/ - application/x-www-form-urlencoded 272
+2026-02-22 20:50:14.394 -08:00 [INF] Executing endpoint 'CleanMvcApp.Controllers.AccountController.Login (CleanMvcApp)'
+2026-02-22 20:50:14.446 -08:00 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(CleanMvcApp.Models.ViewModels.LoginViewModel, System.String) on controller CleanMvcApp.Controllers.AccountController (CleanMvcApp).
+2026-02-22 20:50:14.583 -08:00 [INF] Executed DbCommand (5ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[Address], [a].[ConcurrencyStamp], [a].[CreatedAt], [a].[Email], [a].[EmailConfirmed], [a].[FullName], [a].[IsActive], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2026-02-22 20:50:14.781 -08:00 [INF] Executed DbCommand (3ms) [Parameters=[@__user_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[ClaimType], [a].[ClaimValue], [a].[UserId]
+FROM [AspNetUserClaims] AS [a]
+WHERE [a].[UserId] = @__user_Id_0
+2026-02-22 20:50:14.898 -08:00 [INF] Executed DbCommand (8ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2026-02-22 20:50:14.914 -08:00 [INF] Executed DbCommand (8ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2026-02-22 20:50:14.929 -08:00 [INF] Executed DbCommand (2ms) [Parameters=[@__role_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[ClaimType], [a].[ClaimValue]
+FROM [AspNetRoleClaims] AS [a]
+WHERE [a].[RoleId] = @__role_Id_0
+2026-02-22 20:50:14.967 -08:00 [INF] AuthenticationScheme: Identity.Application signed in.
+2026-02-22 20:50:14.976 -08:00 [INF] User customer1@localstore.com logged in successfully
+2026-02-22 20:50:14.980 -08:00 [INF] User customer1@localstore.com logged in successfully
+2026-02-22 20:50:14.986 -08:00 [INF] Executing RedirectResult, redirecting to /Home/Index.
+2026-02-22 20:50:14.991 -08:00 [INF] Executed action CleanMvcApp.Controllers.AccountController.Login (CleanMvcApp) in 538.6793ms
+2026-02-22 20:50:14.995 -08:00 [INF] Executed endpoint 'CleanMvcApp.Controllers.AccountController.Login (CleanMvcApp)'
+2026-02-22 20:50:15.049 -08:00 [INF] Request finished HTTP/1.1 POST http://localhost:5264/ - 302 0 null 661.8028ms
+2026-02-22 20:50:15.055 -08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5264/Home/Index - null null
+2026-02-22 20:50:15.113 -08:00 [INF] Executing endpoint 'CleanMvcApp.Controllers.HomeController.Index (CleanMvcApp)'
+2026-02-22 20:50:15.121 -08:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller CleanMvcApp.Controllers.HomeController (CleanMvcApp).
+2026-02-22 20:50:15.249 -08:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[StoreId], [s].[Address], [s].[AverageRating], [s].[ClosingTime], [s].[CreatedAt], [s].[DeliveryCharge], [s].[DeliveryRadius], [s].[IsActive], [s].[Latitude], [s].[LicenseNumber], [s].[Longitude], [s].[OpeningTime], [s].[OwnerId], [s].[Status], [s].[StoreImageUrl], [s].[StoreName], [s].[TotalReviews], [s].[UpdatedAt]
+FROM [Stores] AS [s]
+2026-02-22 20:50:15.412 -08:00 [INF] Executing ViewResult, running view Index.
+2026-02-22 20:50:15.603 -08:00 [INF] Executed ViewResult - view Index executed in 194.0806ms.
+2026-02-22 20:50:15.606 -08:00 [INF] Executed action CleanMvcApp.Controllers.HomeController.Index (CleanMvcApp) in 481.1071ms
+2026-02-22 20:50:15.612 -08:00 [INF] Executed endpoint 'CleanMvcApp.Controllers.HomeController.Index (CleanMvcApp)'
+2026-02-22 20:50:15.696 -08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5264/Home/Index - 200 null text/html; charset=utf-8 641.2014ms
+2026-02-22 20:50:15.873 -08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5264/Cart/GetItemCount - null null
+2026-02-22 20:50:15.924 -08:00 [INF] Executing endpoint 'CleanMvcApp.Controllers.CartController.GetItemCount (CleanMvcApp)'
+2026-02-22 20:50:15.930 -08:00 [INF] Route matched with {action = "GetItemCount", controller = "Cart"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetItemCount() on controller CleanMvcApp.Controllers.CartController (CleanMvcApp).
+2026-02-22 20:50:15.962 -08:00 [INF] Executed DbCommand (12ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartItemId], [c].[CreatedAt], [c].[CustomerId], [c].[ProductId], [c].[Quantity], [c].[UpdatedAt]
+FROM [CartItems] AS [c]
+WHERE [c].[CustomerId] = @__userId_0
+2026-02-22 20:50:16.069 -08:00 [INF] Executing JsonResult, writing value of type '<>f__AnonymousType4`1[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-02-22 20:50:16.308 -08:00 [INF] Executed action CleanMvcApp.Controllers.CartController.GetItemCount (CleanMvcApp) in 374.1434ms
+2026-02-22 20:50:16.310 -08:00 [INF] Executed endpoint 'CleanMvcApp.Controllers.CartController.GetItemCount (CleanMvcApp)'
+2026-02-22 20:50:16.312 -08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5264/Cart/GetItemCount - 200 null application/json; charset=utf-8 440.1799ms
+2026-02-22 20:50:27.195 -08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5264/Browse/Products?storeId=1 - null null
+2026-02-22 20:50:27.265 -08:00 [INF] Executing endpoint 'CleanMvcApp.Controllers.BrowseController.Products (CleanMvcApp)'
+2026-02-22 20:50:27.273 -08:00 [INF] Route matched with {action = "Products", controller = "Browse"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Products(Int32, System.String, System.Nullable`1[System.Int32], System.Nullable`1[System.Decimal], System.Nullable`1[System.Decimal]) on controller CleanMvcApp.Controllers.BrowseController (CleanMvcApp).
+2026-02-22 20:50:27.337 -08:00 [INF] Executed DbCommand (3ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [s].[StoreId], [s].[Address], [s].[AverageRating], [s].[ClosingTime], [s].[CreatedAt], [s].[DeliveryCharge], [s].[DeliveryRadius], [s].[IsActive], [s].[Latitude], [s].[LicenseNumber], [s].[Longitude], [s].[OpeningTime], [s].[OwnerId], [s].[Status], [s].[StoreImageUrl], [s].[StoreName], [s].[TotalReviews], [s].[UpdatedAt]
+FROM [Stores] AS [s]
+WHERE [s].[StoreId] = @__p_0
+2026-02-22 20:50:27.557 -08:00 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CategoryId], [c].[CategoryName], [c].[CreatedAt], [c].[Description], [c].[IsActive], [c].[UpdatedAt]
+FROM [Categories] AS [c]
+2026-02-22 20:50:27.758 -08:00 [INF] Executed DbCommand (61ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[ProductId], [p].[AverageRating], [p].[CategoryId], [p].[CreatedAt], [p].[Description], [p].[DiscountPercentage], [p].[IsActive], [p].[IsDeleted], [p].[Price], [p].[ProductImageUrl], [p].[ProductName], [p].[SKU], [p].[StockQuantity], [p].[StoreId], [p].[TotalReviews], [p].[UpdatedAt]
+FROM [Products] AS [p]
+WHERE [p].[IsDeleted] = CAST(0 AS bit)
+2026-02-22 20:50:27.770 -08:00 [INF] Product search returned 0 results
+2026-02-22 20:50:27.773 -08:00 [INF] Executing ViewResult, running view Products.
+2026-02-22 20:50:27.938 -08:00 [INF] Executed ViewResult - view Products executed in 165.85ms.
+2026-02-22 20:50:28.021 -08:00 [INF] Executed action CleanMvcApp.Controllers.BrowseController.Products (CleanMvcApp) in 745.2577ms
+2026-02-22 20:50:28.031 -08:00 [INF] Executed endpoint 'CleanMvcApp.Controllers.BrowseController.Products (CleanMvcApp)'
+2026-02-22 20:50:28.038 -08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5264/Browse/Products?storeId=1 - 200 null text/html; charset=utf-8 842.4831ms
+2026-02-22 20:50:28.187 -08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5264/Cart/GetItemCount - null null
+2026-02-22 20:50:28.270 -08:00 [INF] Executing endpoint 'CleanMvcApp.Controllers.CartController.GetItemCount (CleanMvcApp)'
+2026-02-22 20:50:28.273 -08:00 [INF] Route matched with {action = "GetItemCount", controller = "Cart"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetItemCount() on controller CleanMvcApp.Controllers.CartController (CleanMvcApp).
+2026-02-22 20:50:28.286 -08:00 [INF] Executed DbCommand (1ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartItemId], [c].[CreatedAt], [c].[CustomerId], [c].[ProductId], [c].[Quantity], [c].[UpdatedAt]
+FROM [CartItems] AS [c]
+WHERE [c].[CustomerId] = @__userId_0
+2026-02-22 20:50:28.290 -08:00 [INF] Executing JsonResult, writing value of type '<>f__AnonymousType4`1[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-02-22 20:50:28.323 -08:00 [INF] Executed action CleanMvcApp.Controllers.CartController.GetItemCount (CleanMvcApp) in 43.8339ms
+2026-02-22 20:50:28.327 -08:00 [INF] Executed endpoint 'CleanMvcApp.Controllers.CartController.GetItemCount (CleanMvcApp)'
+2026-02-22 20:50:28.329 -08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5264/Cart/GetItemCount - 200 null application/json; charset=utf-8 141.6544ms
+2026-02-22 20:50:38.867 -08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5264/Dashboard/Index - null null
+2026-02-22 20:50:38.873 -08:00 [INF] Executing endpoint 'CleanMvcApp.Controllers.DashboardController.Index (CleanMvcApp)'
+2026-02-22 20:50:38.915 -08:00 [INF] Route matched with {action = "Index", controller = "Dashboard"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller CleanMvcApp.Controllers.DashboardController (CleanMvcApp).
+2026-02-22 20:50:39.158 -08:00 [INF] Executing ViewResult, running view Index.
+2026-02-22 20:50:39.182 -08:00 [INF] Executed ViewResult - view Index executed in 25.3268ms.
+2026-02-22 20:50:39.362 -08:00 [INF] Executed action CleanMvcApp.Controllers.DashboardController.Index (CleanMvcApp) in 205.6382ms
+2026-02-22 20:50:39.366 -08:00 [INF] Executed endpoint 'CleanMvcApp.Controllers.DashboardController.Index (CleanMvcApp)'
+2026-02-22 20:50:39.369 -08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5264/Dashboard/Index - 200 null text/html; charset=utf-8 500.9155ms
+2026-02-22 20:50:39.498 -08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5264/Cart/GetItemCount - null null
+2026-02-22 20:50:39.505 -08:00 [INF] Executing endpoint 'CleanMvcApp.Controllers.CartController.GetItemCount (CleanMvcApp)'
+2026-02-22 20:50:39.507 -08:00 [INF] Route matched with {action = "GetItemCount", controller = "Cart"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetItemCount() on controller CleanMvcApp.Controllers.CartController (CleanMvcApp).
+2026-02-22 20:50:39.540 -08:00 [INF] Executed DbCommand (16ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartItemId], [c].[CreatedAt], [c].[CustomerId], [c].[ProductId], [c].[Quantity], [c].[UpdatedAt]
+FROM [CartItems] AS [c]
+WHERE [c].[CustomerId] = @__userId_0
+2026-02-22 20:50:39.547 -08:00 [INF] Executing JsonResult, writing value of type '<>f__AnonymousType4`1[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-02-22 20:50:39.549 -08:00 [INF] Executed action CleanMvcApp.Controllers.CartController.GetItemCount (CleanMvcApp) in 39.3966ms
+2026-02-22 20:50:39.554 -08:00 [INF] Executed endpoint 'CleanMvcApp.Controllers.CartController.GetItemCount (CleanMvcApp)'
+2026-02-22 20:50:39.556 -08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5264/Cart/GetItemCount - 200 null application/json; charset=utf-8 57.7341ms
+2026-02-22 20:50:40.241 -08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5264/Browse/Search - null null
+2026-02-22 20:50:40.248 -08:00 [INF] Executing endpoint 'CleanMvcApp.Controllers.BrowseController.Search (CleanMvcApp)'
+2026-02-22 20:50:40.297 -08:00 [INF] Route matched with {action = "Search", controller = "Browse"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Search(System.String, System.Nullable`1[System.Int32], System.Nullable`1[System.Decimal], System.Nullable`1[System.Decimal], System.Nullable`1[System.Decimal]) on controller CleanMvcApp.Controllers.BrowseController (CleanMvcApp).
+2026-02-22 20:50:40.308 -08:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CategoryId], [c].[CategoryName], [c].[CreatedAt], [c].[Description], [c].[IsActive], [c].[UpdatedAt]
+FROM [Categories] AS [c]
+2026-02-22 20:50:40.321 -08:00 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[ProductId], [p].[AverageRating], [p].[CategoryId], [p].[CreatedAt], [p].[Description], [p].[DiscountPercentage], [p].[IsActive], [p].[IsDeleted], [p].[Price], [p].[ProductImageUrl], [p].[ProductName], [p].[SKU], [p].[StockQuantity], [p].[StoreId], [p].[TotalReviews], [p].[UpdatedAt]
+FROM [Products] AS [p]
+WHERE [p].[IsDeleted] = CAST(0 AS bit)
+2026-02-22 20:50:40.326 -08:00 [INF] Product search returned 0 results
+2026-02-22 20:50:40.359 -08:00 [INF] Executing ViewResult, running view Search.
+2026-02-22 20:50:40.436 -08:00 [INF] Executed ViewResult - view Search executed in 78.1323ms.
+2026-02-22 20:50:40.439 -08:00 [INF] Executed action CleanMvcApp.Controllers.BrowseController.Search (CleanMvcApp) in 137.0388ms
+2026-02-22 20:50:40.516 -08:00 [INF] Executed endpoint 'CleanMvcApp.Controllers.BrowseController.Search (CleanMvcApp)'
+2026-02-22 20:50:40.518 -08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5264/Browse/Search - 200 null text/html; charset=utf-8 276.3057ms
+2026-02-22 20:50:40.604 -08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5264/Cart/GetItemCount - null null
+2026-02-22 20:50:40.651 -08:00 [INF] Executing endpoint 'CleanMvcApp.Controllers.CartController.GetItemCount (CleanMvcApp)'
+2026-02-22 20:50:40.656 -08:00 [INF] Route matched with {action = "GetItemCount", controller = "Cart"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetItemCount() on controller CleanMvcApp.Controllers.CartController (CleanMvcApp).
+2026-02-22 20:50:40.708 -08:00 [INF] Executed DbCommand (11ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartItemId], [c].[CreatedAt], [c].[CustomerId], [c].[ProductId], [c].[Quantity], [c].[UpdatedAt]
+FROM [CartItems] AS [c]
+WHERE [c].[CustomerId] = @__userId_0
+2026-02-22 20:50:40.773 -08:00 [INF] Executing JsonResult, writing value of type '<>f__AnonymousType4`1[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-02-22 20:50:40.782 -08:00 [INF] Executed action CleanMvcApp.Controllers.CartController.GetItemCount (CleanMvcApp) in 86.8078ms
+2026-02-22 20:50:40.845 -08:00 [INF] Executed endpoint 'CleanMvcApp.Controllers.CartController.GetItemCount (CleanMvcApp)'
+2026-02-22 20:50:40.887 -08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5264/Cart/GetItemCount - 200 null application/json; charset=utf-8 282.5905ms
+2026-02-22 20:50:50.396 -08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5264/Browse/Search?searchTerm=food&categoryId=&minPrice=&maxPrice=&minRating= - null null
+2026-02-22 20:50:50.403 -08:00 [INF] Executing endpoint 'CleanMvcApp.Controllers.BrowseController.Search (CleanMvcApp)'
+2026-02-22 20:50:50.408 -08:00 [INF] Route matched with {action = "Search", controller = "Browse"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Search(System.String, System.Nullable`1[System.Int32], System.Nullable`1[System.Decimal], System.Nullable`1[System.Decimal], System.Nullable`1[System.Decimal]) on controller CleanMvcApp.Controllers.BrowseController (CleanMvcApp).
+2026-02-22 20:50:50.456 -08:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CategoryId], [c].[CategoryName], [c].[CreatedAt], [c].[Description], [c].[IsActive], [c].[UpdatedAt]
+FROM [Categories] AS [c]
+2026-02-22 20:50:50.466 -08:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[ProductId], [p].[AverageRating], [p].[CategoryId], [p].[CreatedAt], [p].[Description], [p].[DiscountPercentage], [p].[IsActive], [p].[IsDeleted], [p].[Price], [p].[ProductImageUrl], [p].[ProductName], [p].[SKU], [p].[StockQuantity], [p].[StoreId], [p].[TotalReviews], [p].[UpdatedAt]
+FROM [Products] AS [p]
+WHERE [p].[IsDeleted] = CAST(0 AS bit)
+2026-02-22 20:50:50.470 -08:00 [INF] Product search returned 0 results
+2026-02-22 20:50:50.518 -08:00 [INF] Executing ViewResult, running view Search.
+2026-02-22 20:50:50.525 -08:00 [INF] Executed ViewResult - view Search executed in 7.0557ms.
+2026-02-22 20:50:50.531 -08:00 [INF] Executed action CleanMvcApp.Controllers.BrowseController.Search (CleanMvcApp) in 116.711ms
+2026-02-22 20:50:50.646 -08:00 [INF] Executed endpoint 'CleanMvcApp.Controllers.BrowseController.Search (CleanMvcApp)'
+2026-02-22 20:50:50.649 -08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5264/Browse/Search?searchTerm=food&categoryId=&minPrice=&maxPrice=&minRating= - 200 null text/html; charset=utf-8 252.4204ms
+2026-02-22 20:50:50.711 -08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5264/Cart/GetItemCount - null null
+2026-02-22 20:50:50.719 -08:00 [INF] Executing endpoint 'CleanMvcApp.Controllers.CartController.GetItemCount (CleanMvcApp)'
+2026-02-22 20:50:50.728 -08:00 [INF] Route matched with {action = "GetItemCount", controller = "Cart"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetItemCount() on controller CleanMvcApp.Controllers.CartController (CleanMvcApp).
+2026-02-22 20:50:50.747 -08:00 [INF] Executed DbCommand (11ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartItemId], [c].[CreatedAt], [c].[CustomerId], [c].[ProductId], [c].[Quantity], [c].[UpdatedAt]
+FROM [CartItems] AS [c]
+WHERE [c].[CustomerId] = @__userId_0
+2026-02-22 20:50:50.838 -08:00 [INF] Executing JsonResult, writing value of type '<>f__AnonymousType4`1[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-02-22 20:50:50.844 -08:00 [INF] Executed action CleanMvcApp.Controllers.CartController.GetItemCount (CleanMvcApp) in 113.7481ms
+2026-02-22 20:50:50.848 -08:00 [INF] Executed endpoint 'CleanMvcApp.Controllers.CartController.GetItemCount (CleanMvcApp)'
+2026-02-22 20:50:50.895 -08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5264/Cart/GetItemCount - 200 null application/json; charset=utf-8 184.2278ms
+2026-02-22 20:50:54.216 -08:00 [INF] Request starting HTTP/1.1 POST http://localhost:5264/Account/Logout - application/x-www-form-urlencoded 225
+2026-02-22 20:50:54.274 -08:00 [INF] Executing endpoint 'CleanMvcApp.Controllers.AccountController.Logout (CleanMvcApp)'
+2026-02-22 20:50:54.294 -08:00 [INF] Route matched with {action = "Logout", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Logout() on controller CleanMvcApp.Controllers.AccountController (CleanMvcApp).
+2026-02-22 20:50:54.367 -08:00 [INF] AuthenticationScheme: Identity.Application signed out.
+2026-02-22 20:50:54.374 -08:00 [INF] AuthenticationScheme: Identity.External signed out.
+2026-02-22 20:50:54.384 -08:00 [INF] AuthenticationScheme: Identity.TwoFactorUserId signed out.
+2026-02-22 20:50:54.385 -08:00 [INF] User logged out successfully
+2026-02-22 20:50:54.387 -08:00 [INF] User logged out
+2026-02-22 20:50:54.417 -08:00 [INF] Executing RedirectResult, redirecting to /Home/Index.
+2026-02-22 20:50:54.420 -08:00 [INF] Executed action CleanMvcApp.Controllers.AccountController.Logout (CleanMvcApp) in 93.812ms
+2026-02-22 20:50:54.423 -08:00 [INF] Executed endpoint 'CleanMvcApp.Controllers.AccountController.Logout (CleanMvcApp)'
+2026-02-22 20:50:54.426 -08:00 [INF] Request finished HTTP/1.1 POST http://localhost:5264/Account/Logout - 302 0 null 209.8551ms
+2026-02-22 20:50:54.432 -08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5264/Home/Index - null null
+2026-02-22 20:50:54.439 -08:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2026-02-22 20:50:54.480 -08:00 [INF] AuthenticationScheme: Identity.Application was challenged.
+2026-02-22 20:50:54.484 -08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5264/Home/Index - 302 0 null 51.842ms
+2026-02-22 20:50:54.489 -08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5264/Account/Login?ReturnUrl=%2FHome%2FIndex - null null
+2026-02-22 20:50:54.494 -08:00 [INF] Executing endpoint 'CleanMvcApp.Controllers.AccountController.Login (CleanMvcApp)'
+2026-02-22 20:50:54.496 -08:00 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(System.String) on controller CleanMvcApp.Controllers.AccountController (CleanMvcApp).
+2026-02-22 20:50:54.499 -08:00 [INF] Executing ViewResult, running view Login.
+2026-02-22 20:50:54.533 -08:00 [INF] Executed ViewResult - view Login executed in 33.197ms.
+2026-02-22 20:50:54.626 -08:00 [INF] Executed action CleanMvcApp.Controllers.AccountController.Login (CleanMvcApp) in 127.4912ms
+2026-02-22 20:50:54.679 -08:00 [INF] Executed endpoint 'CleanMvcApp.Controllers.AccountController.Login (CleanMvcApp)'
+2026-02-22 20:50:54.681 -08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5264/Account/Login?ReturnUrl=%2FHome%2FIndex - 200 null text/html; charset=utf-8 191.8846ms

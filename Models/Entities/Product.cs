@@ -13,6 +13,7 @@ namespace CleanMvcApp.Models.Entities
         public int StockQuantity { get; set; } = 0;
         public string? ProductImageUrl { get; set; }
         public bool IsActive { get; set; } = true;
+        public bool IsDeleted { get; set; } = false;
         public decimal AverageRating { get; set; } = 0;
         public int TotalReviews { get; set; } = 0;
         public DateTime CreatedAt { get; set; } = DateTime.UtcNow;

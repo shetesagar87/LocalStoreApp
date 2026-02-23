@@ -1,0 +1,194 @@
+@model CleanMvcApp.Models.Entities.Product
+
+@{
+    ViewData["Title"] = Model.ProductName;
+    var discountedPrice = Model.Price * (1 - Model.DiscountPercentage / 100);
+}
+
+<div class="container mt-4">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a asp-controller="Home" asp-action="Index">Home</a></li>
+            <li class="breadcrumb-item"><a asp-controller="Browse" asp-action="Products" asp-route-storeId="@Model.StoreId">Store Products</a></li>
+            <li class="breadcrumb-item active">@Model.ProductName</li>
+        </ol>
+    </nav>
+
+    <div class="row">
+        <!-- Product Image -->
+        <div class="col-md-5">
+            @if (!string.IsNullOrEmpty(Model.ProductImageUrl))
+            {
+                <img src="@Model.ProductImageUrl" class="img-fluid rounded shadow" alt="@Model.ProductName">
+            }
+            else
+            {
+                <div class="bg-light rounded shadow d-flex align-items-center justify-content-center" style="height: 400px;">
+                    <i class="bi bi-box" style="font-size: 8rem; color: #ccc;"></i>
+                </div>
+            }
+        </div>
+
+        <!-- Product Details -->
+        <div class="col-md-7">
+            <h2>@Model.ProductName</h2>
+            
+            <!-- Rating -->
+            <div class="mb-3">
+                @if (Model.AverageRating > 0)
+                {
+                    <span class="text-warning">
+                        @for (int i = 0; i < (int)Model.AverageRating; i++)
+                        {
+                            <i class="bi bi-star-fill"></i>
+                        }
+                        @for (int i = (int)Model.AverageRating; i < 5; i++)
+                        {
+                            <i class="bi bi-star"></i>
+                        }
+                    </span>
+                    <span class="text-muted">(@Model.TotalReviews reviews)</span>
+                }
+                else
+                {
+                    <span class="text-muted">No reviews yet</span>
+                }
+            </div>
+
+            <!-- Price -->
+            <div class="mb-3">
+                @if (Model.DiscountPercentage > 0)
+                {
+                    <h3 class="text-success mb-0">₹@discountedPrice.ToString("F2")</h3>
+                    <p class="text-muted">
+                        <span class="text-decoration-line-through">₹@Model.Price</span>
+                        <span class="badge bg-danger ms-2">@Model.DiscountPercentage% OFF</span>
+                    </p>
+                }
+                else
+                {
+                    <h3 class="mb-0">₹@Model.Price</h3>
+                }
+            </div>
+
+            <!-- Stock Status -->
+            <div class="mb-3">
+                @if (Model.StockQuantity > 0)
+                {
+                    <span class="badge bg-success">
+                        <i class="bi bi-check-circle"></i> In Stock (@Model.StockQuantity available)
+                    </span>
+                }
+                else
+                {
+                    <span class="badge bg-danger">
+                        <i class="bi bi-x-circle"></i> Out of Stock
+                    </span>
+                }
+            </div>
+
+            <!-- Description -->
+            <div class="mb-4">
+                <h5>Description</h5>
+                <p>@(Model.Description ?? "No description available.")</p>
+            </div>
+
+            <!-- Product Info -->
+            <div class="mb-4">
+                <h5>Product Information</h5>
+                <table class="table table-sm">
+                    <tbody>
+                        <tr>
+                            <td class="fw-bold">SKU:</td>
+                            <td>@Model.SKU</td>
+                        </tr>
+                        <tr>
+                            <td class="fw-bold">Category:</td>
+                            <td>@Model.Category?.CategoryName</td>
+                        </tr>
+                        <tr>
+                            <td class="fw-bold">Store:</td>
+                            <td>
+                                <a asp-controller="Browse" asp-action="Products" asp-route-storeId="@Model.StoreId">
+                                    @Model.Store?.StoreName
+                                </a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Add to Cart -->
+            @if (Model.StockQuantity > 0)
+            {
+                <div class="mb-3">
+                    <div class="row g-2">
+                        <div class="col-md-3">
+                            <input type="number" id="quantity" class="form-control" value="1" min="1" max="@Model.StockQuantity">
+                        </div>
+                        <div class="col-md-9">
+                            <button class="btn btn-primary btn-lg w-100" onclick="addToCart(@Model.ProductId)">
+                                <i class="bi bi-cart-plus"></i> Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            }
+            else
+            {
+                <button class="btn btn-secondary btn-lg w-100" disabled>
+                    Out of Stock
+                </button>
+            }
+
+            <!-- Additional Actions -->
+            <div class="d-grid gap-2">
+                <a asp-controller="Browse" asp-action="Products" asp-route-storeId="@Model.StoreId" class="btn btn-outline-secondary">
+                    <i class="bi bi-arrow-left"></i> Back to Store
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Reviews Section (Placeholder) -->
+    <div class="row mt-5">
+        <div class="col-12">
+            <h4>Customer Reviews</h4>
+            <div class="alert alert-info">
+                Reviews functionality will be implemented in Task 16.
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        function addToCart(productId) {
+            var quantity = document.getElementById('quantity').value;
+            $.ajax({
+                url: '@Url.Action("AddToCart", "Cart")',
+                type: 'POST',
+                data: { productId: productId, quantity: quantity },
+                success: function(response) {
+                    if (response.success) {
+                        alert(response.message);
+                        updateCartBadge(response.itemCount);
+                    } else {
+                        alert(response.message);
+                    }
+                },
+                error: function() {
+                    alert('An error occurred while adding item to cart.');
+                }
+            });
+        }
+
+        function updateCartBadge(count) {
+            // Update cart badge if it exists
+            var badge = document.getElementById('cart-badge');
+            if (badge) {
+                badge.textContent = count;
+            }
+        }
+    </script>
+}

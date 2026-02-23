@@ -1,0 +1,35 @@
+@model CleanMvcApp.Models.Entities.Category
+@{
+    ViewData["Title"] = "Edit Category";
+}
+
+<div class="container mt-4">
+    <h2>Edit Category</h2>
+    <hr />
+
+    <form asp-action="Edit" asp-route-id="@Model.CategoryId" method="post">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <input type="hidden" asp-for="CategoryId" />
+
+        <div class="mb-3">
+            <label asp-for="CategoryName" class="form-label"></label>
+            <input asp-for="CategoryName" class="form-control" />
+            <span asp-validation-for="CategoryName" class="text-danger"></span>
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="Description" class="form-label"></label>
+            <textarea asp-for="Description" class="form-control" rows="3"></textarea>
+            <span asp-validation-for="Description" class="text-danger"></span>
+        </div>
+
+        <div class="mt-3">
+            <button type="submit" class="btn btn-primary">Update Category</button>
+            <a asp-action="Index" class="btn btn-secondary">Cancel</a>
+        </div>
+    </form>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

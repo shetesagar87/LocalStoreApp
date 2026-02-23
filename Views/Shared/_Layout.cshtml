@@ -23,6 +23,9 @@
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
                         </li>
                         <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Browse" asp-action="Search">Browse Products</a>
+                        </li>
+                        <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Dashboard" asp-action="Index">Dashboard</a>
                         </li>
                         @if (User.IsInRole("StoreOwner"))
@@ -40,6 +43,7 @@
                                 <ul class="dropdown-menu" aria-labelledby="adminDropdown">
                                     <li><a class="dropdown-item" asp-controller="AdminStore" asp-action="Pending">Pending Stores</a></li>
                                     <li><a class="dropdown-item" asp-controller="AdminStore" asp-action="Index">All Stores</a></li>
+                                    <li><a class="dropdown-item" asp-controller="AdminCategory" asp-action="Index">Categories</a></li>
                                     <li><hr class="dropdown-divider"></li>
                                     <li><a class="dropdown-item" asp-controller="Admin" asp-action="ManageUsers">Manage Users</a></li>
                                     <li><a class="dropdown-item" asp-controller="Admin" asp-action="Settings">Settings</a></li>
@@ -50,6 +54,14 @@
                     <ul class="navbar-nav">
                         @if (User.Identity?.IsAuthenticated == true)
                         {
+                            <li class="nav-item">
+                                <a class="nav-link text-dark position-relative" asp-controller="Cart" asp-action="Index">
+                                    <i class="bi bi-cart" style="font-size: 1.2rem;"></i>
+                                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" id="cart-badge">
+                                        0
+                                    </span>
+                                </a>
+                            </li>
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle text-dark" href="#" id="userDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
@@ -97,6 +109,25 @@
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
+    @if (User.Identity?.IsAuthenticated == true)
+    {
+        <script>
+            $(document).ready(function() {
+                // Load cart item count
+                $.ajax({
+                    url: '@Url.Action("GetItemCount", "Cart")',
+                    type: 'GET',
+                    success: function(response) {
+                        if (response.itemCount > 0) {
+                            $('#cart-badge').text(response.itemCount);
+                        } else {
+                            $('#cart-badge').hide();
+                        }
+                    }
+                });
+            });
+        </script>
+    }
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>

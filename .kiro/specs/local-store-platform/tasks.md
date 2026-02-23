@@ -111,11 +111,11 @@ The implementation uses ASP.NET Core MVC 6.0+ with Entity Framework Core, ASP.NE
     - Implement GetStoreByIdAsync and GetNearbyStoresAsync
     - _Requirements: 3.1, 3.2, 3.3, 3.4, 3.5, 3.7, 5.1_
 
-  - [ ]* 6.2 Write property test for store registration
+  - [ ] 6.2 Write property test for store registration
     - **Property 6: Store Registration Starts Pending**
     - **Validates: Requirements 3.1, 3.2**
 
-  - [ ]* 6.3 Write property test for store approval
+  - [ ] 6.3 Write property test for store approval
     - **Property 7: Store Approval State Transition**
     - **Validates: Requirements 3.3, 3.4**
 
@@ -130,8 +130,8 @@ The implementation uses ASP.NET Core MVC 6.0+ with Entity Framework Core, ASP.NE
     - Implement file upload for store images
     - _Requirements: 3.1, 3.3, 3.4, 3.5, 3.6, 3.7_
 
-- [ ] 7. Geo-location service
-  - [ ] 7.1 Implement geo-location service
+- [x] 7. Geo-location service
+  - [x] 7.1 Implement geo-location service
     - Create IGeoLocationService interface
     - Implement CalculateDistance using Haversine formula
     - Implement GeocodeAddressAsync (optional: integrate Google Maps API or use simple parsing)
@@ -150,15 +150,15 @@ The implementation uses ASP.NET Core MVC 6.0+ with Entity Framework Core, ASP.NE
     - Test edge cases (same location, antipodal points)
     - _Requirements: 5.1_
 
-- [ ] 8. Product catalog management
-  - [ ] 8.1 Implement category management
+- [x] 8. Product catalog management
+  - [x] 8.1 Implement category management
     - Create ICategoryService interface
     - Implement CRUD operations for categories
     - Create AdminCategoryController (Admin role)
     - Create Razor views for category management
     - _Requirements: 12.3_
 
-  - [ ] 8.2 Implement product service
+  - [x] 8.2 Implement product service
     - Create IProductService interface
     - Implement CreateProductAsync with SKU uniqueness validation
     - Implement UpdateProductAsync with timestamp update
@@ -180,7 +180,7 @@ The implementation uses ASP.NET Core MVC 6.0+ with Entity Framework Core, ASP.NE
     - **Property 11: Zero Stock Prevents Orders**
     - **Validates: Requirements 4.6, 4.7**
 
-  - [ ] 8.6 Create product controllers and views
+  - [x] 8.6 Create product controllers and views
     - Create ProductController with Create, Edit, Delete, Details actions (StoreOwner role)
     - Create Razor views for product management
     - Implement file upload for product images
@@ -188,7 +188,7 @@ The implementation uses ASP.NET Core MVC 6.0+ with Entity Framework Core, ASP.NE
     - _Requirements: 4.1, 4.3, 4.4, 4.5_
 
 - [ ] 9. Product search and browsing
-  - [ ] 9.1 Implement product search with filters
+  - [x] 9.1 Implement product search with filters
     - Create ProductSearchDto with search term, category, price range, store, rating filters
     - Implement search logic in ProductService combining all filters
     - Implement geo-location filtering in search
@@ -198,7 +198,7 @@ The implementation uses ASP.NET Core MVC 6.0+ with Entity Framework Core, ASP.NE
     - **Property 14: Search Filter Composition**
     - **Validates: Requirements 6.6**
 
-  - [ ] 9.3 Create customer product browsing views
+  - [x] 9.3 Create customer product browsing views
     - Create HomeController with Index action showing nearby stores
     - Create ProductBrowseController with Search action
     - Create Razor views for product listing and search
@@ -210,7 +210,7 @@ The implementation uses ASP.NET Core MVC 6.0+ with Entity Framework Core, ASP.NE
   - Ensure all tests pass, ask the user if questions arise.
 
 - [ ] 11. Shopping cart
-  - [ ] 11.1 Implement cart service
+  - [x] 11.1 Implement cart service
     - Create ICartService interface
     - Implement AddToCartAsync with stock validation
     - Implement UpdateCartItemAsync with subtotal recalculation
@@ -232,7 +232,7 @@ The implementation uses ASP.NET Core MVC 6.0+ with Entity Framework Core, ASP.NE
     - **Property 17: Cart Persistence Across Sessions**
     - **Validates: Requirements 7.6**
 
-  - [ ] 11.5 Create cart controllers and views
+  - [x] 11.5 Create cart controllers and views
     - Create CartController with AddToCart, UpdateQuantity, RemoveItem, ViewCart actions
     - Create Razor view for cart display
     - Implement AJAX for cart operations

@@ -1,0 +1,69 @@
+@model IEnumerable<CleanMvcApp.Models.Entities.Product>
+@{
+    ViewData["Title"] = "Products";
+    var store = ViewBag.Store as CleanMvcApp.Models.Entities.Store;
+}
+
+<div class="container mt-4">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <div>
+            <h2>Products - @store?.StoreName</h2>
+            <a asp-controller="Store" asp-action="Index" class="btn btn-sm btn-secondary">Back to Stores</a>
+        </div>
+        <a asp-action="Create" asp-route-storeId="@store?.StoreId" class="btn btn-primary">
+            <i class="bi bi-plus-circle"></i> Add Product
+        </a>
+    </div>
+
+    @if (TempData["SuccessMessage"] != null)
+    {
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+            @TempData["SuccessMessage"]
+            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+        </div>
+    }
+
+    @if (!Model.Any())
+    {
+        <div class="alert alert-info">
+            <p>No products added yet. Click "Add Product" to create your first product.</p>
+        </div>
+    }
+    else
+    {
+        <div class="row">
+            @foreach (var product in Model)
+            {
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="card h-100">
+                        @if (!string.IsNullOrEmpty(product.ProductImageUrl))
+                        {
+                            <img src="@product.ProductImageUrl" class="card-img-top" alt="@product.ProductName" style="height: 200px; object-fit: cover;">
+                        }
+                        else
+                        {
+                            <div class="card-img-top bg-secondary d-flex align-items-center justify-content-center" style="height: 200px;">
+                                <span class="text-white">No Image</span>
+                            </div>
+                        }
+                        <div class="card-body">
+                            <h5 class="card-title">@product.ProductName</h5>
+                            <p class="card-text">
+                                <strong>Price:</strong> $@product.Price<br />
+                                <strong>Stock:</strong> @product.StockQuantity<br />
+                                <strong>SKU:</strong> @product.SKU
+                            </p>
+                        </div>
+                        <div class="card-footer">
+                            <a asp-action="Details" asp-route-id="@product.ProductId" class="btn btn-sm btn-info">Details</a>
+                            <a asp-action="Edit" asp-route-id="@product.ProductId" class="btn btn-sm btn-primary">Edit</a>
+                            <form asp-action="Delete" asp-route-id="@product.ProductId" method="post" class="d-inline">
+                                <button type="submit" class="btn btn-sm btn-danger" onclick="return confirm('Are you sure?');">Delete</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    }
+</div>

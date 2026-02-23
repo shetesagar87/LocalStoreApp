@@ -68,6 +68,7 @@
                         <div class="card-footer">
                             <a asp-action="Details" asp-route-id="@store.StoreId" class="btn btn-sm btn-primary">View Details</a>
                             <a asp-action="Edit" asp-route-id="@store.StoreId" class="btn btn-sm btn-secondary">Edit</a>
+                            <a asp-controller="Product" asp-action="Index" asp-route-storeId="@store.StoreId" class="btn btn-sm btn-success">Products</a>
                         </div>
                     </div>
                 </div>
