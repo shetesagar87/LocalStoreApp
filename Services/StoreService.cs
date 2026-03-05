@@ -2,17 +2,28 @@ using CleanMvcApp.Models.Entities;
 using CleanMvcApp.Models.Enums;
 using CleanMvcApp.Repositories;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Caching.Memory;
 
 namespace CleanMvcApp.Services
 {
     public class StoreService : IStoreService
     {
         private readonly IUnitOfWork _unitOfWork;
+        private readonly INotificationService _notificationService;
+        private readonly IMemoryCache _cache;
         private readonly ILogger<StoreService> _logger;
+        private const string CACHE_KEY_STORE_PREFIX = "store_";
+        private static readonly TimeSpan CacheDuration = TimeSpan.FromMinutes(10);
 
-        public StoreService(IUnitOfWork unitOfWork, ILogger<StoreService> logger)
+        public StoreService(
+            IUnitOfWork unitOfWork,
+            INotificationService notificationService,
+            IMemoryCache cache,
+            ILogger<StoreService> logger)
         {
             _unitOfWork = unitOfWork;
+            _notificationService = notificationService;
+            _cache = cache;
             _logger = logger;
         }
 
@@ -43,7 +54,19 @@ namespace CleanMvcApp.Services
 
         public async Task<Store?> GetStoreByIdAsync(int storeId)
         {
-            return await _unitOfWork.Stores.GetByIdAsync(storeId);
+            var cacheKey = $"{CACHE_KEY_STORE_PREFIX}{storeId}";
+            
+            if (!_cache.TryGetValue(cacheKey, out Store? store))
+            {
+                store = await _unitOfWork.Stores.GetByIdAsync(storeId);
+                
+                if (store != null)
+                {
+                    _cache.Set(cacheKey, store, CacheDuration);
+                }
+            }
+            
+            return store;
         }
 
         public async Task<IEnumerable<Store>> GetStoresByOwnerAsync(string ownerId)
@@ -91,6 +114,9 @@ namespace CleanMvcApp.Services
                 await _unitOfWork.Stores.UpdateAsync(store);
                 await _unitOfWork.SaveChangesAsync();
 
+                // Invalidate cache
+                _cache.Remove($"{CACHE_KEY_STORE_PREFIX}{store.StoreId}");
+
                 _logger.LogInformation("Store {StoreId} updated", store.StoreId);
             }
             catch (Exception ex)
@@ -125,6 +151,20 @@ namespace CleanMvcApp.Services
                 await _unitOfWork.SaveChangesAsync();
 
                 _logger.LogInformation("Store {StoreId} approved", storeId);
+                
+                // Send approval notification
+                _ = Task.Run(async () =>
+                {
+                    try
+                    {
+                        await _notificationService.SendStoreApprovalAsync(store, true);
+                    }
+                    catch (Exception ex)
+                    {
+                        _logger.LogError(ex, "Failed to send approval notification for Store {StoreId}", storeId);
+                    }
+                });
+
                 return true;
             }
             catch (Exception ex)
@@ -159,6 +199,20 @@ namespace CleanMvcApp.Services
                 await _unitOfWork.SaveChangesAsync();
 
                 _logger.LogInformation("Store {StoreId} rejected. Reason: {Reason}", storeId, reason);
+                
+                // Send rejection notification
+                _ = Task.Run(async () =>
+                {
+                    try
+                    {
+                        await _notificationService.SendStoreApprovalAsync(store, false);
+                    }
+                    catch (Exception ex)
+                    {
+                        _logger.LogError(ex, "Failed to send rejection notification for Store {StoreId}", storeId);
+                    }
+                });
+
                 return true;
             }
             catch (Exception ex)

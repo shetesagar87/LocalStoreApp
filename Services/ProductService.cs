@@ -1,16 +1,29 @@
 using CleanMvcApp.Models.Entities;
 using CleanMvcApp.Repositories;
+using Microsoft.Extensions.Caching.Memory;
 
 namespace CleanMvcApp.Services
 {
     public class ProductService : IProductService
     {
         private readonly IUnitOfWork _unitOfWork;
+        private readonly INotificationService _notificationService;
+        private readonly IMemoryCache _cache;
         private readonly ILogger<ProductService> _logger;
+        private const int LOW_STOCK_THRESHOLD = 10;
+        private const string CACHE_KEY_PRODUCT_PREFIX = "product_";
+        private const string CACHE_KEY_STORE_PRODUCTS_PREFIX = "store_products_";
+        private static readonly TimeSpan CacheDuration = TimeSpan.FromMinutes(5);
 
-        public ProductService(IUnitOfWork unitOfWork, ILogger<ProductService> logger)
+        public ProductService(
+            IUnitOfWork unitOfWork,
+            INotificationService notificationService,
+            IMemoryCache cache,
+            ILogger<ProductService> logger)
         {
             _unitOfWork = unitOfWork;
+            _notificationService = notificationService;
+            _cache = cache;
             _logger = logger;
         }
 
@@ -33,6 +46,9 @@ namespace CleanMvcApp.Services
 
                 var createdProduct = await _unitOfWork.Products.AddAsync(product);
                 await _unitOfWork.SaveChangesAsync();
+
+                // Invalidate cache
+                _cache.Remove($"{CACHE_KEY_STORE_PRODUCTS_PREFIX}{product.StoreId}");
 
                 _logger.LogInformation("Product {ProductName} created with ID {ProductId} for store {StoreId}", 
                     product.ProductName, createdProduct.ProductId, product.StoreId);
@@ -69,6 +85,10 @@ namespace CleanMvcApp.Services
                 product.UpdatedAt = DateTime.UtcNow;
                 await _unitOfWork.Products.UpdateAsync(product);
                 await _unitOfWork.SaveChangesAsync();
+
+                // Invalidate cache
+                _cache.Remove($"{CACHE_KEY_PRODUCT_PREFIX}{product.ProductId}");
+                _cache.Remove($"{CACHE_KEY_STORE_PRODUCTS_PREFIX}{product.StoreId}");
 
                 _logger.LogInformation("Product {ProductId} updated", product.ProductId);
             }
@@ -123,6 +143,23 @@ namespace CleanMvcApp.Services
                 await _unitOfWork.SaveChangesAsync();
 
                 _logger.LogInformation("Product {ProductId} stock updated to {Quantity}", productId, quantity);
+                
+                // Check for low stock and send alert
+                if (quantity <= LOW_STOCK_THRESHOLD && quantity > 0)
+                {
+                    _ = Task.Run(async () =>
+                    {
+                        try
+                        {
+                            await _notificationService.SendLowStockAlertAsync(product);
+                        }
+                        catch (Exception ex)
+                        {
+                            _logger.LogError(ex, "Failed to send low stock alert for Product {ProductId}", productId);
+                        }
+                    });
+                }
+
                 return true;
             }
             catch (Exception ex)

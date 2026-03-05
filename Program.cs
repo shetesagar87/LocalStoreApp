@@ -72,6 +72,9 @@ builder.Services.ConfigureApplicationCookie(options =>
 // Configure AutoMapper
 builder.Services.AddAutoMapper(typeof(Program));
 
+// Configure Memory Cache
+builder.Services.AddMemoryCache();
+
 // Register repositories and Unit of Work
 builder.Services.AddScoped(typeof(IRepository<>), typeof(GenericRepository<>));
 builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
@@ -87,6 +90,7 @@ builder.Services.AddScoped<IOrderService, OrderService>();
 builder.Services.AddScoped<IReviewService, ReviewService>();
 builder.Services.AddScoped<IAdminDashboardService, AdminDashboardService>();
 builder.Services.AddScoped<IStoreDashboardService, StoreDashboardService>();
+builder.Services.AddScoped<INotificationService, NotificationService>();
 builder.Services.AddScoped<IExampleService, ExampleService>();
 builder.Services.AddScoped<IAuthService, AuthService>();
 
@@ -112,6 +116,15 @@ else
 // Add custom error handling middleware
 app.UseMiddleware<ErrorHandlingMiddleware>();
 
+// Add security headers middleware
+app.UseMiddleware<SecurityHeadersMiddleware>();
+
+// Add input sanitization middleware
+app.UseMiddleware<InputSanitizationMiddleware>();
+
+// Add rate limiting middleware
+app.UseMiddleware<RateLimitingMiddleware>();
+
 app.UseHttpsRedirection();
 app.UseStaticFiles();
 
@@ -130,10 +143,24 @@ Task.Run(async () =>
     using (var scope = app.Services.CreateScope())
     {
         var services = scope.ServiceProvider;
+        var configuration = services.GetRequiredService<IConfiguration>();
+        
         try
         {
-            await DbSeeder.SeedRolesAndAdminAsync(services);
-            Log.Information("Database seeded successfully");
+            var seedRolesAndAdmin = configuration.GetValue<bool>("SeedSettings:SeedRolesAndAdmin", true);
+            var seedDemoData = configuration.GetValue<bool>("SeedSettings:SeedDemoData", true);
+
+            if (seedRolesAndAdmin)
+            {
+                await DbSeeder.SeedRolesAndAdminAsync(services);
+                Log.Information("Roles and admin user seeded successfully");
+            }
+
+            if (seedDemoData)
+            {
+                await DbSeeder.SeedDemoDataAsync(services);
+                Log.Information("Demo data seeded successfully");
+            }
         }
         catch (Exception ex)
         {

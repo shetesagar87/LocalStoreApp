@@ -359,23 +359,35 @@ dotnet dev-certs https --trust
 
 ## Additional Configuration
 
-### Email Notifications (Optional)
+### Email Notifications
 
-To enable email notifications, configure SMTP settings in `appsettings.json`:
+Email notifications are now implemented! To enable actual email sending, configure SMTP settings in `appsettings.json`:
 
 ```json
 {
   "EmailSettings": {
-    "SmtpServer": "smtp.gmail.com",
-    "SmtpPort": 587,
-    "SenderEmail": "your-email@gmail.com",
-    "SenderPassword": "your-app-password",
-    "EnableSsl": true
+    "SmtpHost": "smtp.gmail.com",
+    "SmtpPort": "587",
+    "SmtpUsername": "your-email@gmail.com",
+    "SmtpPassword": "your-app-password",
+    "FromEmail": "noreply@localstore.com",
+    "FromName": "Local Store Platform"
   }
 }
 ```
 
-**Note**: Email notifications are not yet implemented in the current version.
+**Supported Notifications:**
+- Order confirmation emails
+- Order status update emails
+- Store approval/rejection emails
+- Low stock alerts for store owners
+
+**Gmail Setup:**
+1. Enable 2-factor authentication on your Gmail account
+2. Generate an App Password: https://myaccount.google.com/apppasswords
+3. Use the App Password in the `SmtpPassword` field
+
+**Note**: If SMTP is not configured, notifications will be logged to the database but emails won't be sent.
 
 ### Payment Gateway (Optional)
 

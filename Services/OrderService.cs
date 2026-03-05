@@ -8,15 +8,18 @@ namespace CleanMvcApp.Services
     {
         private readonly IUnitOfWork _unitOfWork;
         private readonly ICartService _cartService;
+        private readonly INotificationService _notificationService;
         private readonly ILogger<OrderService> _logger;
 
         public OrderService(
             IUnitOfWork unitOfWork,
             ICartService cartService,
+            INotificationService notificationService,
             ILogger<OrderService> logger)
         {
             _unitOfWork = unitOfWork;
             _cartService = cartService;
+            _notificationService = notificationService;
             _logger = logger;
         }
 
@@ -136,6 +139,20 @@ namespace CleanMvcApp.Services
                 }
 
                 _logger.LogInformation("Order {OrderNumber} created for customer {CustomerId}", order.OrderNumber, customerId);
+                
+                // Send order confirmation email
+                _ = Task.Run(async () =>
+                {
+                    try
+                    {
+                        await _notificationService.SendOrderConfirmationAsync(createdOrder);
+                    }
+                    catch (Exception ex)
+                    {
+                        _logger.LogError(ex, "Failed to send order confirmation for {OrderNumber}", order.OrderNumber);
+                    }
+                });
+
                 return createdOrder;
             }
             catch (Exception ex)
@@ -191,6 +208,20 @@ namespace CleanMvcApp.Services
                 await _unitOfWork.SaveChangesAsync();
 
                 _logger.LogInformation("Order {OrderId} status updated to {Status}", orderId, newStatus);
+                
+                // Send status update notification
+                _ = Task.Run(async () =>
+                {
+                    try
+                    {
+                        await _notificationService.SendOrderStatusUpdateAsync(order);
+                    }
+                    catch (Exception ex)
+                    {
+                        _logger.LogError(ex, "Failed to send status update for Order {OrderId}", orderId);
+                    }
+                });
+
                 return true;
             }
             catch (Exception ex)
